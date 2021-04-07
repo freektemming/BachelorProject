@@ -1,5 +1,9 @@
-import numpy as np
+# Class were all the information per model is saved
 
+import numpy as np
+from statistics import mean
+
+# constants
 sigma = 5.67051 * pow(10,-5)  # cgs
 Rsun = 6.957 * pow(10,10)
 Lsun = 3.828 * pow(10,33)
@@ -22,14 +26,14 @@ class Data:
         self.model = data[:,0]
         self.m = len(self.model)
         self.age2 = data[self.x-1:self.m-1,1]
-        self.age = data[self.x:,1] / 1e6
+        self.age = data[57:,1] / 1e6
         self.M = data[self.x:,2]
         self.logM = np.log10(self.M)
         self.Mdot = data[self.x:,3]
         self.Mdot = - self.Mdot 
         self.logMdot = np.log10(self.Mdot)
         self.logTeff = data[self.x:,6]
-        self.Teff = data[self.x:,7]
+        self.Teff = data[self.x:,7] / 1e3 # kK
         self.logL = data[self.x:,11]
         self.R =  data[self.x:,13]
         self.logg = data[self.x:,14]
@@ -97,3 +101,13 @@ class Data:
         if n_temp < n:
             n = n_temp          
         return n #meg
+
+    # ------ Determine main sequence ------
+    def mainsequence(self):
+        for i in range(len(self.age) - 1):
+            if self.Teff[i + 1] - self.Teff[i] > 0:
+                return i
+    # get maximum age on main sequence
+    def get_age(self, i):
+        max = self.age[i]
+        return max
