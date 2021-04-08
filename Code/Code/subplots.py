@@ -55,7 +55,7 @@ def star(model1, model2):
 
 star(vink01, vink18)
 
-# ------ Plotting elements ------
+# ------ Elements ------
 def elements(model1, model2):
 
     # ------ Figure ------
