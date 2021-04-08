@@ -56,7 +56,7 @@ def star(model1, model2):
 star(vink01, vink18)
 
 # ------ Plotting elements ------
-def elementplots(model1, model2):
+def elements(model1, model2):
 
     # ------ Figure ------
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
@@ -98,7 +98,7 @@ def elementplots(model1, model2):
     plt.tight_layout()
     plt.savefig('Plots/elements.png')
 
-elementplots(vink01, vink18)
+elements(vink01, vink18)
 
 # ------ Rotation ------
 def rotation(model1, model2):
@@ -145,10 +145,12 @@ def rotation(model1, model2):
 
 rotation(vink01, vink18)
 
+# ------ Histograms ------
 def histogram(model1, model2):
 
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2)
 
+    # ------ Hist 1 ------
     ax1.bar(2, model1.M[len(model1.M)-1], 1, label='vink01', color = 'navy')
     ax1.bar(3, model2.M[len(model2.M)-1], 1, label='vink18', color = 'darkred')
     ax1.set_xlim(0,7)
@@ -158,6 +160,7 @@ def histogram(model1, model2):
     ax1.set_title('Mass')
     ax1.legend()
 
+    # ------ Hist 2 ------
     ax2.bar(2, model1.R[len(model1.R)-1], 1, label='vink01', color = 'navy')
     ax2.bar(3, model2.R[len(model2.R)-1], 1, label='vink18', color = 'darkred')
     ax2.set_xlim(0,7)
@@ -167,6 +170,7 @@ def histogram(model1, model2):
     ax2.set_title('Radius')
     ax2.legend()
 
+    # ------ Hist 3 ------
     ax3.bar(2, model1.Teff[len(model1.Teff)-1], 1, label='vink01', color = 'navy')
     ax3.bar(3, model2.Teff[len(model2.Teff)-1], 1, label='vink18', color = 'darkred')
     ax3.set_xlim(0,7)
@@ -176,6 +180,7 @@ def histogram(model1, model2):
     ax3.set_title('Effective Temperature')
     ax3.legend()
 
+    # ------ Hist 4 ------
     ax4.bar(2, model1.logL[len(model1.logL)-1], 1, label='vink01', color = 'navy')
     ax4.bar(3, model2.logL[len(model2.logL)-1], 1, label='vink18', color = 'darkred')
     ax4.set_xlim(0,7)
