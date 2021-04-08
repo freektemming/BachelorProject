@@ -23,7 +23,7 @@ def star(model1, model2):
     ax1.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
     ax1.set_xlabel('Age [Myr]')
     ax1.set_ylabel('Mass [M$_{\odot}$]')
-    ax1.set_title('Mass Loss')
+    ax1.set_title('Mass')
     ax1.yaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     # ------ Plot 2 ------
@@ -154,8 +154,8 @@ def histogram(model1, model2):
     ax1.set_xlim(0,7)
     ax1.set_xticks([2,3])
     ax1.set_xticklabels(['', ''])
-    ax1.set_ylabel('Solar Mass')
-    ax1.set_title('Results')
+    ax1.set_ylabel('Mass M$_{\odot}$')
+    ax1.set_title('Mass')
     ax1.legend()
 
     ax2.bar(2, model1.R[len(model1.R)-1], 1, label='vink01', color = 'navy')
@@ -163,8 +163,8 @@ def histogram(model1, model2):
     ax2.set_xlim(0,7)
     ax2.set_xticks([2,3])
     ax2.set_xticklabels(['', ''])
-    ax2.set_ylabel('Solar Radius')
-    ax2.set_title('Results')
+    ax2.set_ylabel('Radius R$_{\odot}$')
+    ax2.set_title('Radius')
     ax2.legend()
 
     ax3.bar(2, model1.Teff[len(model1.Teff)-1], 1, label='vink01', color = 'navy')
@@ -173,7 +173,7 @@ def histogram(model1, model2):
     ax3.set_xticks([2,3])
     ax3.set_xticklabels(['', ''])
     ax3.set_ylabel('Teff')
-    ax3.set_title('Results')
+    ax3.set_title('Effective Temperature')
     ax3.legend()
 
     ax4.bar(2, model1.logL[len(model1.logL)-1], 1, label='vink01', color = 'navy')
@@ -182,13 +182,13 @@ def histogram(model1, model2):
     ax4.set_xticks([2,3])
     ax4.set_xticklabels(['', ''])
     ax4.set_ylabel('LogL')
-    ax4.set_title('Results')
+    ax4.set_title('Luminosity')
     ax4.legend()
 
     fig.tight_layout()
     plt.savefig('Plots/histogram.png')
 
-#histogram(vink01, vink18)
+histogram(vink01, vink18)
 
 # ------ Plot difference between 2 variables ------
 def difference(model1,model2, var):

@@ -41,8 +41,8 @@ hrd(vink01, vink18)
 def subhrd(model1, model2):
     
     colormap = plt.cm.plasma
-    fig, (ax1, ax2) = plt.subplots(2, figsize=(9,6.5))
-    fig.suptitle('HRD Comparison Models', fontweight='bold')
+    fig, (ax1, ax2) = plt.subplots(2, figsize=(9,9))
+    fig.suptitle('HRD 2 Models', fontweight='bold')
 
     # ------ first plot ------
     ax1.set_xlim(51,2)
@@ -74,7 +74,7 @@ def subhrd(model1, model2):
     cbar.set_label('Age [Myr]')
 
     fig.tight_layout()
-    plt.savefig('Plots/subHRD.png')
+    plt.savefig('Plots/HRD-sub.png')
 
 subhrd(vink01, vink18)
 
