@@ -23,6 +23,8 @@ class Data:
         self.xd = self.coreh.compress((self.coreh>self.coreh[0]*0.997).flat) 
         self.x = len(self.xd)
 
+        self.centerhe = data[self.x:,60]
+
         self.model = data[:,0]
         self.m = len(self.model)
         self.age2 = data[self.x-1:self.m-1,1]
@@ -38,6 +40,7 @@ class Data:
         self.R =  data[self.x:,13]
         self.logg = data[self.x:,14]
         self.g = 10**self.logg
+        self.centerc = data[self.x:,61] # c12
         self.centernit = data[self.x:,62] # N14
         self.logsurfh1 = data[self.x:,69]
         self.surfh1 = pow(10,self.logsurfh1)
