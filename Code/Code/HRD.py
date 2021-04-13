@@ -35,7 +35,7 @@ def hrd(model1, model2):
     fig.tight_layout()
     plt.savefig('Plots/HRD.png')
 
-hrd(vink01, vink18)
+#hrd(vink01, vink18)
 
 # ------ Plot multiple HRD ------
 def subhrd(model1, model2):
@@ -76,7 +76,7 @@ def subhrd(model1, model2):
     fig.tight_layout()
     plt.savefig('Plots/HRD-sub.png')
 
-subhrd(vink01, vink18)
+#subhrd(vink01, vink18)
 
 # ------ Plot main sequence HRD ------ 
 def mainsequence(model1, model2):
@@ -107,6 +107,6 @@ def mainsequence(model1, model2):
     ax.legend(loc = 'upper left')
 
     fig.tight_layout()
-    plt.savefig('Plots/HRD-main.png')
-
-mainsequence(vink01, vink18)
+    #plt.savefig('Plots/HRD-main.png')
+    #plt.show()
+#mainsequence(vink01, vink18)

@@ -22,13 +22,15 @@ class Data:
         self.coreh = data[:,59]
         self.xd = self.coreh.compress((self.coreh>self.coreh[0]*0.997).flat) 
         self.x = len(self.xd)
+        self.coreH = data[self.x:,59]
 
         self.centerhe = data[self.x:,60]
+        self.convective_core = data[self.x:,39]
 
         self.model = data[:,0]
         self.m = len(self.model)
         self.age2 = data[self.x-1:self.m-1,1]
-        self.age = data[57:,1] / 1e6
+        self.age = data[self.x:,1] / 1e6
         self.M = data[self.x:,2]
         self.logM = np.log10(self.M)
         self.Mdot = data[self.x:,3]
@@ -54,6 +56,29 @@ class Data:
         self.nith = self.nit/self.surfh1
         self.oxh = self.ox/self.surfh1
         self.carh = self.car/self.surfh1
+
+        # ------ Convection ------
+        self.nmass = self.M / np.max(self.M)
+        self.convcore = data[self.x:,16]
+        self.convective_core = data[self.x:,37] / self.M * self.nmass
+        self.mix1 = data[self.x:,40]
+        self.czmass = data[self.x:,29]
+        
+        self.HC = data[self.x:,59] * self.nmass
+        self.HeC = data[self.x:,60] * self.nmass
+        self.CC = data[self.x:,61] * self.nmass
+        self.NC = data[self.x:,62] * self.nmass
+        self.OC = data[self.x:,63] * self.nmass
+        
+        self.convbot = data[self.x:,39] * self.nmass # conv mix 1
+        self.convtop = data[self.x,38] * self.nmass # conv mix 1
+        self.top = data[self.x:,42] * self.nmass # mix 1
+        self.bot = data[self.x:,43] * self.nmass # mix 1
+        
+        self.cv3b = data[self.x:,73] * self.nmass
+        self.cv3t = data[self.x:,74] * self.nmass
+        self.cv4b = data[self.x:,75] * self.nmass
+        self.cv4t = data[self.x:,76] * self.nmass
 
         # ------ Rotation ------
         self.vrot = data[self.x:,22]
@@ -86,7 +111,7 @@ class Data:
         self.Mdotorig = data[self.x:,103]
             
         # ------ time ------
-        self.time = self.age/pow(10,6)
+        self.time = self.age#/pow(10,6) ???
 
     # ------ Color Bar ------
     def get_max_bar(self):
