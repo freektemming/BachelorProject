@@ -62,9 +62,9 @@ def mass(model1,model2):
     #ax1.plot(vink01.time[0:lim1], vink01.convective_core[0:lim1], linewidth = 3, color = 'pink', label = 'core')
 
     # ------ Plot Colors ------
-    ims1 = ax1.scatter(BaseZams, zams.normR * model1.nmass[63 - 57], c= zams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
-    ims2 = ax1.scatter(BaseMid, mid.normR * model1.nmass[107 - 57], c= mid.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
-    ims3 = ax1.scatter(BaseTams, tams.normR * model1.nmass[200 - 57], c= tams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims1 = ax1.scatter(BaseZams, zams.normR, c= zams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims2 = ax1.scatter(BaseMid, mid.normR, c= mid.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims3 = ax1.scatter(BaseTams, tams.normR, c= tams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
     cbar1 = fig1.colorbar(ims1, ax = ax1)
     cbar1.set_label('Zones')
 
@@ -169,9 +169,9 @@ def sub(model1, model2):
     #ax1.plot(vink01.time[0:lim1], vink01.convective_core[0:lim1], linewidth = 3, color = 'pink', label = 'core')
 
     # Plot Colors
-    ims1 = ax1.scatter(BaseZams, zams.normR * model1.nmass[63 - 57], c= zams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
-    ims2 = ax1.scatter(BaseMid, mid.normR * model1.nmass[107 - 57], c= mid.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
-    ims3 = ax1.scatter(BaseTams, tams.normR * model1.nmass[200 - 57], c= tams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims1 = ax1.scatter(BaseZams, zams.normR, c= zams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims2 = ax1.scatter(BaseMid, mid.normR, c= mid.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims3 = ax1.scatter(BaseTams, tams.normR, c= tams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
     cbar1 = fig.colorbar(ims1, ax = ax1)
     cbar1.set_label('Zones')
 
