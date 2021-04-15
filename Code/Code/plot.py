@@ -1,6 +1,6 @@
 # Script that makes plot
 
-from ClassData import Data
+from classData import Data
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter
@@ -29,7 +29,7 @@ def plot(model1, model2):
     ims2 = ax.scatter(model2.age, model2.coreH, c= model2.age, marker='o', edgecolors='none', s=100, cmap=colormap, vmin = model2.get_min_bar(), vmax = model2.get_max_bar())
     cbar1 = fig.colorbar(ims1, ax = ax)
     cbar1.set_label('Age [Myr]')
-    ax.legend()
+    ax.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
     plt.show()

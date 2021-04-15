@@ -1,6 +1,6 @@
 # Script that makes multiple HRD plots
 
-from ClassData import Data
+from classData import Data
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter
@@ -30,12 +30,13 @@ def hrd(model1, model2):
     ims2 = ax.scatter(model2.Teff, model2.logL, c= model2.age, marker='o', edgecolors='none', s=100, cmap=colormap, vmin = model2.get_min_bar(), vmax = model2.get_max_bar())
     cbar1 = fig.colorbar(ims1, ax = ax)
     cbar1.set_label('Age [Myr]')
-    ax.legend()
+    ax.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
-    plt.savefig('Plots/HRD.png')
+    #plt.savefig('Plots/HRD.png')
+    plt.show()
 
-#hrd(vink01, vink18)
+hrd(vink01, vink18)
 
 # ------ Plot multiple HRD ------
 def subhrd(model1, model2):
@@ -74,9 +75,10 @@ def subhrd(model1, model2):
     cbar.set_label('Age [Myr]')
 
     fig.tight_layout()
-    plt.savefig('Plots/HRD-sub.png')
+    #plt.savefig('Plots/HRD-sub.png')
+    plt.show()
 
-#subhrd(vink01, vink18)
+subhrd(vink01, vink18)
 
 # ------ Plot main sequence HRD ------ 
 def mainsequence(model1, model2):
@@ -104,9 +106,10 @@ def mainsequence(model1, model2):
     ims2 = ax.scatter(model2.Teff[0:lim2], model2.logL[0:lim2], c= model2.age[0:lim2], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = model2.get_min_bar(), vmax = model2.get_age(lim2))
     cbar1 = fig.colorbar(ims1, ax = ax)
     cbar1.set_label('Age [Myr]')
-    ax.legend(loc = 'upper left')
+    ax.legend(shadow = False, edgecolor = 'k', loc = 'upper left')
 
     fig.tight_layout()
     #plt.savefig('Plots/HRD-main.png')
-    #plt.show()
-#mainsequence(vink01, vink18)
+    plt.show()
+
+mainsequence(vink01, vink18)

@@ -1,6 +1,6 @@
 # Multiple supblots / histograms to compare variables from different models
 
-from ClassData import Data
+from classData import Data
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter

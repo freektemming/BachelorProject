@@ -18,6 +18,8 @@ Lscriptsun = pow(Teffsun,4.)/(10**loggsun)
 class Data:
 
     def __init__(self,data):
+
+        # data with six rows skipped
         data = np.genfromtxt(data,skip_header=6)  
         self.coreh = data[:,59]
         self.xd = self.coreh.compress((self.coreh>self.coreh[0]*0.997).flat) 
@@ -40,6 +42,7 @@ class Data:
         self.Teff = data[self.x:,7] / 1e3 # kK
         self.logL = data[self.x:,11]
         self.R =  data[self.x:,13]
+        self.logR = np.log10(self.R)
         self.logg = data[self.x:,14]
         self.g = 10**self.logg
         self.centerc = data[self.x:,61] # c12
@@ -58,11 +61,17 @@ class Data:
         self.carh = self.car/self.surfh1
 
         # ------ Convection ------
+        self.normR = self.R / np.max(self.R)
         self.nmass = self.M / np.max(self.M)
         self.convcore = data[self.x:,16]
         self.convective_core = data[self.x:,37] / self.M * self.nmass
+        self.logconvective_core = np.log10(self.convective_core)
         self.mix1 = data[self.x:,40]
-        self.czmass = data[self.x:,29]
+        self.czmass = data[self.x:,27] / self.M * self.nmass
+        self.czradius = data[self.x:,28] #/ self.R
+        self.logczradius = np.log10(self.czradius)
+        self.nczradius = data[self.x:,28] / self.R
+        self.Hecoremass = data[self.x:,30] / self.M * self.nmass
         
         self.HC = data[self.x:,59] * self.nmass
         self.HeC = data[self.x:,60] * self.nmass
@@ -70,15 +79,14 @@ class Data:
         self.NC = data[self.x:,62] * self.nmass
         self.OC = data[self.x:,63] * self.nmass
         
-        self.convbot = data[self.x:,39] * self.nmass # conv mix 1
-        self.convtop = data[self.x,38] * self.nmass # conv mix 1
-        self.top = data[self.x:,42] * self.nmass # mix 1
-        self.bot = data[self.x:,43] * self.nmass # mix 1
-        
-        self.cv3b = data[self.x:,73] * self.nmass
-        self.cv3t = data[self.x:,74] * self.nmass
-        self.cv4b = data[self.x:,75] * self.nmass
-        self.cv4t = data[self.x:,76] * self.nmass
+        self.convbot = data[self.x:,39] * self.nmass # conv mix 1 m/Mstar
+        self.convtop = data[self.x,38] * self.nmass # conv mix 1 m/Mstar
+        self.convtop2 = data[self.x:,40] * self.nmass # conv mix 2 m/Mstar
+        self.convbot2 = data[self.x:,41] * self.nmass # conv mix 2 m/Mstar
+        self.top = data[self.x:,42] * self.nmass # mix 1 m/Mstar
+        self.bot = data[self.x:,43] * self.nmass # mix 1 m/Mstar
+
+        self.logconvbot = np.log10(self.convbot)
 
         # ------ Rotation ------
         self.vrot = data[self.x:,22]
@@ -138,4 +146,9 @@ class Data:
     # get maximum age on main sequence
     def get_age(self, i):
         max = self.age[i]
+        return max
+
+    # ------ Determine max of list in certain range ------
+    def maxlist(self, lim):
+        max = np.max(self.R[0:lim])
         return max
