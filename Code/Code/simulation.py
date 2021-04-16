@@ -57,18 +57,18 @@ def circles(model1,model2):
     ylist5 = []
     ylist6 = []
 
-    length = len(model1.age) - 1200
+    length = len(model1.age) - 1250
     counter = 0
     for i in range(0,length,8):
         
         # after H burning fase: make simulation faster (skip steps)
         counter += 1
-        if model1.age[i] > 4.6:
+        if model1.age[i] > 4.5:
             if counter % 2 == 0:
                 continue
 
         # ------ Plot 1 ------
-        colormap = plt.cm.plasma
+        colormap = plt.cm.plasma_r
         colorX = length * [1600]
         colorY = length * [4000]
         colorX2 = length * [4600]
@@ -82,16 +82,16 @@ def circles(model1,model2):
         ax1.set_ylim(0,6200)
         ax1.set_ylabel('Radius R$_{\odot}$')
         ax1.set_xlabel('Radius R$_{\odot}$')
-        ax1.set_title('Radius of 2 Models', fontweight = 'bold')
+        ax1.set_title('2 Models 40M$_{\odot}$', fontweight = 'bold')
 
         #ax.add_patch(circle1)
         #ax.add_patch(circle2)
 
         # plot colors
-        ims1 = ax1.scatter(colorX[i], colorY[i], c= model1.age[i], marker='o', edgecolors='none', s=int(model1.R[i]**1.3), cmap=colormap, vmin = 4.5, vmax = model1.get_max_bar())
-        ims2 = ax1.scatter(colorX2[i], colorY2[i], c= model2.age[i], marker='o', edgecolors='none', s=int(model2.R[i]**1.3), cmap=colormap, vmin = 4.5, vmax = model2.get_max_bar())
+        ims1 = ax1.scatter(colorX[i], colorY[i], c= model1.Teff[i], marker='o', edgecolors='none', s=int(model1.R[i]**1.3), cmap=colormap, vmin = 0, vmax = 50)
+        ims2 = ax1.scatter(colorX2[i], colorY2[i], c= model2.Teff[i], marker='o', edgecolors='none', s=int(model2.R[i]**1.3), cmap=colormap, vmin = 0, vmax = 50)
         cbar1 = fig.colorbar(ims1, ax = ax1)
-        cbar1.set_label('Age [Myr]')
+        cbar1.set_label('Teff [kK]')
 
         ax1.text(1000,1500, f'Age: {round(model1.age[i],2)} [My]')
         ax1.text(4000,1500, f'Age: {round(model2.age[i],2)} [My]')
@@ -100,8 +100,8 @@ def circles(model1,model2):
         ax1.text(4000,1000, f'Mass: {round(model2.M[i],2)} M_sun')
 
 
-        # ax1.text(1000,500, f'Core H: {round(model1.HC[i] / max(model1.HC) * 100,2)} %')
-        # ax1.text(4000,500, f'Core H: {round(model2.HC[i] / max(model2.HC) * 100,2)} %')
+        ax1.text(1000,500, f'Teff: {round(model1.Teff[i],2)} [kK]')
+        ax1.text(4000,500, f'Teff: {round(model2.Teff[i],2)} [kK]')
 
         # ------ Plot 2 ------
 
@@ -125,7 +125,7 @@ def circles(model1,model2):
 
         ax2.set_xlim(0,6)
         ax2.set_ylim(0,1)
-        ax2.set_ylabel('m / M$_{\odot}$')
+        ax2.set_ylabel('m / M$_{\star}$')
         ax2.set_xlabel('Age [My]')
         ax2.set_title('Core Elements', fontweight = 'bold')
 
