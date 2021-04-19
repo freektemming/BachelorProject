@@ -9,6 +9,8 @@ from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 import math
 from scipy import interpolate
+import os
+import imageio
 
 # ------ Models ------
 vink01 = Data('../Data/40M_Vink01_out.data')
@@ -32,6 +34,9 @@ def interpol(model, varX, varY):
 
 # ------ Plot 2 stars ------
 def circles(model1,model2):
+
+    # ------ Files for GIF ------
+    files = []
 
     # ------ Get Interpolation ------
     # model 1
@@ -66,7 +71,7 @@ def circles(model1,model2):
 
     length = len(xInterpol1)
     counter = 0
-    for i in range(0,length,10):
+    for i in range(0,length,5):
         
         # after H burning fase: make simulation faster (skip steps)
         counter += 1
@@ -112,7 +117,6 @@ def circles(model1,model2):
         ax1.text(4000,500, f'Teff: {round(yInterpol21[i],2)} [kK]')
 
         # ------ Plot 2 ------
-
         xlist.append(xInterpol1[i])
         ylist.append(yInterpol14[i])
         xlist2.append(xInterpol2[i])
@@ -148,9 +152,22 @@ def circles(model1,model2):
         # ------ Show ------
         plt.legend(shadow = False, edgecolor = 'k')
         fig.tight_layout()
-        plt.draw()
-        plt.pause(0.00001)
+        #plt.draw()
+        #plt.pause(0.00001)
+
+        # ------ GIF ------
+        filename = f'Plots/GIF/{i}.png'
+        files.append(filename)
+        plt.savefig(f'{filename}')
+        
         plt.close()
+        print(xInterpol1[i])
+
+    with imageio.get_writer('Plots/simulation.gif', mode='I') as writer:
+        for filename in files:
+            image = imageio.imread(filename)
+            writer.append_data(image)
+
 
 circles(vink01, vink18)
 
