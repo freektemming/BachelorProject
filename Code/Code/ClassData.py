@@ -29,7 +29,7 @@ class Data:
         self.centerhe = data[self.x:,60]
         self.convective_core = data[self.x:,39]
 
-        self.model = data[:,0]
+        self.model = data[self.x:,0]
         self.m = len(self.model)
         self.age2 = data[self.x-1:self.m-1,1]
         self.age = data[self.x:,1] / 1e6
