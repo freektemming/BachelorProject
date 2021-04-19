@@ -69,6 +69,7 @@ def circles(model1,model2):
     ylist6 = []
 
 
+    # ------ Loop Over Data ------
     length = len(xInterpol1)
     counter = 0
     for i in range(0,length,5):
@@ -152,8 +153,9 @@ def circles(model1,model2):
         # ------ Show ------
         plt.legend(shadow = False, edgecolor = 'k')
         fig.tight_layout()
-        #plt.draw()
-        #plt.pause(0.00001)
+        plt.draw()
+        plt.pause(0.00001)
+        plt.close()
 
         # ------ GIF ------
         filename = f'Plots/GIF/{i}.png'
@@ -163,6 +165,7 @@ def circles(model1,model2):
         plt.close()
         print(xInterpol1[i])
 
+    # ------ Make GIF From Saved Files ------
     with imageio.get_writer('Plots/simulation.gif', mode='I') as writer:
         for filename in files:
             image = imageio.imread(filename)
