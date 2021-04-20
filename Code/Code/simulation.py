@@ -166,10 +166,10 @@ def circles(model1,model2):
         print(xInterpol1[i])
 
     # ------ Make GIF From Saved Files ------
-    with imageio.get_writer('Plots/simulation.gif', mode='I') as writer:
-        for filename in files:
-            image = imageio.imread(filename)
-            writer.append_data(image)
+    # with imageio.get_writer('Plots/simulation.gif', mode='I') as writer:
+    #     for filename in files:
+    #         image = imageio.imread(filename)
+    #         writer.append_data(image)
 
 
 circles(vink01, vink18)

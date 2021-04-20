@@ -45,21 +45,30 @@ class Data:
         self.logR = np.log10(self.R)
         self.logg = data[self.x:,14]
         self.g = 10**self.logg
+
+        # ------ Elements ------
         self.centerc = data[self.x:,61] # c12
         self.centernit = data[self.x:,62] # N14
-        self.logsurfh1 = data[self.x:,69]
-        self.surfh1 = pow(10,self.logsurfh1)
+
+        # surface
+        self.logh1 = data[self.x:,69]
+        self.h1 = pow(10,self.logh1)
+        self.nh1 = self.h1 / np.max(self.h1)
+        self.loghe = data[self.x:,70] # He4 surf
+        self.he = 10**self.loghe
+        self.nhe = self.he / np.max(self.he)
         self.nit = data[self.x:,66] # N14
+        self.nnit = self.nit / np.max(self.nit)
         self.ox = data[self.x:,67] # O16
+        self.nox = self.ox / np.max(self.ox)
         self.car = data[self.x:,65]  # C12
-        self.lognit = np.log10(self.nit/(14*self.surfh1)) + 12
-        self.logsurfhe = data[self.x:,70] # He4 surf
-        self.surfhe = 10**self.logsurfhe
+        self.ncar = self.car / np.max(self.car)
 
-        self.nith = self.nit/self.surfh1
-        self.oxh = self.ox/self.surfh1
-        self.carh = self.car/self.surfh1
-
+        self.lognit = np.log10(self.nit/(14*self.h1)) + 12
+        self.nith = self.nit/self.h1
+        self.oxh = self.ox/self.h1
+        self.carh = self.car/self.h1
+        
         # ------ Convection ------
         self.normR = self.R / np.max(self.R)
         self.nmass = self.M / np.max(self.M)
@@ -73,6 +82,7 @@ class Data:
         self.nczradius = data[self.x:,28] / self.R
         self.Hecoremass = data[self.x:,30] / self.M * self.nmass
         
+        # Elements
         self.HC = data[self.x:,59] * self.nmass
         self.HeC = data[self.x:,60] * self.nmass
         self.CC = data[self.x:,61] * self.nmass

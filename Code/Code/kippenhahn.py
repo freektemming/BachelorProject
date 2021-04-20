@@ -25,6 +25,9 @@ zams = Structure('../Data/prof_ZAMS.data')
 mid = Structure('../Data/prof_midMS.data')
 tams = Structure('../Data/prof_tams.data')
 
+# ------ Convert Radius To Mass ------
+
+
 # ------ Mass Fractions ------
 def mass(model1,model2):
 
@@ -62,30 +65,33 @@ def mass(model1,model2):
     #ax1.plot(vink01.time[0:lim1], vink01.convective_core[0:lim1], linewidth = 3, color = 'pink', label = 'core')
 
     # ------ Plot Colors ------
-    ims1 = ax1.scatter(BaseZams, zams.normR, c= zams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
-    ims2 = ax1.scatter(BaseMid, mid.normR, c= mid.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
-    ims3 = ax1.scatter(BaseTams, tams.normR, c= tams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims1 = ax1.scatter(BaseZams, zams.normM * model1.nmass[63 - 57], c= zams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims2 = ax1.scatter(BaseMid, mid.normM * model1.nmass[107 - 57], c= mid.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
+    ims3 = ax1.scatter(BaseTams, tams.normM * model1.nmass[200 - 57], c= tams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 5, zorder = 2)
     cbar1 = fig1.colorbar(ims1, ax = ax1)
     cbar1.set_label('Zones')
 
     # ------ Fill Planes ------
     #ax1.fill_between(model1.time[0:lim1], model1.convtop[0:lim1], model1.nmass[0:lim1], alpha = 0.5, color = 'grey', hatch = '///')
-    ax1.fill_between(model1.time[0:lim1], 0, model1.convective_core[0:lim1], alpha = 0.5, color = 'grey', hatch = '///')
-    ax1.fill_between(model1.time[0:lim1], model1.convbot[0:lim1], model1.convtop[0:lim1], alpha = 0.2, color = 'grey', hatch = '///')
-    ax1.fill_between(model1.time[0:lim1], model1.convbot2[0:lim1], model1.convtop2[0:lim1], alpha = 0.2, color = 'grey', hatch = '///')
+    ax1.fill_between(model1.time[0:lim1], 0, model1.convective_core[0:lim1], alpha = 0.4, color = 'grey', hatch = '/')
+    ax1.fill_between(model1.time[0:lim1], model1.convbot2[0:lim1], model1.convtop2[0:lim1], alpha = 0.4, color = 'grey', hatch = '/')
+    ax1.fill_between(model2.time[0:lim2], 0, model2.convective_core[0:lim2], alpha = 0.2, color = 'lime')
+    ax1.fill_between(model2.time[0:lim2], model2.convbot2[0:lim2], model1.convtop2[0:lim2], alpha = 0.2, color = 'lime')
+    #ax1.fill_between(model1.time[0:lim1], model1.convbot[0:lim1], model1.convtop[0:lim1], alpha = 0.2, color = 'grey', hatch = '///')
+
 
     # ------ Text ------
     ax1.text(1.3, 0.2, 'Convective core', fontweight = 'bold')
-    ax1.text(1.3, 0.56, 'Convective mix 1', fontweight = 'bold')
+    #ax1.text(1.3, 0.56, 'Convective mix 1', fontweight = 'bold')
     ax1.text(1.3, 0.9, 'Convective mix 2', fontweight = 'bold')
     # ax1.text(1, 0.8, 'Radiative envelope', fontweight = 'bold')
 
     # ------ Show ------
     #plt.legend(shadow = False, edgecolor = 'k')
     fig1.tight_layout()
-    plt.show()
+    #plt.show()
 
-    #plt.savefig('Plots/Week2/KipMixZones.png')
+    plt.savefig('Plots/Kippenhahn/Kipmodels.png')
 
 mass(vink01, vink18)
 
@@ -134,11 +140,11 @@ def radius(model1,model2):
     # ------ Show ------
     plt.legend(shadow = False, edgecolor = 'k')
     fig1.tight_layout()
-    #plt.savefig('Plots/Week2/KipRadius.png')
+    #plt.savefig('Plots/Kippenhahn/KipRadius.png')
     plt.show()
 
 
-radius(vink01, vink18)
+#radius(vink01, vink18)
 
 # Plot for 2 Kippenhahn diagrams: mass and radius
 def sub(model1, model2):
@@ -217,6 +223,6 @@ def sub(model1, model2):
     #ax2.legend(shadow = False, edgecolor = 'k')
     fig.tight_layout()
     plt.show()
-    #plt.savefig('Plots/Week2/KipSub.png')
+    #plt.savefig('Plots/Kippenhahn/KipSub.png')
 
-sub(vink01, vink18)
+#sub(vink01, vink18)

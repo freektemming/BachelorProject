@@ -10,190 +10,255 @@ import numpy as np
 vink01 = Data('../Data/40M_Vink01_out.data')
 vink18 = Data('../Data/40M_Vink18_out.data')
 
+# limit: ms for main sequence, full evolution: other string
+lim = 'msd'
+
 # ------ Compare 4 variables ------
-def star(model1, model2):
+def star(model1, model2, ms):
+
+    if ms == 'ms':
+        # main sequence limit
+        lim1 = model1.mainsequence()
+        lim2 = model2.mainsequence()
+    else:
+        # full simulation
+        lim1 = len(model1.age)
+        lim2 = len(model1.age)
 
     # ------ Figure ------
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
-    fig.suptitle('Comparison Models', fontweight='bold')
+    
+    if ms == 'ms':
+        fig.suptitle('Main Sequence Results', fontweight='bold')
+        limit = '_ms'
+    else:
+        fig.suptitle('Full Evolution Results', fontweight='bold')
+        limit = ''
 
     # ------ Plot 1 ------
-    ax1.plot(model1.age, model1.M, label = 'Vink01', color = 'navy')
-    ax1.plot(model2.age, model2.M, label = 'Vink18', color = 'darkred')
-    ax1.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax1.plot(model1.age[0:lim1], model1.M[0:lim1], label = 'Vink01', color = 'navy')
+    ax1.plot(model2.age[0:lim2], model2.M[0:lim2], label = 'Vink18', color = 'darkred')
+    ax1.legend(shadow = False, edgecolor = 'k')
     ax1.set_xlabel('Age [Myr]')
     ax1.set_ylabel('Mass [M$_{\odot}$]')
     ax1.set_title('Mass')
     ax1.yaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     # ------ Plot 2 ------
-    ax2.plot(model1.age, model1.logL, label = 'Vink01', color = 'navy')
-    ax2.plot(model2.age, model2.logL, label = 'Vink18', color = 'darkred')
+    ax2.plot(model1.age[0:lim1], model1.logL[0:lim1], label = 'Vink01', color = 'navy')
+    ax2.plot(model2.age[0:lim2], model2.logL[0:lim2], label = 'Vink18', color = 'darkred')
     ax2.set_xlabel('Age [Myr]')
     ax2.set_ylabel('log (L / L$_{\odot}$)')
     ax2.set_title('Luminosity')
-    ax2.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax2.legend(shadow = False, edgecolor = 'k')
 
     # ------ Plot 3 ------
-    ax3.plot(model1.age, model1.Teff, label = 'Vink01', color = 'navy')
-    ax3.plot(model2.age, model2.Teff, label = 'Vink18', color = 'darkred')
-    ax3.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax3.plot(model1.age[0:lim1], model1.Teff[0:lim1], label = 'Vink01', color = 'navy')
+    ax3.plot(model2.age[0:lim2], model2.Teff[0:lim2], label = 'Vink18', color = 'darkred')
+    ax3.legend(shadow = False, edgecolor = 'k')
     ax3.set_xlabel('Age [Myr]')
     ax3.set_ylabel('Teff [kK]')
     ax3.set_title('Effective Temperature')
 
     # ------ Plot 4 ------
-    ax4.plot(model1.age, model1.R, label = 'Vink01', color = 'navy')
-    ax4.plot(model2.age, model2.R, label = 'Vink18', color = 'darkred')
-    ax4.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax4.plot(model1.age[0:lim1], model1.R[0:lim1], label = 'Vink01', color = 'navy')
+    ax4.plot(model2.age[0:lim2], model2.R[0:lim2], label = 'Vink18', color = 'darkred')
+    ax4.legend(shadow = False, edgecolor = 'k')
     ax4.set_xlabel('Age [Myr]')
     ax4.set_ylabel('Radius [R$_{\odot}$]')
     ax4.set_title('Radius')
     
     plt.tight_layout()
-    plt.savefig('Plots/subplot.png')
+    plt.savefig(f'Plots/Week1/Subplots/subplot{limit}.png')
 
-star(vink01, vink18)
+star(vink01, vink18, lim)
 
 # ------ Elements ------
-def elements(model1, model2):
+def elements(model1, model2, ms):
+
+    if ms == 'ms':
+        # main sequence limit
+        lim1 = model1.mainsequence()
+        lim2 = model2.mainsequence()
+    else:
+        # full simulation
+        lim1 = len(model1.age)
+        lim2 = len(model1.age)
 
     # ------ Figure ------
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
-    fig.suptitle('Comparison Models', fontweight='bold')
+    
+    if ms == 'ms':
+        fig.suptitle('Main Sequence Results', fontweight='bold')
+        limit = '_ms'
+    else:
+        fig.suptitle('Full Evolution Results', fontweight='bold')
+        limit = ''
 
     # ------ Plot 1 ------
-    ax1.plot(model1.age, model1.car, label = 'Vink01', color = 'navy')
-    ax1.plot(model2.age, model2.car, label = 'Vink18', color = 'darkred')
-    ax1.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax1.plot(model1.age[0:lim1], model1.nh1[0:lim1], label = 'Vink01', color = 'navy')
+    ax1.plot(model2.age[0:lim2], model2.nh1[0:lim2], label = 'Vink18', color = 'darkred')
+    ax1.legend(shadow = False, edgecolor = 'k')
     ax1.set_xlabel('Age [Myr]')
-    ax1.set_ylabel('')
-    ax1.set_title('Carbon')
+    ax1.set_ylabel('H/H$_{\star}$')
+    ax1.set_title('Surface Hydrogen')
     ax1.yaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     # ------ Plot 2 ------
-    ax2.plot(model1.age, model1.nit, label = 'Vink01', color = 'navy')
-    ax2.plot(model2.age, model2.nit, label = 'Vink18', color = 'darkred')
+    ax2.plot(model1.age[0:lim1], model1.ncar[0:lim1], label = 'Vink01', color = 'navy')
+    ax2.plot(model2.age[0:lim2], model2.ncar[0:lim2], label = 'Vink18', color = 'darkred')
     ax2.set_xlabel('Age [Myr]')
-    ax2.set_ylabel('')
-    ax2.set_title('Nitrogen')
-    ax2.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax2.set_ylabel('C/C$_{\star}$')
+    ax2.set_title('Surface Carbon')
+    ax2.legend(shadow = False, edgecolor = 'k')
 
     # ------ Plot 3 ------
-    ax3.plot(model1.age, model1.ox, label = 'Vink01', color = 'navy')
-    ax3.plot(model2.age, model2.ox, label = 'Vink18', color = 'darkred')
-    ax3.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax3.plot(model1.age[0:lim1], model1.nnit[0:lim1], label = 'Vink01', color = 'navy')
+    ax3.plot(model2.age[0:lim2], model2.nnit[0:lim2], label = 'Vink18', color = 'darkred')
+    ax3.legend(shadow = False, edgecolor = 'k')
     ax3.set_xlabel('Age [Myr]')
-    ax3.set_ylabel('')
-    ax3.set_title('Oxigen')
+    ax3.set_ylabel('N/N$_{\star}$')
+    ax3.set_title('Surface Nitrogen')
 
     # ------ Plot 4 ------
-    ax4.plot(model1.age, model1.surfh1, label = 'Vink01', color = 'navy')
-    ax4.plot(model2.age, model2.surfh1, label = 'Vink18', color = 'darkred')
-    ax4.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax4.plot(model1.age[0:lim1], model1.nox[0:lim1], label = 'Vink01', color = 'navy')
+    ax4.plot(model2.age[0:lim2], model2.nox[0:lim2], label = 'Vink18', color = 'darkred')
+    ax4.legend(shadow = False, edgecolor = 'k')
     ax4.set_xlabel('Age [Myr]')
-    ax4.set_ylabel('')
-    ax4.set_title('Surface H')
+    ax4.set_ylabel('O/O$_{\star}$')
+    ax4.set_title('Surface Oxigen')
     
     plt.tight_layout()
-    plt.savefig('Plots/elements.png')
+    plt.savefig(f'Plots/Week1/Subplots/elements{limit}.png')
 
-elements(vink01, vink18)
+elements(vink01, vink18, lim)
 
 # ------ Rotation ------
-def rotation(model1, model2):
+def rotation(model1, model2, ms):
+
+    if ms == 'ms':
+        # main sequence limit
+        lim1 = model1.mainsequence()
+        lim2 = model2.mainsequence()
+    else:
+        # full simulation
+        lim1 = len(model1.age)
+        lim2 = len(model1.age)
 
     # ------ Figure ------
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
-    fig.suptitle('Comparison Models', fontweight='bold')
+
+    if ms == 'ms':
+        fig.suptitle('Main Sequence Results', fontweight='bold')
+        limit = '_ms'
+    else:
+        fig.suptitle('Full Evolution Results', fontweight='bold')
+        limit = ''
 
     # ------ Plot 1 ------
-    ax1.plot(model1.age, model1.vrot, label = 'Vink01', color = 'navy')
-    ax1.plot(model2.age, model2.vrot, label = 'Vink18', color = 'darkred')
-    ax1.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax1.plot(model1.age[0:lim1], model1.vrot[0:lim1], label = 'Vink01', color = 'navy')
+    ax1.plot(model2.age[0:lim2], model2.vrot[0:lim2], label = 'Vink18', color = 'darkred')
+    ax1.legend(shadow = False, edgecolor = 'k')
     ax1.set_xlabel('Age [Myr]')
     ax1.set_ylabel('')
     ax1.set_title('Rotational Velocity')
     ax1.yaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     # ------ Plot 2 ------
-    ax2.plot(model1.age, model1.Jtot, label = 'Vink01', color = 'navy')
-    ax2.plot(model2.age, model2.Jtot, label = 'Vink18', color = 'darkred')
+    ax2.plot(model1.age[0:lim1], model1.Jtot[0:lim1], label = 'Vink01', color = 'navy')
+    ax2.plot(model2.age[0:lim2], model2.Jtot[0:lim2], label = 'Vink18', color = 'darkred')
     ax2.set_xlabel('Age [Myr]')
     ax2.set_ylabel('')
     ax2.set_title('Total Angular Momentum')
-    ax2.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax2.legend(shadow = False, edgecolor = 'k')
 
     # ------ Plot 3 ------
-    ax3.plot(model1.age, model1.Omega, label = 'Vink01', color = 'navy')
-    ax3.plot(model2.age, model2.Omega, label = 'Vink18', color = 'darkred')
-    ax3.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax3.plot(model1.age[0:lim1], model1.Omega[0:lim1], label = 'Vink01', color = 'navy')
+    ax3.plot(model2.age[0:lim2], model2.Omega[0:lim2], label = 'Vink18', color = 'darkred')
+    ax3.legend(shadow = False, edgecolor = 'k')
     ax3.set_xlabel('Age [Myr]')
     ax3.set_ylabel('')
     ax3.set_title('Omega')
 
     # ------ Plot 4 ------
-    ax4.plot(model1.age, model1.period, label = 'Vink01', color = 'navy')
-    ax4.plot(model2.age, model2.period, label = 'Vink18', color = 'darkred')
-    ax4.legend(fancybox = True, scatterpoints = 1, labelspacing = 1, shadow=True)
+    ax4.plot(model1.age[0:lim1], model1.period[0:lim1], label = 'Vink01', color = 'navy')
+    ax4.plot(model2.age[0:lim2], model2.period[0:lim2], label = 'Vink18', color = 'darkred')
+    ax4.legend(shadow = False, edgecolor = 'k')
     ax4.set_xlabel('Age [Myr]')
     ax4.set_ylabel('')
     ax4.set_title('Period')
     
     plt.tight_layout()
-    plt.savefig('Plots/rotation.png')
+    plt.savefig(f'Plots/Week1/Subplots/rotation{limit}.png')
 
-rotation(vink01, vink18)
+rotation(vink01, vink18, lim)
 
 # ------ Histograms ------
-def histogram(model1, model2):
+def histogram(model1, model2, ms):
+
+    if ms == 'ms':
+        # main sequence limit
+        lim1 = model1.mainsequence()
+        lim2 = model2.mainsequence()
+    else:
+        # full simulation
+        lim1 = len(model1.age)
+        lim2 = len(model1.age)
+
 
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2)
+    
+    if ms == 'ms':
+        fig.suptitle('Main Sequence Results', fontweight='bold')
+        limit = '_ms'
+    else:
+        fig.suptitle('Full Evolution Results', fontweight='bold')
+        limit = ''
 
     # ------ Hist 1 ------
-    ax1.bar(2, model1.M[len(model1.M)-1], 1, label='vink01', color = 'navy')
-    ax1.bar(3, model2.M[len(model2.M)-1], 1, label='vink18', color = 'darkred')
+    ax1.bar(2, model1.M[len(model1.M[0:lim1])-1], 1, label='vink01', color = 'navy')
+    ax1.bar(3, model2.M[len(model2.M[0:lim2])-1], 1, label='vink18', color = 'darkred')
     ax1.set_xlim(0,7)
     ax1.set_xticks([2,3])
     ax1.set_xticklabels(['', ''])
     ax1.set_ylabel('Mass M$_{\odot}$')
     ax1.set_title('Mass')
-    ax1.legend()
+    ax1.legend(shadow = False, edgecolor = 'k')
 
     # ------ Hist 2 ------
-    ax2.bar(2, model1.R[len(model1.R)-1], 1, label='vink01', color = 'navy')
-    ax2.bar(3, model2.R[len(model2.R)-1], 1, label='vink18', color = 'darkred')
+    ax2.bar(2, model1.R[len(model1.R[0:lim1])-1], 1, label='vink01', color = 'navy')
+    ax2.bar(3, model2.R[len(model2.R[0:lim2])-1], 1, label='vink18', color = 'darkred')
     ax2.set_xlim(0,7)
     ax2.set_xticks([2,3])
     ax2.set_xticklabels(['', ''])
     ax2.set_ylabel('Radius R$_{\odot}$')
     ax2.set_title('Radius')
-    ax2.legend()
+    ax2.legend(shadow = False, edgecolor = 'k')
 
     # ------ Hist 3 ------
-    ax3.bar(2, model1.Teff[len(model1.Teff)-1], 1, label='vink01', color = 'navy')
-    ax3.bar(3, model2.Teff[len(model2.Teff)-1], 1, label='vink18', color = 'darkred')
+    ax3.bar(2, model1.Teff[len(model1.Teff[0:lim1])-1], 1, label='vink01', color = 'navy')
+    ax3.bar(3, model2.Teff[len(model2.Teff[0:lim2])-1], 1, label='vink18', color = 'darkred')
     ax3.set_xlim(0,7)
     ax3.set_xticks([2,3])
     ax3.set_xticklabels(['', ''])
     ax3.set_ylabel('Teff')
     ax3.set_title('Effective Temperature')
-    ax3.legend()
+    ax3.legend(shadow = False, edgecolor = 'k')
 
     # ------ Hist 4 ------
-    ax4.bar(2, model1.logL[len(model1.logL)-1], 1, label='vink01', color = 'navy')
-    ax4.bar(3, model2.logL[len(model2.logL)-1], 1, label='vink18', color = 'darkred')
+    ax4.bar(2, model1.logL[len(model1.logL[0:lim1])-1], 1, label='vink01', color = 'navy')
+    ax4.bar(3, model2.logL[len(model2.logL[0:lim2])-1], 1, label='vink18', color = 'darkred')
     ax4.set_xlim(0,7)
     ax4.set_xticks([2,3])
     ax4.set_xticklabels(['', ''])
     ax4.set_ylabel('LogL')
     ax4.set_title('Luminosity')
-    ax4.legend()
+    ax4.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
-    plt.savefig('Plots/histogram.png')
+    plt.savefig(f'Plots/Week1/Subplots/histogram{limit}.png')
 
-histogram(vink01, vink18)
+histogram(vink01, vink18, lim)
 
 # ------ Plot difference between 2 variables ------
 def difference(model1,model2, var):
@@ -208,8 +273,8 @@ def difference(model1,model2, var):
         variable2 = model2.vrot
 
     if var == 3:
-        variable1 = model1.surfh1
-        variable2 = model2.surfh1
+        variable1 = model1.h1
+        variable2 = model2.h1
 
     if var == 4:
         variable1 = model1.R
@@ -279,6 +344,6 @@ def difplot(model1,model2):
     ax4.yaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     fig.tight_layout()
-    plt.savefig('Plots/difference.png')
+    plt.savefig('Plots/Week1/Subplots/difference.png')
 
 difplot(vink01,vink18)

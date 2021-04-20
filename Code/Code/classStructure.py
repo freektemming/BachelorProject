@@ -30,6 +30,8 @@ class Structure:
         self.normlogR = self.logR / np.max(self.logR)
         self.R = data2[:,18]
         self.normR = self.R / np.max(self.R)
+        self.M = data2[:,62]
+        self.normM = self.M / np.max(self.M)
 
         self.mixtype = data2[:,8]
         self.zone = data2[:,0]
