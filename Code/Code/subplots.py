@@ -1,22 +1,24 @@
 # Multiple supblots / histograms to compare variables from different models
 
-from classData import Data
+from data import *
+from plots import *
+from plotstyles import *
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 
-# ------ Models ------
-vink01 = Data('../Data/40M_Vink01_out.data')
-vink18 = Data('../Data/40M_Vink18_out.data')
 
-# limit: ms for main sequence, full evolution: other string
-lim = 'msd'
+# limit: True for main sequense
+lim = False
 
 # ------ Compare 4 variables ------
 def star(model1, model2, ms):
 
-    if ms == 'ms':
+    # ------ Set Plot Style ------
+    default_style()
+
+    if ms == True:
         # main sequence limit
         lim1 = model1.mainsequence()
         lim2 = model2.mainsequence()
@@ -71,12 +73,15 @@ def star(model1, model2, ms):
     plt.tight_layout()
     plt.savefig(f'Plots/Week1/Subplots/subplot{limit}.png')
 
-star(vink01, vink18, lim)
+star(vink01, vink18, ms = lim)
 
 # ------ Elements ------
 def elements(model1, model2, ms):
 
-    if ms == 'ms':
+    # ------ Set Plot Style ------
+    default_style()
+
+    if ms == True:
         # main sequence limit
         lim1 = model1.mainsequence()
         lim2 = model2.mainsequence()
@@ -88,7 +93,7 @@ def elements(model1, model2, ms):
     # ------ Figure ------
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
     
-    if ms == 'ms':
+    if ms == True:
         fig.suptitle('Main Sequence Results', fontweight='bold')
         limit = '_ms'
     else:
@@ -131,12 +136,15 @@ def elements(model1, model2, ms):
     plt.tight_layout()
     plt.savefig(f'Plots/Week1/Subplots/elements{limit}.png')
 
-elements(vink01, vink18, lim)
+elements(vink01, vink18, ms = lim)
 
 # ------ Rotation ------
 def rotation(model1, model2, ms):
 
-    if ms == 'ms':
+    # ------ Set Plot Style ------
+    default_style()
+
+    if ms == True:
         # main sequence limit
         lim1 = model1.mainsequence()
         lim2 = model2.mainsequence()
@@ -148,7 +156,7 @@ def rotation(model1, model2, ms):
     # ------ Figure ------
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
 
-    if ms == 'ms':
+    if ms == True:
         fig.suptitle('Main Sequence Results', fontweight='bold')
         limit = '_ms'
     else:
@@ -191,12 +199,15 @@ def rotation(model1, model2, ms):
     plt.tight_layout()
     plt.savefig(f'Plots/Week1/Subplots/rotation{limit}.png')
 
-rotation(vink01, vink18, lim)
+rotation(vink01, vink18, ms = lim)
 
 # ------ Histograms ------
 def histogram(model1, model2, ms):
 
-    if ms == 'ms':
+    # ------ Set Plot Style ------
+    histogramstyle()
+
+    if ms == True:
         # main sequence limit
         lim1 = model1.mainsequence()
         lim2 = model2.mainsequence()
@@ -208,7 +219,7 @@ def histogram(model1, model2, ms):
 
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2)
     
-    if ms == 'ms':
+    if ms == True:
         fig.suptitle('Main Sequence Results', fontweight='bold')
         limit = '_ms'
     else:
@@ -258,7 +269,7 @@ def histogram(model1, model2, ms):
     fig.tight_layout()
     plt.savefig(f'Plots/Week1/Subplots/histogram{limit}.png')
 
-histogram(vink01, vink18, lim)
+histogram(vink01, vink18, ms = lim)
 
 # ------ Plot difference between 2 variables ------
 def difference(model1,model2, var):
@@ -304,6 +315,9 @@ def difference(model1,model2, var):
     return DifferenceList, steps
     
 def difplot(model1,model2):
+
+    # ------ Set Plot Style ------
+    default_style()
 
     # get x-lists and differences
     dif1, steps1 = difference(model1,model2,1)

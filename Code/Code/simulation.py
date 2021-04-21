@@ -1,9 +1,9 @@
 # Script to make simulation
 
-from classData import Data
-#from plotset import *
+from data import *
+from plots import *
+from plotstyles import *
 import matplotlib.pyplot as plt
-
 import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter
 import numpy as np
@@ -12,9 +12,6 @@ from scipy import interpolate
 import os
 import imageio
 
-# ------ Models ------
-vink01 = Data('../Data/40M_Vink01_out.data')
-vink18 = Data('../Data/40M_Vink18_out.data')
 
 # ------ Interpolate model to same age list so steps are equal ------
 # model = model from which variables are checked
@@ -34,6 +31,9 @@ def interpol(model, varX, varY):
 
 # ------ Plot 2 stars ------
 def circles(model1,model2):
+
+    # ------ Plot Style ------
+    default_style()
 
     # ------ Files for GIF ------
     files = []

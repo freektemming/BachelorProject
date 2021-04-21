@@ -46,29 +46,6 @@ class Data:
         self.logg = data[self.x:,14]
         self.g = 10**self.logg
 
-        # ------ Elements ------
-        self.centerc = data[self.x:,61] # c12
-        self.centernit = data[self.x:,62] # N14
-
-        # surface
-        self.logh1 = data[self.x:,69]
-        self.h1 = pow(10,self.logh1)
-        self.nh1 = self.h1 / np.max(self.h1)
-        self.loghe = data[self.x:,70] # He4 surf
-        self.he = 10**self.loghe
-        self.nhe = self.he / np.max(self.he)
-        self.nit = data[self.x:,66] # N14
-        self.nnit = self.nit / np.max(self.nit)
-        self.ox = data[self.x:,67] # O16
-        self.nox = self.ox / np.max(self.ox)
-        self.car = data[self.x:,65]  # C12
-        self.ncar = self.car / np.max(self.car)
-
-        self.lognit = np.log10(self.nit/(14*self.h1)) + 12
-        self.nith = self.nit/self.h1
-        self.oxh = self.ox/self.h1
-        self.carh = self.car/self.h1
-        
         # ------ Convection ------
         self.normR = self.R / np.max(self.R)
         self.nmass = self.M / np.max(self.M)
@@ -83,11 +60,11 @@ class Data:
         self.Hecoremass = data[self.x:,30] / self.M * self.nmass
         
         # Elements
-        self.HC = data[self.x:,59] * self.nmass
-        self.HeC = data[self.x:,60] * self.nmass
-        self.CC = data[self.x:,61] * self.nmass
-        self.NC = data[self.x:,62] * self.nmass
-        self.OC = data[self.x:,63] * self.nmass
+        self.HC = data[self.x:,59] * self.nmass # fraction of core mass
+        self.HeC = data[self.x:,60] * self.nmass # fraction of core mass
+        self.CC = data[self.x:,61] * self.nmass # fraction of core mass
+        self.NC = data[self.x:,62] * self.nmass # fraction of core mass
+        self.OC = data[self.x:,63] * self.nmass # fraction of core mass
         
         self.convbot = data[self.x:,39] * self.nmass # conv mix 1 m/Mstar
         self.convtop = data[self.x,38] * self.nmass # conv mix 1 m/Mstar
@@ -97,6 +74,48 @@ class Data:
         self.bot = data[self.x:,43] * self.nmass # mix 1 m/Mstar
 
         self.logconvbot = np.log10(self.convbot)
+
+        # ------ Elements ------
+        self.centerc = data[self.x:,61] # c12
+        self.centernit = data[self.x:,62] # N14
+
+        # total mass
+        self.toth1 = data[self.x:,71]
+        self.ntoth1 = self.toth1 / np.max(self.M) * self.nmass
+        self.tothe = data[self.x:,72]
+        self.ntothe = self.tothe / np.max(self.M) * self.nmass
+
+        # surface
+        self.logh1 = data[self.x:,69]
+        self.h1 = pow(10,self.logh1)
+        self.nh1 = self.h1 / np.max(self.M) * self.nmass
+        self.loghe = data[self.x:,70] # He4 surf
+        self.he = 10**self.loghe
+        self.nhe = self.he / np.max(self.M) * self.nmass
+        self.nit = data[self.x:,66] # N14
+        self.nnit = self.nit / np.max(self.M) * self.nmass
+        self.ox = data[self.x:,67] # O16
+        self.nox = self.ox / np.max(self.M) * self.nmass
+        self.car = data[self.x:,65]  # C12
+        self.ncar = self.car / np.max(self.M) * self.nmass
+
+        self.lognit = np.log10(self.nit/(14*self.h1)) + 12
+        self.nith = self.nit/self.h1
+        self.oxh = self.ox/self.h1
+        self.carh = self.car/self.h1
+
+        self.botsurfh1 = self.ntoth1 - self.nh1
+        self.botsurfhe = self.ntothe - self.nhe
+
+        # kippenhahn
+        self.nhemin = []
+        for i in range(len(self.nhe)):
+            self.nhemin.append(self.nmass[i]-self.nhe[i])
+
+        self.ntotheminsurf = self.ntothe - self.nhe
+        self.ntotheminsurfmin = []
+        for i in range(len(self.ntotheminsurf)):
+            self.ntotheminsurfmin.append(self.nmass[i]-self.ntotheminsurf[i])
 
         # ------ Rotation ------
         self.vrot = data[self.x:,22]
