@@ -14,7 +14,7 @@ def HRD():
     ax.set_xlim(51,2)
     ax.set_xlabel('T$_{\mathregular{eff}}$ [kK]')
     ax.set_ylabel('log (L / L$_{\odot}$)')
-    ax.set_title('Both Models')
+    ax.set_title('Herzsprung Russell Diagram')
 
     return fig, ax, colormap
 
@@ -22,7 +22,7 @@ def subHRD():
 
     colormap = plt.cm.plasma
     fig, (ax1, ax2) = plt.subplots(2)
-    fig.suptitle('HRD 2 Models')
+    fig.suptitle('Herzsprung Russell Diagram')
 
     ax1.set_xlim(51,2)
     ax1.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
@@ -76,7 +76,7 @@ def hunter():
     
     ax.set_xlabel('V$_{\mathregular{rot}}$')
     ax.set_ylabel('N/N$_{\star}$')
-    ax.set_title('Hunter')
+    ax.set_title('Surface Nitrogen')
 
     return fig, ax, colormap
     
@@ -93,5 +93,27 @@ def kippenhahn():
     #ax.set_xticks([0.0648,3.12,4.76])
     #ax.set_xticklabels(['Zams', 'Mid','Tams'])
     ax.set_xlabel('Time [Myr]')
+
+    return fig, ax, colormap
+
+def HHe():
+
+    colormap = plt.cm.plasma
+    fig, ax = plt.subplots(1,1)
+
+    ax.set_xlabel('Core Hydrogen')
+    ax.set_ylabel('Core Helium')
+    ax.set_title('Hydrogen and Helium')
+
+    return fig, ax, colormap
+
+def HeC():
+
+    colormap = plt.cm.plasma
+    fig, ax = plt.subplots(1,1)
+
+    ax.set_xlabel('Core Helium')
+    ax.set_ylabel('Core Carbon')
+    ax.set_title('Helium and Carbon')
 
     return fig, ax, colormap

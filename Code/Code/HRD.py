@@ -47,10 +47,10 @@ def hrd(model1, model2, ms):
     ax.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
-    #plt.savefig(f'Plots/HRD{limit}.png')
-    plt.show()
+    plt.savefig(f'Plots/Week1/HRD{limit}.png')
+    #plt.show()
 
-hrd(vink01, vink18, ms=True)
+hrd(vink01, vink18, ms=False)
 
 # ------ Plot multiple HRD ------
 def subhrd(model1, model2):
@@ -79,7 +79,7 @@ def subhrd(model1, model2):
     cbar.set_label('Age [Myr]')
 
     fig.tight_layout()
-    #plt.savefig('Plots/HRD-sub.png')
-    plt.show()
+    plt.savefig('Plots/Week1/HRD-sub.png')
+    #plt.show()
 
-#subhrd(vink01, vink18)
+subhrd(vink01, vink18)

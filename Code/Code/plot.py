@@ -13,7 +13,7 @@ def plot(model1, model2, ms):
 
     # ------ Set Plot Style ------
     default_style()
-    fig, ax, colormap = vescape()
+    fig, ax, colormap = HeC()
 
     if ms == True:
         # main sequence limit
@@ -35,18 +35,18 @@ def plot(model1, model2, ms):
         limit = ''
 
     # plot line
-    ax.plot(model1.vesc[0:lim1], model1.Mdot[0:lim1], lw = 1, linestyle = 'solid', color = 'black', label= 'vink01')
-    ax.plot(model2.vesc[0:lim2], model2.Mdot[0:lim2], lw = 1, linestyle = 'dashed', color = 'black', label= 'vink18')
+    ax.plot(model1.HeC[0:lim1], model1.CC[0:lim1], lw = 1, linestyle = 'solid', color = 'black', label= 'vink01')
+    ax.plot(model2.HeC[0:lim2], model2.CC[0:lim2], lw = 1, linestyle = 'dashed', color = 'black', label= 'vink18')
     
     # plot colors
-    ims1 = ax.scatter(model1.vesc[0:lim1], model1.Mdot[0:lim1], c= model1.age[0:lim1], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
-    ims2 = ax.scatter(model2.vesc[0:lim2], model2.Mdot[0:lim2], c= model2.age[0:lim2], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min2, vmax = max2)
+    ims1 = ax.scatter(model1.HeC[0:lim1], model1.CC[0:lim1], c= model1.age[0:lim1], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    ims2 = ax.scatter(model2.HeC[0:lim2], model2.CC[0:lim2], c= model2.age[0:lim2], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min2, vmax = max2)
     cbar1 = fig.colorbar(ims1, ax = ax)
     cbar1.set_label('Age [Myr]')
     ax.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
     #plt.show()
-    plt.savefig(f'Plots/Week1/Vescape{limit}.png')
+    plt.savefig(f'Plots/Week1/He&Car{limit}.png')
 
-plot(vink01, vink18, ms=True)
+plot(vink01, vink18, ms=False)
