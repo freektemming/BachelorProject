@@ -89,15 +89,20 @@ class Data:
         self.logh1 = data[self.x:,69]
         self.h1 = pow(10,self.logh1)
         self.nh1 = self.h1 / np.max(self.M) * self.nmass
+        self.lognh1 = np.log10(self.nh1)
         self.loghe = data[self.x:,70] # He4 surf
         self.he = 10**self.loghe
         self.nhe = self.he / np.max(self.M) * self.nmass
+        self.lognhe = np.log10(self.nhe)
         self.nit = data[self.x:,66] # N14
         self.nnit = self.nit / np.max(self.M) * self.nmass
+        self.lognnit = np.log10(self.nnit)
         self.ox = data[self.x:,67] # O16
         self.nox = self.ox / np.max(self.M) * self.nmass
+        self.lognox = np.log10(self.nox)
         self.car = data[self.x:,65]  # C12
         self.ncar = self.car / np.max(self.M) * self.nmass
+        self.logncar = np.log10(self.ncar)
 
         self.lognit = np.log10(self.nit/(14*self.h1)) + 12
         self.nith = self.nit/self.h1
