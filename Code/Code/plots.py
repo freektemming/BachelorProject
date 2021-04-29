@@ -85,7 +85,7 @@ def hunter(mass):
     fig, ax = plt.subplots(1,1)
     
     ax.set_xlabel('V$_{\mathregular{rot}}$ [km / s]')
-    ax.set_ylabel('N/N$_{\star}$')
+    ax.set_ylabel('log (N/N$_{\star}$)')
     ax.set_title(f'Surface Nitrogen of {mass} Solar Mass Stars')
 
     return fig, ax, colormap
