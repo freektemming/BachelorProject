@@ -19,10 +19,6 @@ class Structure:
 
     def __init__(self,data):
         
-        # data with third row
-        #data1 = np.genfromtxt(data)
-        #self.age = data1[2,4]
-
         # data with six rows skipped
         data2 = np.genfromtxt(data,skip_header=6)
 
@@ -36,3 +32,22 @@ class Structure:
         self.mixtype = data2[:,8]
         self.zone = data2[:,0]
         self.mlt = data2[:,35]
+
+        self.datatest = data
+
+    # open data again (first rows) and get age of star
+    def age(self):
+        # data with third row
+        data_top = np.genfromtxt(self.datatest, max_rows=3)
+        self.age = data_top[2,4] / 10**6
+        self.age = float(self.age)
+        self.age = round(self.age,2)
+        return self.age
+    
+    # open data again (first rows) and get model number of star
+    def model(self):
+        # data with third row
+        data_top = np.genfromtxt(self.datatest, max_rows=3)
+        self.model = data_top[2,0]
+        self.model = int(self.model)
+        return self.model

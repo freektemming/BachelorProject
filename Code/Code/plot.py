@@ -46,7 +46,7 @@ def plot(model1, model2, ms):
     ax.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
-    #plt.show()
-    plt.savefig(f'Plots/Week1/He&Car{limit}.png')
+    plt.show()
+    #plt.savefig(f'Plots/Week1/He&Car{limit}.png')
 
-plot(vink01, vink18, ms=False)
+plot(vink1_20, vink18, ms=False)

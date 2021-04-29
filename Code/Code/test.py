@@ -35,4 +35,9 @@ def interpol(model1, model2):
     plt.plot(xnew2, ynew2, 'o')
     plt.show()
 
-interpol(vink01, vink18)
+#interpol(vink01, vink18)
+
+vink = vink01_20
+test = vink.x
+print(test)
+print(type(test))

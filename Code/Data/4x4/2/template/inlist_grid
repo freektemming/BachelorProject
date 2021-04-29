@@ -1,0 +1,21 @@
+
+&star_job
+
+      ! changing 
+      extras_cpar(1) =
+
+/ ! end of star_job namelist
+
+&controls
+
+      ! changing 
+      initial_mass = 
+               
+/ ! end of controls namelist
+
+
+&pgstar
+         
+
+
+/ ! end of pgstar namelist

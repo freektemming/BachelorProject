@@ -6,35 +6,45 @@ import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 
-def HRD():
+def HRD(model):
 
     colormap = plt.cm.plasma
     fig, ax = plt.subplots(1,1)
 
-    ax.set_xlim(51,2)
+    ax.set_xlim(55,2)
     ax.set_xlabel('T$_{\mathregular{eff}}$ [kK]')
     ax.set_ylabel('log (L / L$_{\odot}$)')
-    ax.set_title('Herzsprung Russell Diagram')
+    ax.set_title(f'Herzsprung Russell Diagram: {model}')
 
     return fig, ax, colormap
 
 def subHRD():
 
     colormap = plt.cm.plasma
-    fig, (ax1, ax2) = plt.subplots(2)
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2)
     fig.suptitle('Herzsprung Russell Diagram')
 
-    ax1.set_xlim(51,2)
+    ax1.set_xlim(60,2)
     ax1.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
     ax1.set_ylabel('log (L / L$_{\odot}$)')
-    ax1.set_title('Vink01')
+    ax1.set_title('Vink 01')
 
-    ax2.set_xlim(51,2)
+    ax2.set_xlim(60,2)
     ax2.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
     ax2.set_ylabel('log (L / L$_{\odot}$)')
-    ax2.set_title('Vink18')
+    ax2.set_title('Vink 18')
 
-    return fig, ax1, ax2, colormap
+    ax3.set_xlim(60,2)
+    ax3.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
+    ax3.set_ylabel('log (L / L$_{\odot}$)')
+    ax3.set_title('Leuven')
+
+    ax4.set_xlim(60,2)
+    ax4.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
+    ax4.set_ylabel('log (L / L$_{\odot}$)')
+    ax4.set_title('Krticka')
+
+    return fig, ((ax1, ax2), (ax3, ax4)), colormap
 
 def vescape():
     
@@ -58,37 +68,45 @@ def LvsMdot():
 
     return fig, ax, colormap
 
-def hunterNH():
+def hunterNH(mass):
 
     colormap = plt.cm.plasma
     fig, ax = plt.subplots(1,1)
     
-    ax.set_xlabel('V$_{\mathregular{rot}}$')
+    ax.set_xlabel('V$_{\mathregular{rot}}$ [km / s]')
     ax.set_ylabel('log (N / H) + 12')
-    ax.set_title('Hunter')
+    ax.set_title(f'Hunter Diagram of {mass} Solar Mass Stars')
 
     return fig, ax, colormap
 
-def hunter():
+def hunter(mass):
 
     colormap = plt.cm.plasma
     fig, ax = plt.subplots(1,1)
     
-    ax.set_xlabel('V$_{\mathregular{rot}}$')
+    ax.set_xlabel('V$_{\mathregular{rot}}$ [km / s]')
     ax.set_ylabel('N/N$_{\star}$')
-    ax.set_title('Surface Nitrogen')
+    ax.set_title(f'Surface Nitrogen of {mass} Solar Mass Stars')
 
     return fig, ax, colormap
     
-def kippenhahn():
+def kippenhahn(number, mass):
     
     colormap = plt.cm.cividis_r
     colormap = plt.cm.cubehelix
     fig, ax = plt.subplots(1,1)
 
+    if number == '1':
+        model = 'Vink 01 Model'
+    if number == '2':
+        model = 'Vink 18 Model'
+    if number == '3':
+        model = 'Leuven Model'
+    if number == '4':
+        model = 'Krticka Model'
 
     ax.set_ylabel('m / M$_{\star}$')
-    ax.set_title('Kippenhahn Diagram Mass')
+    ax.set_title(f'Mass Fractions {model}: {mass}M''$_{\odot}$')
 
     #ax.set_xticks([0.0648,3.12,4.76])
     #ax.set_xticklabels(['Zams', 'Mid','Tams'])

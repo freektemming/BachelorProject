@@ -158,15 +158,15 @@ def circles(model1,model2):
         plt.close()
 
         # ------ GIF ------
-        filename = f'Plots/GIF/{i}.png'
-        files.append(filename)
-        plt.savefig(f'{filename}')
+        # filename = f'Plots/GIF/{i}.png'
+        # files.append(filename)
+        # plt.savefig(f'{filename}')
         
-        plt.close()
-        print(xInterpol1[i])
+        # plt.close()
+        # print(xInterpol1[i])
 
     # ------ Make GIF From Saved Files ------
-    # with imageio.get_writer('Plots/simulation.gif', mode='I') as writer:
+    # with imageio.get_writer('Plots/simulation2.gif', mode='I') as writer:
     #     for filename in files:
     #         image = imageio.imread(filename)
     #         writer.append_data(image)

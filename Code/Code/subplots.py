@@ -107,7 +107,7 @@ def elements(model1, model2, ms):
     ax1.set_xlabel('Age [Myr]')
     ax1.set_ylabel('H/H$_{\star}$')
     ax1.set_title('Surface Hydrogen')
-    ax1.yaxis.set_major_formatter(FormatStrFormatter('%d'))
+    #ax1.yaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     # ------ Plot 2 ------
     ax2.plot(model1.age[0:lim1], model1.ncar[0:lim1], label = 'Vink01', color = 'navy')

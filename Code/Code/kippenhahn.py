@@ -56,6 +56,135 @@ def multicolor_ylabel(ax,list_of_strings,list_of_colors,axis='x',anchorpad=0,**k
         ax.add_artist(anchored_ybox)
 
 
+# ------ Mass Fractions and Convection ------
+def massconv(model, zams, mid, tams, number, mass, ms):
+
+    if ms == True:
+        # main sequence limit
+        lim = model.mainsequence()
+        limit = '_ms'
+        folder = 'MainSequence'
+    else:
+        # full simulation
+        lim = len(model.age)
+        limit = ''
+        folder = 'FullSimulation'
+
+    # ------ Set Plot Style ------
+    default_style()
+    fig, ax, colormap = kippenhahn(number, mass)
+
+    # list for x-axis structure plot
+    baseZ = zams.age()
+    baseM = mid.age()
+    baseT = tams.age()
+
+    BaseZams = [baseZ] * len(zams.normR)
+    BaseMid = [baseM] * len(mid.normR)
+    BaseTams = [baseT] * len(tams.normR)
+    
+    # ------ Plot Lines ------
+    ax.plot(model.time[0:lim], model.ntoth1[0:lim], color = 'deeppink', label = 'Hydrogen')
+    ax.plot(model.time[0:lim], model.ntothe[0:lim], color = 'darkred', label = 'Helium')
+    
+    # ------ Plot Colors ------
+    ims1 = ax.scatter(BaseZams, zams.normM * model.nmass[zams.model() - model.x], c= zams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 6, zorder = 2)
+    ims2 = ax.scatter(BaseMid, mid.normM * model.nmass[mid.model() - model.x], c= mid.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 6, zorder = 2)
+    ims3 = ax.scatter(BaseTams, tams.normM * model.nmass[tams.model() - model.x], c= tams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 6, zorder = 2)
+    # cbar1 = fig.colorbar(ims1, ax = ax)
+    # cbar1.set_label('Zones')
+
+    # ------ Fill Planes ------
+    ax.fill_between(model.time[0:lim], model.convtop[0:lim], model.nmass[0:lim], alpha = 0.5, color = 'grey', hatch = '///')
+    ax.fill_between(model.time[0:lim], 0, model.convective_core[0:lim], alpha = 0.2, color = 'grey', hatch = '///')
+
+    # ------ Text ------
+    ax.text(1.3, 0.2, 'Convective core', fontweight = 'bold')
+    ax.text(1, 0.8, 'Radiative envelope', fontweight = 'bold')
+
+    # ------ Plot Colors On Axis ------
+    multicolor_ylabel(ax,('Hydrogen','Helium'),('darkred','deeppink'),axis='yleft',size=14,weight='bold')
+    multicolor_ylabel(ax,('Convection','Overshoot','Radiation'),('lightblue','seagreen','navy'),axis='yright',size=14,weight='bold')
+
+    # ------ Show ------
+    #plt.legend(shadow = False, edgecolor = 'k')
+    fig.tight_layout()
+    #plt.show()
+
+    plt.savefig(f'Plots/4x4/Kippenhahn/{folder}/Kip{number}_{mass}{limit}.png')
+
+# ====== Full Simulation =====
+def fullsim():
+
+    # ------ Vink 01 Plots ------
+    massconv(vink01_20, vink01_20z, vink01_20m, vink01_20t, '1', '20', ms=True)
+    massconv(vink01_30, vink01_30z, vink01_30m, vink01_30t, '1', '30', ms=False)
+    massconv(vink01_40, vink01_40z, vink01_40m, vink01_40t, '1', '40', ms=False)
+    massconv(vink01_50, vink01_50z, vink01_50m, vink01_50t, '1', '50', ms=False)
+    massconv(vink01_60, vink01_60z, vink01_60m, vink01_60t, '1', '60', ms=False)
+
+    # ------ Vink 18 Plots ------
+    massconv(vink18_20, vink18_20z, vink18_20m, vink18_20t, '2', '20', ms=False)
+    massconv(vink18_30, vink18_30z, vink18_30m, vink18_30t, '2', '30', ms=False)
+    massconv(vink18_40, vink18_40z, vink18_40m, vink18_40t, '2', '40', ms=False)
+    massconv(vink18_50, vink18_50z, vink18_50m, vink18_50t, '2', '50', ms=False)
+    massconv(vink18_60, vink18_60z, vink18_60m, vink18_60t, '2', '60', ms=False)
+
+    # ------ Leuven Plots ------
+    massconv(leuven_20, leuven_20z, leuven_20m, leuven_20t, '3', '20', ms=False)
+    massconv(leuven_30, leuven_30z, leuven_30m, leuven_30t, '3', '30', ms=False)
+    massconv(leuven_40, leuven_40z, leuven_40m, leuven_40t, '3', '40', ms=False)
+    massconv(leuven_50, leuven_50z, leuven_50m, leuven_50t, '3', '50', ms=False)
+    massconv(leuven_60, leuven_60z, leuven_60m, leuven_60t, '3', '60', ms=False)
+
+    # ------ Krticka Plots ------
+    massconv(krticka_20, krticka_20z, krticka_20m, krticka_20t, '4', '20', ms=False)
+    massconv(krticka_30, krticka_30z, krticka_30m, krticka_30t, '4', '30', ms=False)
+    massconv(krticka_40, krticka_40z, krticka_40m, krticka_40t, '4', '40', ms=False)
+    massconv(krticka_50, krticka_50z, krticka_50m, krticka_50t, '4', '50', ms=False)
+    massconv(krticka_60, krticka_60z, krticka_60m, krticka_60t, '4', '60', ms=False)
+
+# ====== Main Sequence ======
+def ms():
+
+    #------ Vink 01 Plots ------
+    massconv(vink01_20, vink01_20z, vink01_20m, vink01_20t, '1', '20', ms=True)
+    massconv(vink01_30, vink01_30z, vink01_30m, vink01_30t, '1', '30', ms=True)
+    massconv(vink01_40, vink01_40z, vink01_40m, vink01_40t, '1', '40', ms=True)
+    massconv(vink01_50, vink01_50z, vink01_50m, vink01_50t, '1', '50', ms=True)
+    massconv(vink01_60, vink01_60z, vink01_60m, vink01_60t, '1', '60', ms=True)
+
+    # ------ Vink 18 Plots ------
+    massconv(vink18_20, vink18_20z, vink18_20m, vink18_20t, '2', '20', ms=True)
+    massconv(vink18_30, vink18_30z, vink18_30m, vink18_30t, '2', '30', ms=True)
+    massconv(vink18_40, vink18_40z, vink18_40m, vink18_40t, '2', '40', ms=True)
+    massconv(vink18_50, vink18_50z, vink18_50m, vink18_50t, '2', '50', ms=True)
+    massconv(vink18_60, vink18_60z, vink18_60m, vink18_60t, '2', '60', ms=True)
+
+    # ------ Leuven Plots ------
+    massconv(leuven_20, leuven_20z, leuven_20m, leuven_20t, '3', '20', ms=True)
+    massconv(leuven_30, leuven_30z, leuven_30m, leuven_30t, '3', '30', ms=True)
+    massconv(leuven_40, leuven_40z, leuven_40m, leuven_40t, '3', '40', ms=True)
+    massconv(leuven_50, leuven_50z, leuven_50m, leuven_50t, '3', '50', ms=True)
+    massconv(leuven_60, leuven_60z, leuven_60m, leuven_60t, '3', '60', ms=True)
+
+    # ------ Krticka Plots ------
+    massconv(krticka_20, krticka_20z, krticka_20m, krticka_20t, '4', '20', ms=True)
+    massconv(krticka_30, krticka_30z, krticka_30m, krticka_30t, '4', '30', ms=True)
+    massconv(krticka_40, krticka_40z, krticka_40m, krticka_40t, '4', '40', ms=True)
+    massconv(krticka_50, krticka_50z, krticka_50m, krticka_50t, '4', '50', ms=True)
+    massconv(krticka_60, krticka_60z, krticka_60m, krticka_60t, '4', '60', ms=True)
+
+fullsim()
+ms()
+
+
+
+
+
+
+
+# =========================================
 # ------ Mass Fractions and Elements ------
 def mass(model1,model2, ms):
 
@@ -99,6 +228,9 @@ def mass(model1,model2, ms):
     ax.fill_between(model1.time[0:lim1], model1.nmass[0:lim1], model1.nhemin[0:lim1], alpha = 0.6, color = 'darkred')
     ax.fill_between(model1.time[0:lim1], model1.nhemin[0:lim1], model1.ntotheminsurfmin[0:lim1], alpha = 0.6, color = 'red')
 
+    ax.fill_between(model1.time[0:lim1], model1.ntoth1[0:lim1], model1.surfcartoplim[0:lim1], alpha = 0.6, color = 'navy')
+    ax.fill_between(model1.time[0:lim1], model1.surfcartoplim[0:lim1], model1.surfnittoplim[0:lim1], alpha = 0.6, color = 'pink')
+    ax.fill_between(model1.time[0:lim1], model1.surfnittoplim[0:lim1], model1.surfoxtoplim[0:lim1], alpha = 0.6, color = 'black')
     # ------ Text ------
     #ax.text(1.3, 0.2, 'Convective core', fontweight = 'bold')
     #ax1.text(1.3, 0.56, 'Convective mix 1', fontweight = 'bold')
@@ -112,78 +244,11 @@ def mass(model1,model2, ms):
     # ------ Show ------
     plt.legend(shadow = False, edgecolor = 'k')
     fig.tight_layout()
-    #plt.show()
+    plt.show()
 
-    plt.savefig(f'Plots/Kippenhahn/Kippenhahn{limit}.png')
+    #plt.savefig(f'Plots/Kippenhahn/Kippenhahn{limit}.png')
 
-mass(vink01, vink18, ms=False)
-
-
-# ------ Mass Fractions and Elements ------
-def massconv(model1,model2, ms):
-
-    if ms == True:
-        # main sequence limit
-        lim1 = model1.mainsequence()
-        lim2 = model2.mainsequence()
-        limit = '_ms'
-    else:
-        # full simulation
-        lim1 = len(model1.age)
-        lim2 = len(model1.age)
-        limit = ''
-
-    # ------ Set Plot Style ------
-    default_style()
-    #plt.style.use('dark_background')
-    fig, ax, colormap = kippenhahn()
-
-    # list for x-axis structure plot
-    BaseZams = [0.0648] * len(zams.normR)
-    BaseMid = [3.12] * len(mid.normR)
-    BaseTams = [4.76] * len(tams.normR)
-    
-    # ------ Plot Lines ------
-    ax.plot(model1.time[0:lim1], model1.ntoth1[0:lim1], color = 'deeppink', label = 'Hydrogen')
-    ax.plot(model1.time[0:lim1], model1.ntothe[0:lim1], color = 'darkred', label = 'Helium')
-    # ------ Plot Colors ------
-    ims1 = ax.scatter(BaseZams, zams.normM * model1.nmass[63 - 57], c= zams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 6, zorder = 2)
-    ims2 = ax.scatter(BaseMid, mid.normM * model1.nmass[107 - 57], c= mid.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 6, zorder = 2)
-    ims3 = ax.scatter(BaseTams, tams.normM * model1.nmass[200 - 57], c= tams.mixtype, marker='_', edgecolors='none', s=100, cmap=colormap, vmin = 0, vmax = 6, zorder = 2)
-    # cbar1 = fig.colorbar(ims1, ax = ax)
-    # cbar1.set_label('Zones')
-
-    # ------ Fill Planes ------
-    
-    # ax.fill_between(model1.time[0:lim1], model1.botsurfh1[0:lim1], model1.ntoth1[0:lim1], alpha = 0.6, color = 'darkgreen')
-    # ax.fill_between(model1.time[0:lim1], 0, model1.botsurfh1[0:lim1], alpha = 0.6, color = 'lime')
-
-    # ax.fill_between(model1.time[0:lim1], model1.nmass[0:lim1], model1.nhemin[0:lim1], alpha = 0.6, color = 'darkred')
-    # ax.fill_between(model1.time[0:lim1], model1.nhemin[0:lim1], model1.ntotheminsurfmin[0:lim1], alpha = 0.6, color = 'red')
-    
-    ax.fill_between(model1.time[0:lim1], model1.convtop[0:lim1], model1.nmass[0:lim1], alpha = 0.5, color = 'grey', hatch = '///')
-    ax.fill_between(model1.time[0:lim1], 0, model1.convective_core[0:lim1], alpha = 0.2, color = 'grey', hatch = '///')
-
-    # ------ Text ------
-    ax.text(1.3, 0.2, 'Convective core', fontweight = 'bold')
-    #ax.text(1.3, 0.56, 'Convective mix 1', fontweight = 'bold')
-    #ax.text(1.3, 0.9, 'Convective mix 2', fontweight = 'bold')
-    ax.text(1, 0.8, 'Radiative envelope', fontweight = 'bold')
-
-    # ------ Plot Colors On Axis ------
-    multicolor_ylabel(ax,('Hydrogen','Helium'),('darkred','deeppink'),axis='yleft',size=14,weight='bold')
-    multicolor_ylabel(ax,('Convection','Overshoot','Radiation'),('lightblue','seagreen','navy'),axis='yright',size=14,weight='bold')
-
-    # ------ Show ------
-    #plt.legend(shadow = False, edgecolor = 'k')
-    fig.tight_layout()
-    #plt.show()
-
-    plt.savefig(f'Plots/Kippenhahn/Kipconv{limit}.png')
-
-massconv(vink01, vink18, ms=False)
-
-
+#mass(vink01, vink18, ms=False)
 
 
 def radius(model1,model2):

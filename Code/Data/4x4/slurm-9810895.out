@@ -1,0 +1,82 @@
+Creating main directory...1
+Creating sub-directory...20
+Running model...
+Finished running model with Route and mass: 1/20
+Creating sub-directory...30
+Running model...
+Finished running model with Route and mass: 1/30
+Creating sub-directory...40
+Running model...
+Finished running model with Route and mass: 1/40
+Creating sub-directory...50
+Running model...
+STOP store_eos_for_cell
+Finished running model with Route and mass: 1/50
+Creating sub-directory...60
+Running model...
+Finished running model with Route and mass: 1/60
+Creating main directory...2
+Creating sub-directory...20
+Running model...
+Finished running model with Route and mass: 2/20
+Creating sub-directory...30
+Running model...
+Finished running model with Route and mass: 2/30
+Creating sub-directory...40
+Running model...
+STOP store_eos_for_cell
+Finished running model with Route and mass: 2/40
+Creating sub-directory...50
+Running model...
+Finished running model with Route and mass: 2/50
+Creating sub-directory...60
+Running model...
+STOP store_eos_for_cell
+Finished running model with Route and mass: 2/60
+Creating main directory...3
+Creating sub-directory...20
+Running model...
+Finished running model with Route and mass: 3/20
+Creating sub-directory...30
+Running model...
+Finished running model with Route and mass: 3/30
+Creating sub-directory...40
+Running model...
+Finished running model with Route and mass: 3/40
+Creating sub-directory...50
+Running model...
+Finished running model with Route and mass: 3/50
+Creating sub-directory...60
+Running model...
+Finished running model with Route and mass: 3/60
+Creating main directory...4
+Creating sub-directory...20
+Running model...
+Finished running model with Route and mass: 4/20
+Creating sub-directory...30
+Running model...
+Finished running model with Route and mass: 4/30
+Creating sub-directory...40
+Running model...
+Finished running model with Route and mass: 4/40
+Creating sub-directory...50
+Running model...
+STOP store_eos_for_cell
+Finished running model with Route and mass: 4/50
+Creating sub-directory...60
+Running model...
+Finished running model with Route and mass: 4/60
+
+JOB STATISTICS
+==============
+Job ID: 9810895
+Cluster: sara
+User/Group: zsoltk/zsoltk
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 24
+CPU Utilized: 4-08:07:45
+CPU Efficiency: 54.510f 7-23:02:24 core-walltime
+Job Wall-clock time: 07:57:36
+Memory Utilized: 5.08 GB
+Memory Efficiency: 8.420f 60.31 GB

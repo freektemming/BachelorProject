@@ -107,7 +107,7 @@ class Data:
         self.botsurfh1 = self.ntoth1 - self.nh1
         self.botsurfhe = self.ntothe - self.nhe
 
-        # kippenhahn
+        # ==================== Kippenhahn
         self.nhemin = []
         for i in range(len(self.nhe)):
             self.nhemin.append(self.nmass[i]-self.nhe[i])
@@ -116,6 +116,11 @@ class Data:
         self.ntotheminsurfmin = []
         for i in range(len(self.ntotheminsurf)):
             self.ntotheminsurfmin.append(self.nmass[i]-self.ntotheminsurf[i])
+
+        self.surfcartoplim = self.ntoth1 + self.ncar
+        self.surfnittoplim = self.surfcartoplim + self.nnit
+        self.surfoxtoplim = self.surfnittoplim + self.nox
+        # ====================
 
         # ------ Rotation ------
         self.vrot = data[self.x:,22]
