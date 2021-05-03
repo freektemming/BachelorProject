@@ -161,6 +161,7 @@ class Data:
         self.time = self.age#/pow(10,6) ???
 
     # ------ Color Bar ------
+    # age
     def get_max_bar(self):
         m = 0
         bar = self.age
@@ -177,6 +178,23 @@ class Data:
             n = n_temp          
         return n #meg
 
+    # gravity
+    def get_max_grav(self):
+        m = 0
+        bar = self.logg
+        m_temp = bar.max()
+        if m_temp > m:
+            m = m_temp          
+        return m #baz
+
+    def get_min_grav(self):
+        n = 0
+        bar = self.logg
+        n_temp = bar.min()
+        if n_temp < n:
+            n = n_temp          
+        return n #meg
+
     # ------ Determine main sequence ------
     def mainsequence(self):
         for i in range(len(self.age) - 1):
@@ -186,6 +204,11 @@ class Data:
     def get_age(self, i):
         max = self.age[i]
         return max
+    
+    # get minimum gravitation on main sequence
+    def get_grav(self, i):
+        min = self.logg[i]
+        return min
 
     # ------ Determine max of list in certain range ------
     def maxlist(self, lim):

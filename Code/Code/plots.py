@@ -11,7 +11,7 @@ def HRD(model):
     colormap = plt.cm.plasma
     fig, ax = plt.subplots(1,1)
 
-    ax.set_xlim(55,2)
+    ax.set_xlim(60,2)
     ax.set_xlabel('T$_{\mathregular{eff}}$ [kK]')
     ax.set_ylabel('log (L / L$_{\odot}$)')
     ax.set_title(f'Herzsprung Russell Diagram: {model}')
@@ -70,7 +70,7 @@ def LvsMdot():
 
 def hunterNH(mass):
 
-    colormap = plt.cm.plasma
+    colormap = plt.cm.plasma_r
     fig, ax = plt.subplots(1,1)
     
     ax.set_xlabel('V$_{\mathregular{rot}}$ [km / s]')
@@ -81,7 +81,7 @@ def hunterNH(mass):
 
 def hunter(mass):
 
-    colormap = plt.cm.plasma
+    colormap = plt.cm.plasma_r
     fig, ax = plt.subplots(1,1)
     
     ax.set_xlabel('V$_{\mathregular{rot}}$ [km / s]')
@@ -133,5 +133,35 @@ def HeC():
     ax.set_xlabel('Core Helium')
     ax.set_ylabel('Core Carbon')
     ax.set_title('Helium and Carbon')
+
+    return fig, ax, colormap
+
+def vrotmdot(plottype, model):
+    
+    colormap = plt.cm.plasma_r
+    fig, ax = plt.subplots(1,1)
+
+    if plottype == 'Mdot':
+        ax.set_xlim(55,2)
+        ax.set_xlabel('T$_{\mathregular{eff}}$ [kK]')
+        ax.set_ylabel('log ($\dot{M}$) [M$_{\odot}$ / yr]')
+        ax.set_title(f'Mass Loss: {model} Stars')
+
+    if plottype == 'Vrot':
+        ax.set_xlim(55,2)
+        ax.set_xlabel('T$_{\mathregular{eff}}$ [kK]')
+        ax.set_ylabel('V$_{\mathregular{rot}}$ [km / s]')
+        ax.set_title(f'Rotational Velocity: {model} Stars')
+
+    return fig, ax, colormap
+
+def Core(model):
+
+    fig, ax = plt.subplots(1,1)
+    colormap = plt.cm.cividis
+
+    ax.set_ylabel('m / M$_{\star}$')
+    ax.set_xlabel('Time [Myr]')
+    ax.set_title(f'Core Mass of {model} Stars')
 
     return fig, ax, colormap

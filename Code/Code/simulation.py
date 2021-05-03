@@ -172,7 +172,7 @@ def circles(model1,model2):
     #         writer.append_data(image)
 
 
-circles(vink01, vink18)
+circles(vink01_20, vink18_20)
 
 
 def simulation(model1, model2):

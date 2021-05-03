@@ -49,4 +49,4 @@ def plot(model1, model2, ms):
     plt.show()
     #plt.savefig(f'Plots/Week1/He&Car{limit}.png')
 
-plot(vink1_20, vink18, ms=False)
+plot(vink01_40, vink18_40, ms=False)

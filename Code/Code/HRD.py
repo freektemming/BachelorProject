@@ -9,7 +9,7 @@ from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 
 # limit: True for main sequense
-lim = False
+lim = True
 
 # ------ plot normal HRD 1 Model All Masses------
 def hrd(model1, model2, model3, model4, model5, number, ms):
@@ -36,6 +36,7 @@ def hrd(model1, model2, model3, model4, model5, number, ms):
         min1 = model1.get_min_bar()
         max1 = model1.get_age(lim1)
         limit = '_ms'
+        folder = 'MainSequence'
     else:
         # full simulation
         lim1 = len(model1.age)
@@ -47,6 +48,7 @@ def hrd(model1, model2, model3, model4, model5, number, ms):
         min1 = model1.get_min_bar()
         max1 = model1.get_max_bar()
         limit = ''
+        folder = 'FullSimulation'
 
     # ------ Set Plot Style ------
     default_style()
@@ -59,7 +61,6 @@ def hrd(model1, model2, model3, model4, model5, number, ms):
     ax.plot(model4.Teff[0:lim4], model4.logL[0:lim4], lw = 1, color = 'black')
     ax.plot(model5.Teff[0:lim5], model5.logL[0:lim5], lw = 1, color = 'black')
 
-    
     # plot colors
     ims1 = ax.scatter(model1.Teff[0:lim1], model1.logL[0:lim1], c= model1.age[0:lim1], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
     ims2 = ax.scatter(model2.Teff[0:lim2], model2.logL[0:lim2], c= model2.age[0:lim2], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
@@ -78,13 +79,88 @@ def hrd(model1, model2, model3, model4, model5, number, ms):
     ax.text(model5.Teff[0] + 5, model5.logL[0], '60M$_{\odot}$', fontweight = 'bold')
     
     fig.tight_layout()
-    plt.savefig(f'Plots/4x4/HRDmodels/HRD{number}{limit}.png')
+    plt.savefig(f'Plots/{datafolder}/HRDmodels/{folder}/HRD{number}{limit}.png')
     #plt.show()
 
-# hrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, '1', ms=lim)
-# hrd(vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, '2', ms=lim)
-# hrd(leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, '3', ms=lim)
-# hrd(krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, '4', ms=lim)
+hrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, '1', ms=lim)
+hrd(vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, '2', ms=lim)
+hrd(leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, '3', ms=lim)
+hrd(krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, '4', ms=lim)
+
+
+# ------ plot normal HRD 4 Models 1 Mass ------
+def hrdmass(model1, model2, model3, model4, number, ms):
+
+    # plot name of model in legend
+    if number == '20':
+        model = '20 M$_{\odot}$'
+        mass = '20'
+    if number == '30':
+        model = '30 M$_{\odot}$'
+        mass = '30'
+    if number == '40':
+        model = '40 M$_{\odot}$'
+        mass = '40'
+    if number == '50':
+        model = '50 M$_{\odot}$'
+        mass = '50'
+    if number == '60':
+        model = '60 M$_{\odot}$'
+        mass = '60'
+
+    if ms == True:
+        # main sequence limit
+        lim1 = model1.mainsequence()
+        lim2 = model2.mainsequence()
+        lim3 = model3.mainsequence()
+        lim4 = model4.mainsequence()
+
+        # age limit colorbar
+        min1 = model1.get_min_bar()
+        max1 = model1.get_age(lim1)
+        limit = '_ms'
+        folder = 'MainSequence'
+    else:
+        # full simulation
+        lim1 = len(model1.age)
+        lim2 = len(model2.age)
+        lim3 = len(model3.age)
+        lim4 = len(model4.age)
+
+        min1 = model1.get_min_bar()
+        max1 = model1.get_max_bar()
+        limit = ''
+        folder = 'FullSimulation'
+
+    # ------ Set Plot Style ------
+    default_style()
+    fig, ax, colormap = HRD(model)
+
+    # plot line
+    ax.plot(model1.Teff[0:lim1], model1.logL[0:lim1], lw = 1, color = 'black', linestyle = 'solid', label = 'Vink 01')
+    ax.plot(model2.Teff[0:lim2], model2.logL[0:lim2], lw = 1, color = 'black', linestyle = 'dashed', label = 'Vink 18')
+    ax.plot(model3.Teff[0:lim3], model3.logL[0:lim3], lw = 1, color = 'black', linestyle = 'dashdot', label = 'Leuven')
+    ax.plot(model4.Teff[0:lim4], model4.logL[0:lim4], lw = 1, color = 'black', linestyle = 'dotted', label = 'Krticka')
+    
+    # plot colors
+    ims1 = ax.scatter(model1.Teff[0:lim1], model1.logL[0:lim1], c= model1.age[0:lim1], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    ims2 = ax.scatter(model2.Teff[0:lim2], model2.logL[0:lim2], c= model2.age[0:lim2], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    ims3 = ax.scatter(model3.Teff[0:lim3], model3.logL[0:lim3], c= model3.age[0:lim3], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    ims4 = ax.scatter(model4.Teff[0:lim4], model4.logL[0:lim4], c= model4.age[0:lim4], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    cbar1 = fig.colorbar(ims1, ax = ax)
+    cbar1.set_label('Age [Myr]')
+    ax.legend(shadow = False, edgecolor = 'k')
+
+    fig.tight_layout()
+    plt.savefig(f'Plots/{datafolder}/HRDmass/{folder}/HRD{mass}{limit}.png')
+    #plt.show()
+
+hrdmass(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms=lim)
+hrdmass(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms=lim)
+hrdmass(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms=lim)
+hrdmass(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms=lim)
+hrdmass(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms=lim)
+
 
 # ------ Plot multiple HRD 4 Models Main Sequence------
 def subhrd(model11, model12, model13, model14, model15, model21, model22, model23, model24, model25, model31, model32, model33, model34, model35, model41, model42, model43, model44, model45, ms):
@@ -249,74 +325,3 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     #plt.show()
 
 #subhrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=lim)
-
-# ------ plot normal HRD 4 Models 1 Mass ------
-def hrdmass(model1, model2, model3, model4, number, ms):
-
-    # plot name of model in legend
-    if number == '20':
-        model = '20 M$_{\odot}$'
-        mass = '20'
-    if number == '30':
-        model = '30 M$_{\odot}$'
-        mass = '30'
-    if number == '40':
-        model = '40 M$_{\odot}$'
-        mass = '40'
-    if number == '50':
-        model = '50 M$_{\odot}$'
-        mass = '50'
-    if number == '60':
-        model = '60 M$_{\odot}$'
-        mass = '60'
-
-    if ms == True:
-        # main sequence limit
-        lim1 = model1.mainsequence()
-        lim2 = model2.mainsequence()
-        lim3 = model3.mainsequence()
-        lim4 = model4.mainsequence()
-
-        # age limit colorbar
-        min1 = model1.get_min_bar()
-        max1 = model1.get_age(lim1)
-        limit = '_ms'
-    else:
-        # full simulation
-        lim1 = len(model1.age)
-        lim2 = len(model2.age)
-        lim3 = len(model3.age)
-        lim4 = len(model4.age)
-
-        min1 = model1.get_min_bar()
-        max1 = model1.get_max_bar()
-        limit = ''
-
-    # ------ Set Plot Style ------
-    default_style()
-    fig, ax, colormap = HRD(model)
-
-    # plot line
-    ax.plot(model1.Teff[0:lim1], model1.logL[0:lim1], lw = 1, color = 'black', linestyle = 'solid', label = 'Vink 01')
-    ax.plot(model2.Teff[0:lim2], model2.logL[0:lim2], lw = 1, color = 'black', linestyle = 'dashed', label = 'Vink 18')
-    ax.plot(model3.Teff[0:lim3], model3.logL[0:lim3], lw = 1, color = 'black', linestyle = 'dashdot', label = 'Leuven')
-    ax.plot(model4.Teff[0:lim4], model4.logL[0:lim4], lw = 1, color = 'black', linestyle = 'dotted', label = 'Krticka')
-    
-    # plot colors
-    ims1 = ax.scatter(model1.Teff[0:lim1], model1.logL[0:lim1], c= model1.age[0:lim1], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
-    ims2 = ax.scatter(model2.Teff[0:lim2], model2.logL[0:lim2], c= model2.age[0:lim2], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
-    ims3 = ax.scatter(model3.Teff[0:lim3], model3.logL[0:lim3], c= model3.age[0:lim3], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
-    ims4 = ax.scatter(model4.Teff[0:lim4], model4.logL[0:lim4], c= model4.age[0:lim4], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
-    cbar1 = fig.colorbar(ims1, ax = ax)
-    cbar1.set_label('Age [Myr]')
-    ax.legend(shadow = False, edgecolor = 'k')
-
-    fig.tight_layout()
-    plt.savefig(f'Plots/4x4/HRDmass/HRD{mass}{limit}.png')
-    #plt.show()
-
-hrdmass(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms=lim)
-hrdmass(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms=lim)
-hrdmass(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms=lim)
-hrdmass(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms=lim)
-hrdmass(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms=lim)

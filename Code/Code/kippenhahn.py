@@ -111,73 +111,119 @@ def massconv(model, zams, mid, tams, number, mass, ms):
     fig.tight_layout()
     #plt.show()
 
-    plt.savefig(f'Plots/4x4/Kippenhahn/{folder}/Kip{number}_{mass}{limit}.png')
+    plt.savefig(f'Plots/{datafolder}/Kippenhahn/{folder}/Kip{number}_{mass}{limit}.png')
 
-# ====== Full Simulation =====
-def fullsim():
+# ====== Mass Conv ======
+lim = True
 
-    # ------ Vink 01 Plots ------
-    massconv(vink01_20, vink01_20z, vink01_20m, vink01_20t, '1', '20', ms=True)
-    massconv(vink01_30, vink01_30z, vink01_30m, vink01_30t, '1', '30', ms=False)
-    massconv(vink01_40, vink01_40z, vink01_40m, vink01_40t, '1', '40', ms=False)
-    massconv(vink01_50, vink01_50z, vink01_50m, vink01_50t, '1', '50', ms=False)
-    massconv(vink01_60, vink01_60z, vink01_60m, vink01_60t, '1', '60', ms=False)
+# # ------ Vink 01 Plots ------
+# massconv(vink01_20, vink01_20z, vink01_20m, vink01_20t, '1', '20', ms=lim)
+# massconv(vink01_30, vink01_30z, vink01_30m, vink01_30t, '1', '30', ms=lim)
+# massconv(vink01_40, vink01_40z, vink01_40m, vink01_40t, '1', '40', ms=lim)
+# massconv(vink01_50, vink01_50z, vink01_50m, vink01_50t, '1', '50', ms=lim)
+# massconv(vink01_60, vink01_60z, vink01_60m, vink01_60t, '1', '60', ms=lim)
 
-    # ------ Vink 18 Plots ------
-    massconv(vink18_20, vink18_20z, vink18_20m, vink18_20t, '2', '20', ms=False)
-    massconv(vink18_30, vink18_30z, vink18_30m, vink18_30t, '2', '30', ms=False)
-    massconv(vink18_40, vink18_40z, vink18_40m, vink18_40t, '2', '40', ms=False)
-    massconv(vink18_50, vink18_50z, vink18_50m, vink18_50t, '2', '50', ms=False)
-    massconv(vink18_60, vink18_60z, vink18_60m, vink18_60t, '2', '60', ms=False)
+# # ------ Vink 18 Plots ------
+# massconv(vink18_20, vink18_20z, vink18_20m, vink18_20t, '2', '20', ms=lim)
+# massconv(vink18_30, vink18_30z, vink18_30m, vink18_30t, '2', '30', ms=lim)
+# massconv(vink18_40, vink18_40z, vink18_40m, vink18_40t, '2', '40', ms=lim)
+# massconv(vink18_50, vink18_50z, vink18_50m, vink18_50t, '2', '50', ms=lim)
+# massconv(vink18_60, vink18_60z, vink18_60m, vink18_60t, '2', '60', ms=lim)
 
-    # ------ Leuven Plots ------
-    massconv(leuven_20, leuven_20z, leuven_20m, leuven_20t, '3', '20', ms=False)
-    massconv(leuven_30, leuven_30z, leuven_30m, leuven_30t, '3', '30', ms=False)
-    massconv(leuven_40, leuven_40z, leuven_40m, leuven_40t, '3', '40', ms=False)
-    massconv(leuven_50, leuven_50z, leuven_50m, leuven_50t, '3', '50', ms=False)
-    massconv(leuven_60, leuven_60z, leuven_60m, leuven_60t, '3', '60', ms=False)
+# # ------ Leuven Plots ------
+# massconv(leuven_20, leuven_20z, leuven_20m, leuven_20t, '3', '20', ms=lim)
+# massconv(leuven_30, leuven_30z, leuven_30m, leuven_30t, '3', '30', ms=lim)
+# massconv(leuven_40, leuven_40z, leuven_40m, leuven_40t, '3', '40', ms=lim)
+# massconv(leuven_50, leuven_50z, leuven_50m, leuven_50t, '3', '50', ms=lim)
+# massconv(leuven_60, leuven_60z, leuven_60m, leuven_60t, '3', '60', ms=lim)
 
-    # ------ Krticka Plots ------
-    massconv(krticka_20, krticka_20z, krticka_20m, krticka_20t, '4', '20', ms=False)
-    massconv(krticka_30, krticka_30z, krticka_30m, krticka_30t, '4', '30', ms=False)
-    massconv(krticka_40, krticka_40z, krticka_40m, krticka_40t, '4', '40', ms=False)
-    massconv(krticka_50, krticka_50z, krticka_50m, krticka_50t, '4', '50', ms=False)
-    massconv(krticka_60, krticka_60z, krticka_60m, krticka_60t, '4', '60', ms=False)
+# # ------ Krticka Plots ------
+# massconv(krticka_20, krticka_20z, krticka_20m, krticka_20t, '4', '20', ms=lim)
+# massconv(krticka_30, krticka_30z, krticka_30m, krticka_30t, '4', '30', ms=lim)
+# massconv(krticka_40, krticka_40z, krticka_40m, krticka_40t, '4', '40', ms=lim)
+# massconv(krticka_50, krticka_50z, krticka_50m, krticka_50t, '4', '50', ms=lim)
+# massconv(krticka_60, krticka_60z, krticka_60m, krticka_60t, '4', '60', ms=lim)
 
-# ====== Main Sequence ======
-def ms():
 
-    #------ Vink 01 Plots ------
-    massconv(vink01_20, vink01_20z, vink01_20m, vink01_20t, '1', '20', ms=True)
-    massconv(vink01_30, vink01_30z, vink01_30m, vink01_30t, '1', '30', ms=True)
-    massconv(vink01_40, vink01_40z, vink01_40m, vink01_40t, '1', '40', ms=True)
-    massconv(vink01_50, vink01_50z, vink01_50m, vink01_50t, '1', '50', ms=True)
-    massconv(vink01_60, vink01_60z, vink01_60m, vink01_60t, '1', '60', ms=True)
+def plotcore(model1, model2, model3, model4, number, ms):
 
-    # ------ Vink 18 Plots ------
-    massconv(vink18_20, vink18_20z, vink18_20m, vink18_20t, '2', '20', ms=True)
-    massconv(vink18_30, vink18_30z, vink18_30m, vink18_30t, '2', '30', ms=True)
-    massconv(vink18_40, vink18_40z, vink18_40m, vink18_40t, '2', '40', ms=True)
-    massconv(vink18_50, vink18_50z, vink18_50m, vink18_50t, '2', '50', ms=True)
-    massconv(vink18_60, vink18_60z, vink18_60m, vink18_60t, '2', '60', ms=True)
+    # plot name of model in legend
+    if number == '20':
+        model = '20 M$_{\odot}$'
+        mass = '20'
+    if number == '30':
+        model = '30 M$_{\odot}$'
+        mass = '30'
+    if number == '40':
+        model = '40 M$_{\odot}$'
+        mass = '40'
+    if number == '50':
+        model = '50 M$_{\odot}$'
+        mass = '50'
+    if number == '60':
+        model = '60 M$_{\odot}$'
+        mass = '60'
 
-    # ------ Leuven Plots ------
-    massconv(leuven_20, leuven_20z, leuven_20m, leuven_20t, '3', '20', ms=True)
-    massconv(leuven_30, leuven_30z, leuven_30m, leuven_30t, '3', '30', ms=True)
-    massconv(leuven_40, leuven_40z, leuven_40m, leuven_40t, '3', '40', ms=True)
-    massconv(leuven_50, leuven_50z, leuven_50m, leuven_50t, '3', '50', ms=True)
-    massconv(leuven_60, leuven_60z, leuven_60m, leuven_60t, '3', '60', ms=True)
+    if ms == True:
+        # main sequence limit
+        lim1 = model1.mainsequence()
+        lim2 = model2.mainsequence()
+        lim3 = model3.mainsequence()
+        lim4 = model4.mainsequence()
 
-    # ------ Krticka Plots ------
-    massconv(krticka_20, krticka_20z, krticka_20m, krticka_20t, '4', '20', ms=True)
-    massconv(krticka_30, krticka_30z, krticka_30m, krticka_30t, '4', '30', ms=True)
-    massconv(krticka_40, krticka_40z, krticka_40m, krticka_40t, '4', '40', ms=True)
-    massconv(krticka_50, krticka_50z, krticka_50m, krticka_50t, '4', '50', ms=True)
-    massconv(krticka_60, krticka_60z, krticka_60m, krticka_60t, '4', '60', ms=True)
+        # age limit colorbar
+        min1 = model1.get_min_bar()
+        max1 = model1.get_age(lim1)
+        limit = '_ms'
+        folder = 'MainSequence'
+    else:
+        # full simulation
+        lim1 = len(model1.age)
+        lim2 = len(model2.age)
+        lim3 = len(model3.age)
+        lim4 = len(model4.age)
 
-fullsim()
-ms()
+        min1 = model1.get_min_bar()
+        max1 = model1.get_max_bar()
+        limit = ''
+        folder = 'FullSimulation'
+    # ------ Set Plot Style ------
+    default_style()
+    fig, ax, colormap = Core(model)
+    
+    # ------ Plot Lines ------
+    ax.plot(model1.time[0:lim1], model1.convective_core[0:lim1], lw = 1, color = 'black', linestyle = 'solid', label = 'Vink 01')
+    ax.plot(model2.time[0:lim2], model2.convective_core[0:lim2], lw = 1, color = 'black', linestyle = 'dashed', label = 'Vink 18')
+    ax.plot(model3.time[0:lim3], model3.convective_core[0:lim3], lw = 1, color = 'black', linestyle = 'dashdot', label = 'Leuven')
+    ax.plot(model4.time[0:lim4], model4.convective_core[0:lim4], lw = 1, color = 'black', linestyle = 'dotted', label = 'Krticka')
+    
+    # ------ Plot Colors ------
+    # ims1 = ax.scatter(model1.Teff[0:lim1], model1.logL[0:lim1], c= model1.age[0:lim1], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    # ims2 = ax.scatter(model2.Teff[0:lim2], model2.logL[0:lim2], c= model2.age[0:lim2], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    # ims3 = ax.scatter(model3.Teff[0:lim3], model3.logL[0:lim3], c= model3.age[0:lim3], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    # ims4 = ax.scatter(model4.Teff[0:lim4], model4.logL[0:lim4], c= model4.age[0:lim4], marker='o', edgecolors='none', s=100, cmap=colormap, vmin = min1, vmax = max1)
+    # cbar1 = fig.colorbar(ims1, ax = ax)
+    # cbar1.set_label('Age [Myr]')
 
+        # ------ Show ------
+    plt.legend(shadow = False, edgecolor = 'k')
+    fig.tight_layout()
+    #plt.show()
+
+    plt.savefig(f'Plots/{datafolder}/Kippenhahn/Core/{folder}/Core{number}{limit}.png')
+
+lim = False
+plotcore(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms=lim)
+plotcore(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms=lim)
+plotcore(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms=lim)
+plotcore(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms=lim)
+plotcore(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms=lim)
+lim = True
+plotcore(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms=lim)
+plotcore(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms=lim)
+plotcore(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms=lim)
+plotcore(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms=lim)
+plotcore(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms=lim)
 
 
 

@@ -10,7 +10,7 @@ import numpy as np
 
 
 # limit: True for main sequense
-lim = True
+lim = False
 
 # ------ Compare 4 variables ------
 def star(model1, model2, model3, model4, mass, ms):
@@ -85,7 +85,7 @@ def star(model1, model2, model3, model4, mass, ms):
     ax2.set_title('Mass Loss')
     
     plt.tight_layout()
-    plt.savefig(f'Plots/4x4/Subplots/Star/{folder}/star{mass}{limit}.png')
+    plt.savefig(f'Plots/{datafolder}/Subplots/Star/{folder}/star{mass}{limit}.png')
 
 star(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
 star(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
@@ -166,7 +166,7 @@ def elements(model1, model2, model3, model4, mass, ms):
     ax4.set_title('Surface Nitrogen')
     
     plt.tight_layout()
-    plt.savefig(f'Plots/4x4/Subplots/Elements/{folder}/elem{mass}{limit}.png')
+    plt.savefig(f'Plots/{datafolder}/Subplots/Elements/{folder}/elem{mass}{limit}.png')
 
 elements(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
 elements(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
@@ -256,7 +256,7 @@ def histogram(model1, model2, model3, model4, mass, ms):
     #ax4.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
-    plt.savefig(f'Plots/4x4/Subplots/Histogram/{folder}/hist{mass}{limit}.png')
+    plt.savefig(f'Plots/{datafolder}/Subplots/Histogram/{folder}/hist{mass}{limit}.png')
 
 histogram(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
 histogram(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
