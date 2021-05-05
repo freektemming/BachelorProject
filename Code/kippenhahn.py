@@ -263,11 +263,11 @@ def plotcore(model1, model2, model3, model4, number, ms):
 # plotcore(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms=lim)
 # plotcore(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms=lim)
 
-def midstructure(model):
+def midstructure(model, name):
 
     # ------ Set Plot Style ------
     default_style()
-    fig, ax = mid(model)
+    fig, ax = mid(name)
 
     # ------ Plot Lines ------
     #ax.plot(model.normM, model.H, color = 'pink', label = 'Hydrogen')
@@ -280,9 +280,41 @@ def midstructure(model):
     # ------ Show ------
     plt.legend(shadow = False, edgecolor = 'k')
     fig.tight_layout()
-    plt.show()
+    #plt.show()
 
-midstructure(vink01_20m)
+    plt.savefig(f'Plots/{datafolder}/Structure/{name}.png')
+
+
+
+midstructure(vink01_20m, 'Vink01 20M')
+midstructure(vink01_30m, 'Vink01 30M')
+midstructure(vink01_40m, 'Vink01 40M')
+midstructure(vink01_50m, 'Vink01 50M')
+midstructure(vink01_60m, 'Vink01 60M')
+
+midstructure(vink18_20m, 'Vink18 20M')
+midstructure(vink18_30m, 'Vink18 30M')
+midstructure(vink18_40m, 'Vink18 40M')
+midstructure(vink18_50m, 'Vink18 50M')
+midstructure(vink18_60m, 'Vink18 60M')
+
+midstructure(leuven_20m, 'Leuven 20M')
+midstructure(leuven_30m, 'Leuven 30M')
+midstructure(leuven_40m, 'Leuven 40M')
+midstructure(leuven_50m, 'Leuven 50M')
+midstructure(leuven_60m, 'Leuven 60M')
+
+midstructure(krticka_20m, 'Krticka 20M')
+midstructure(krticka_30m, 'Krticka 30M')
+midstructure(krticka_40m, 'Krticka 40M')
+midstructure(krticka_50m, 'Krticka 50M')
+midstructure(krticka_60m, 'Krticka 60M')
+
+
+
+
+
+
 
 
 
@@ -495,12 +527,3 @@ def sub(model1, model2):
 
 #sub(vink01, vink18)
 
-
-# self.colors['clr_LightSkyBlue'], #Convection
-# self.colors['clr_LightSteelBlue'], #Softened convection
-# self.colors['clr_SlateGray'], # Overshoot
-# self.colors['clr_Lilac'], #Semi convection
-# self.colors['clr_LightSkyGreen'], #Thermohaline
-# self.colors['clr_BrightBlue'], #Rotation
-# self.colors['clr_Beige'], #Minimum
-# self.colors['clr_Tan'] #Anonymous

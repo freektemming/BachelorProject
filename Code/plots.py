@@ -167,7 +167,7 @@ def Core(model):
     return fig, ax, colormap
 
 def mid(model):
-
+    model = str(model)
     fig, ax = plt.subplots(1,1)
 
     ax.set_ylabel('log (m / M$_{\star}$)')

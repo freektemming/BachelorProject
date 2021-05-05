@@ -5,10 +5,10 @@ from classStructure import Structure
 
 # ------ Select Data ------
     
-#datafolder = '4x4'
+datafolder = '4x4'
 #datafolder = 'OmegaCrit06'
 #datafolder = 'Z002Om2'
-datafolder = 'Z007Om2'
+#datafolder = 'Z007Om2'
 
 # Vink 01
 vink01_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/20/LOGS/out.data')
