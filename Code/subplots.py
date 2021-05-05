@@ -216,7 +216,7 @@ def histogram(model1, model2, model3, model4, mass, ms):
     ax1.set_ylim(0.6)
     ax1.set_xticks([2,3,4,5])
     ax1.set_xticklabels(['Vink 01','Vink 18','Leuven','Krticka'])
-    ax1.set_ylabel('Mass [M$_{\odot}$]')
+    ax1.set_ylabel('Mass [M / M$_{\mathregular{start}}$]')
     ax1.set_title('Mass')
     #ax1.legend(shadow = False, edgecolor = 'k')
 
@@ -228,7 +228,7 @@ def histogram(model1, model2, model3, model4, mass, ms):
     ax2.set_xlim(0,7)
     ax2.set_xticks([2,3,4,5])
     ax2.set_xticklabels(['Vink 01','Vink 18','Leuven','Krticka'])
-    ax2.set_ylabel('Radius [R$_{\odot}$]')
+    ax2.set_ylabel('Radius [R / R$_{\mathregular{start}}$]')
     ax2.set_title('Radius')
     #ax2.legend(shadow = False, edgecolor = 'k')
 
@@ -240,7 +240,7 @@ def histogram(model1, model2, model3, model4, mass, ms):
     ax3.set_xlim(0,7)
     ax3.set_xticks([2,3,4,5])
     ax3.set_xticklabels(['Vink 01','Vink 18','Leuven','Krticka'])
-    ax3.set_ylabel('V$_{\mathregular{rot}}$ [km / s]')
+    ax3.set_ylabel('V$_{\mathregular{rot}}$ [V / V$_{\mathregular{start}}$]')
     ax3.set_title('Rotational Velocity')
     #ax3.legend(shadow = False, edgecolor = 'k')
 
@@ -253,7 +253,7 @@ def histogram(model1, model2, model3, model4, mass, ms):
     ax4.set_ylim(1)
     ax4.set_xticks([2,3,4,5])
     ax4.set_xticklabels(['Vink 01','Vink 18','Leuven','Krticka'])
-    ax4.set_ylabel('log (L / L$_{\odot}$)')
+    ax4.set_ylabel('Luminosity [L / L$_{\mathregular{start}}$]')
     ax4.set_title('Luminosity')
     #ax4.legend(shadow = False, edgecolor = 'k')
 
