@@ -56,8 +56,9 @@ class Data:
         # ------ Convection ------
         self.normR = self.R / np.max(self.R)
         self.nmass = self.M / np.max(self.M)
-        self.convcore = data[self.x:,16]
+        self.convcore = data[self.x:,37]
         self.convective_core = data[self.x:,37] / self.M * self.nmass
+        self.envelope_mass = self.M - self.convcore
         self.logconvective_core = np.log10(self.convective_core)
         self.mix1 = data[self.x:,40]
         self.czmass = data[self.x:,27] / self.M * self.nmass

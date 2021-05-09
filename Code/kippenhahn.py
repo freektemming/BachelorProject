@@ -272,9 +272,9 @@ def midstructure(model, name):
     # ------ Plot Lines ------
     #ax.plot(model.normM, model.H, color = 'pink', label = 'Hydrogen')
     #ax.plot(model.normM, model.He, color = 'gold', label = 'Helium')
-    ax.plot(model.normM, model.C, color = 'black', label = 'Carbon')
-    ax.plot(model.normM, model.N, color = 'darkred', label = 'Nitrogen')
-    ax.plot(model.normM, model.O, color = 'darkgreen', label = 'Oxigen')
+    ax.plot(model.normM, model.logC, color = 'black', label = 'Carbon')
+    ax.plot(model.normM, model.logN, color = 'darkred', label = 'Nitrogen')
+    ax.plot(model.normM, model.logO, color = 'darkgreen', label = 'Oxigen')
 
     
     # ------ Show ------

@@ -36,8 +36,11 @@ class Structure:
         self.H = data2[:,71]
         self.He = data2[:,73]
         self.C = data2[:,74]
+        self.logC = np.log10(self.C)
         self.N = data2[:,75]
+        self.logN = np.log10(self.N)
         self.O = data2[:,76]
+        self.logO = np.log10(self.O)
 
         self.datatest = data
 

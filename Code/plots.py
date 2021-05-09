@@ -175,3 +175,103 @@ def mid(model):
     ax.set_title(f'Structure of MID MS {model} Star')
 
     return fig, ax
+
+def m_init():
+
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
+    colormap = plt.cm.jet
+
+    fig.suptitle('Final Mass Fractions')
+
+    ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax1.set_title('Vink 01')
+
+    ax2.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax2.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax2.set_title('Vink 18')
+
+    ax3.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax3.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax3.set_title('Leuven')
+
+    ax4.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax4.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax4.set_title('Krticka')
+
+    return fig, ax1, ax2, ax3, ax4, colormap
+
+def env_mass():
+
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
+    colormap = plt.cm.jet
+
+    fig.suptitle('Final Envelope Mass')
+
+    ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax1.set_title('Vink 01')
+
+    ax2.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax2.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax2.set_title('Vink 18')
+
+    ax3.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax3.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax3.set_title('Leuven')
+
+    ax4.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax4.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax4.set_title('Krticka')
+
+    return fig, ax1, ax2, ax3, ax4, colormap
+
+def N_mass():
+
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
+    colormap = plt.cm.jet
+
+    fig.suptitle('Surface Nitrogen')
+
+    ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax1.set_title('Vink 01')
+
+    ax2.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax2.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax2.set_title('Vink 18')
+
+    ax3.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax3.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax3.set_title('Leuven')
+
+    ax4.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax4.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax4.set_title('Krticka')
+
+    return fig, ax1, ax2, ax3, ax4, colormap
+
+def He_mass():
+
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
+    colormap = plt.cm.jet
+
+    fig.suptitle('Surface Helium')
+
+    ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax1.set_title('Vink 01')
+
+    ax2.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax2.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax2.set_title('Vink 18')
+
+    ax3.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax3.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax3.set_title('Leuven')
+
+    ax4.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
+    ax4.set_xlabel('Initial Mass [M$_{\odot}$]')
+    ax4.set_title('Krticka')
+
+    return fig, ax1, ax2, ax3, ax4, colormap
