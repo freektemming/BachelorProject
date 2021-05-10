@@ -1,6 +1,6 @@
 # Script that makes plot
 
-from data import *
+from data_allfiles import *
 from plots import *
 from plotstyles import *
 import matplotlib.pyplot as plt
