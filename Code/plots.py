@@ -176,12 +176,15 @@ def mid(model):
 
     return fig, ax
 
-def m_init():
+def m_init(ms):
 
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
     colormap = plt.cm.jet
-
-    fig.suptitle('Final Mass Fractions')
+    
+    if ms == True:
+        fig.suptitle('Final Mass Fractions: Main Sequence')
+    else:
+        fig.suptitle('Final Mass Fractions: Full Simulation')
 
     ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
     ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
@@ -201,12 +204,15 @@ def m_init():
 
     return fig, ax1, ax2, ax3, ax4, colormap
 
-def env_mass():
+def env_mass(ms):
 
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
     colormap = plt.cm.jet
 
-    fig.suptitle('Final Envelope Mass')
+    if ms == True:
+        fig.suptitle('Final Envelope Mass: Main Sequence')
+    else:
+        fig.suptitle('Final Envelope Mass: Full Simulation')
 
     ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
     ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
@@ -226,12 +232,15 @@ def env_mass():
 
     return fig, ax1, ax2, ax3, ax4, colormap
 
-def N_mass():
+def N_mass(ms):
 
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
     colormap = plt.cm.jet
 
-    fig.suptitle('Surface Nitrogen')
+    if ms == True:
+        fig.suptitle('Surface Nitrogen: Main Sequence')
+    else:
+        fig.suptitle('Surface Nitrogen: Full Simulation')
 
     ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
     ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
@@ -251,12 +260,15 @@ def N_mass():
 
     return fig, ax1, ax2, ax3, ax4, colormap
 
-def He_mass():
+def He_mass(ms):
 
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
     colormap = plt.cm.jet
 
-    fig.suptitle('Surface Helium')
+    if ms == True:
+        fig.suptitle('Surface Helium: Main Sequence')
+    else:
+        fig.suptitle('Surface Helium: Fractions Full Simulation')
 
     ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
     ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
