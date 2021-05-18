@@ -9,7 +9,7 @@ from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 
 # limit: True for main sequense
-lim = True
+lim = False
 
 # ------ plot normal HRD 1 Model All Masses------
 def hrd(model1, model2, model3, model4, model5, number, ms):
@@ -39,11 +39,11 @@ def hrd(model1, model2, model3, model4, model5, number, ms):
         folder = 'MainSequence'
     else:
         # full simulation
-        lim1 = len(model1.age)
-        lim2 = len(model2.age)
-        lim3 = len(model3.age)
-        lim4 = len(model4.age)
-        lim5 = len(model5.age)
+        lim1 = model1.end()
+        lim2 = model2.end()
+        lim3 = model3.end()
+        lim4 = model4.end()
+        lim5 = model5.end()
 
         min1 = model1.get_min_bar()
         max1 = model1.get_max_bar()
@@ -122,10 +122,10 @@ def hrdmass(model1, model2, model3, model4, number, ms):
         folder = 'MainSequence'
     else:
         # full simulation
-        lim1 = len(model1.age)
-        lim2 = len(model2.age)
-        lim3 = len(model3.age)
-        lim4 = len(model4.age)
+        lim1 = model1.end()
+        lim2 = model2.end()
+        lim3 = model3.end()
+        lim4 = model4.end()
 
         min1 = model1.get_min_bar()
         max1 = model1.get_max_bar()
@@ -135,7 +135,7 @@ def hrdmass(model1, model2, model3, model4, number, ms):
     # ------ Set Plot Style ------
     default_style()
     fig, ax, colormap = HRD(model)
-
+    print(model2.Teff[lim2])
     # plot line
     ax.plot(model1.Teff[0:lim1], model1.logL[0:lim1], lw = 1, color = 'black', linestyle = 'solid', label = 'Vink 01')
     ax.plot(model2.Teff[0:lim2], model2.logL[0:lim2], lw = 1, color = 'black', linestyle = 'dashed', label = 'Vink 18')

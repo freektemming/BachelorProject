@@ -148,6 +148,7 @@ class Data:
         # ------ wind ------
         self.vesc = data[self.x:,86]
         self.vinf = data[self.x:,87]
+        
         self.wvink01 = data[self.x:,88]
         self.usewvink01 = data[self.x:,89]
         self.wvink18 = data[self.x:,90]
@@ -162,6 +163,7 @@ class Data:
         self.usewkee = data[self.x:,99]
         self.wsander =  data[self.x:,100]
         self.usewsander = data[self.x:,101]
+        
         self.frot = data[self.x:,102]
         self.Mdotorig = data[self.x:,103]
             
@@ -217,6 +219,14 @@ class Data:
     def get_grav(self, i):
         min = self.logg[i]
         return min
+
+    # determine eind of simulation, defined by temperature of 10 kK
+    def end(self):
+        for i in range(len(self.Teff) - 1):
+            if self.Teff[i] < 10:
+                return i
+        # else        
+        return -1
 
     # ------ Determine max of list in certain range ------
     def maxlist(self, lim):

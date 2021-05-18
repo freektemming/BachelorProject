@@ -285,7 +285,6 @@ def midstructure(model, name):
     plt.savefig(f'Plots/{datafolder}/Structure/{name}.png')
 
 
-
 midstructure(vink01_20m, 'Vink01 20M')
 midstructure(vink01_30m, 'Vink01 30M')
 midstructure(vink01_40m, 'Vink01 40M')

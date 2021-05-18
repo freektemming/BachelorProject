@@ -53,6 +53,8 @@ def recipe(model1, model2, model3, model4, model5, number, ms):
     novinkx = []
     novinky = []
     novinkc = []
+    recipe = []
+
     if number == '1':   
         for i in range(len(model1.age[0:lim1])):
             if model1.usewvink01[i] == 1:
