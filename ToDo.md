@@ -22,3 +22,8 @@ eenheden van surf he & surf N in overview?
 - bel supercomputer, login
 - verander symbool in colorplot per metaliciteit
 - alles runnen met nieuw eindpunt (tot waar de simulatie?)
+
+- time vs mdot
+- teff vs mdot
+- email annelotte about practise presentation
+- foto's op desktop

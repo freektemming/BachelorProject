@@ -18,30 +18,54 @@ def HRD(model):
 
     return fig, ax, colormap
 
-def subHRD():
+def overview_Mdot_Teff(region):
 
     colormap = plt.cm.plasma
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2)
-    fig.suptitle('Herzsprung Russell Diagram')
+    fig.suptitle(f'Mass Loss of Different Models: {region}')
 
-    ax1.set_xlim(60,2)
+    ax1.set_xlim(55,5)
     ax1.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
-    ax1.set_ylabel('log (L / L$_{\odot}$)')
+    ax1.set_ylabel('M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
     ax1.set_title('Vink 01')
 
-    ax2.set_xlim(60,2)
+    ax2.set_xlim(55,5)
     ax2.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
-    ax2.set_ylabel('log (L / L$_{\odot}$)')
+    ax2.set_ylabel('M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
     ax2.set_title('Vink 18')
 
-    ax3.set_xlim(60,2)
+    ax3.set_xlim(55,5)
     ax3.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
-    ax3.set_ylabel('log (L / L$_{\odot}$)')
+    ax3.set_ylabel('M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
     ax3.set_title('Leuven')
 
-    ax4.set_xlim(60,2)
+    ax4.set_xlim(55,5)
     ax4.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
-    ax4.set_ylabel('log (L / L$_{\odot}$)')
+    ax4.set_ylabel('M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
+    ax4.set_title('Krticka')
+
+    return fig, ((ax1, ax2), (ax3, ax4)), colormap
+
+def overview_Mdot_Time(region):
+
+    colormap = plt.cm.plasma
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2)
+    fig.suptitle(f'Mass Loss of Different Models: {region}')
+
+    ax1.set_xlabel('Time [Myr]')
+    ax1.set_ylabel('M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
+    ax1.set_title('Vink 01')
+
+    ax2.set_xlabel('Time [Myr]')
+    ax2.set_ylabel('M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]]')
+    ax2.set_title('Vink 18')
+
+    ax3.set_xlabel('Time [Myr]')
+    ax3.set_ylabel('M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
+    ax3.set_title('Leuven')
+
+    ax4.set_xlabel('Time [Myr]')
+    ax4.set_ylabel('M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
     ax4.set_title('Krticka')
 
     return fig, ((ax1, ax2), (ax3, ax4)), colormap
@@ -235,7 +259,7 @@ def env_mass(ms):
 def N_mass(ms):
 
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
-    colormap = plt.cm.jet
+    colormap = plt.cm.coolwarm
 
     if ms == True:
         fig.suptitle('Surface Nitrogen: Main Sequence')
@@ -260,30 +284,3 @@ def N_mass(ms):
 
     return fig, ax1, ax2, ax3, ax4, colormap
 
-def He_mass(ms):
-
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
-    colormap = plt.cm.jet
-
-    if ms == True:
-        fig.suptitle('Surface Helium: Main Sequence')
-    else:
-        fig.suptitle('Surface Helium: Fractions Full Simulation')
-
-    ax1.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
-    ax1.set_xlabel('Initial Mass [M$_{\odot}$]')
-    ax1.set_title('Vink 01')
-
-    ax2.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
-    ax2.set_xlabel('Initial Mass [M$_{\odot}$]')
-    ax2.set_title('Vink 18')
-
-    ax3.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
-    ax3.set_xlabel('Initial Mass [M$_{\odot}$]')
-    ax3.set_title('Leuven')
-
-    ax4.set_ylabel('Initial V$_{\mathregular{rot}}$ [km / s]')
-    ax4.set_xlabel('Initial Mass [M$_{\odot}$]')
-    ax4.set_title('Krticka')
-
-    return fig, ax1, ax2, ax3, ax4, colormap
