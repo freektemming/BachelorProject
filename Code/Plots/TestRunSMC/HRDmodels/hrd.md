@@ -1,0 +1,1 @@
+In this diagram you see that the duration of the main sequences depends on the mass loss of the models. More mass loss is less mass and therefore less hydrogen burning. More mass loss means therefore that the main sequence is longer. 

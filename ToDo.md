@@ -27,3 +27,11 @@ eenheden van surf he & surf N in overview?
 - teff vs mdot
 - email annelotte about practise presentation
 - foto's op desktop
+
+logscale
+structuur
+sam mailen
+simulaties : commands
+colorbar
+annelottee
+self.end in andere plots (subplot?)

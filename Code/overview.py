@@ -11,10 +11,10 @@ import matplotlib.lines as mlines
 
 ms = True
 
-def initial_values(amodel1, amodel2, amodel3, amodel4, amodel5, bmodel1, bmodel2, bmodel3, bmodel4, bmodel5, cmodel1, cmodel2, cmodel3, cmodel4, cmodel5, dmodel1, dmodel2, dmodel3, dmodel4, dmodel5, emodel1, emodel2, emodel3, emodel4, emodel5, fmodel1, fmodel2, fmodel3, fmodel4, fmodel5,
-amodel6, amodel7, amodel8, amodel9, amodel10, bmodel6, bmodel7, bmodel8, bmodel9, bmodel10, cmodel6, cmodel7, cmodel8, cmodel9, cmodel10, dmodel6, dmodel7, dmodel8, dmodel9, dmodel10, emodel6, emodel7, emodel8, emodel9, emodel10, fmodel6, fmodel7, fmodel8, fmodel9, fmodel10,
-amodel11, amodel12, amodel13, amodel14, amodel15, bmodel11, bmodel12, bmodel13, bmodel14, bmodel15, cmodel11, cmodel12, cmodel13, cmodel14, cmodel15, dmodel11, dmodel12, dmodel13, dmodel14, dmodel15, emodel11, emodel12, emodel13, emodel14, emodel15, fmodel11, fmodel12, fmodel13, fmodel14, fmodel15,
-amodel16, amodel17, amodel18, amodel19, amodel20, bmodel16, bmodel17, bmodel18, bmodel19, bmodel20, cmodel16, cmodel17, cmodel18, cmodel19, cmodel20, dmodel16, dmodel17, dmodel18, dmodel19, dmodel20, emodel16, emodel17, emodel18, emodel19, emodel20, fmodel16, fmodel17, fmodel18, fmodel19, fmodel20,
+def initial_values(amodel1, amodel2, amodel3, amodel4, amodel5, bmodel1, bmodel2, bmodel3, bmodel4, bmodel5, cmodel1, cmodel2, cmodel3, cmodel4, cmodel5, dmodel1, dmodel2, dmodel3, dmodel4, dmodel5, emodel1, emodel2, emodel3, emodel4, emodel5, fmodel1, fmodel2, fmodel3, fmodel4, fmodel5, gmodel1, gmodel2, gmodel3, gmodel4, gmodel5, hmodel1, hmodel2, hmodel3, hmodel4, hmodel5, imodel1, imodel2, imodel3, imodel4, imodel5,
+amodel6, amodel7, amodel8, amodel9, amodel10, bmodel6, bmodel7, bmodel8, bmodel9, bmodel10, cmodel6, cmodel7, cmodel8, cmodel9, cmodel10, dmodel6, dmodel7, dmodel8, dmodel9, dmodel10, emodel6, emodel7, emodel8, emodel9, emodel10, fmodel6, fmodel7, fmodel8, fmodel9, fmodel10, gmodel6, gmodel7, gmodel8, gmodel9, gmodel10, hmodel6, hmodel7, hmodel8, hmodel9, hmodel10, imodel6, imodel7, imodel8, imodel9, imodel10,
+amodel11, amodel12, amodel13, amodel14, amodel15, bmodel11, bmodel12, bmodel13, bmodel14, bmodel15, cmodel11, cmodel12, cmodel13, cmodel14, cmodel15, dmodel11, dmodel12, dmodel13, dmodel14, dmodel15, emodel11, emodel12, emodel13, emodel14, emodel15, fmodel11, fmodel12, fmodel13, fmodel14, fmodel15, gmodel11, gmodel12, gmodel13, gmodel14, gmodel15, hmodel11, hmodel12, hmodel13, hmodel14, hmodel15, imodel11, imodel12, imodel13, imodel14, imodel15,
+amodel16, amodel17, amodel18, amodel19, amodel20, bmodel16, bmodel17, bmodel18, bmodel19, bmodel20, cmodel16, cmodel17, cmodel18, cmodel19, cmodel20, dmodel16, dmodel17, dmodel18, dmodel19, dmodel20, emodel16, emodel17, emodel18, emodel19, emodel20, fmodel16, fmodel17, fmodel18, fmodel19, fmodel20, gmodel16, gmodel17, gmodel18, gmodel19, gmodel20, hmodel16, hmodel17, hmodel18, hmodel19, hmodel20, imodel16, imodel17, imodel18, imodel19, imodel20,
 ms):
 
     # end of list
@@ -145,6 +145,69 @@ ms):
         flim18 = fmodel18.mainsequence()
         flim19 = fmodel19.mainsequence()
         flim20 = fmodel20.mainsequence()
+
+        glim1 = gmodel1.mainsequence()
+        glim2 = gmodel2.mainsequence()
+        glim3 = gmodel3.mainsequence()
+        glim4 = gmodel4.mainsequence()
+        glim5 = gmodel5.mainsequence()
+        glim6 = gmodel6.mainsequence()
+        glim7 = gmodel7.mainsequence()
+        glim8 = gmodel8.mainsequence()
+        glim9 = gmodel9.mainsequence()
+        glim10 = gmodel10.mainsequence()
+        glim11 = gmodel11.mainsequence()
+        glim12 = gmodel12.mainsequence()
+        glim13 = gmodel13.mainsequence()
+        glim14 = gmodel14.mainsequence()
+        glim15 = gmodel15.mainsequence()
+        glim16 = gmodel16.mainsequence()
+        glim17 = gmodel17.mainsequence()
+        glim18 = gmodel18.mainsequence()
+        glim19 = gmodel19.mainsequence()
+        glim20 = gmodel20.mainsequence()
+
+        hlim1 = hmodel1.mainsequence()
+        hlim2 = hmodel2.mainsequence()
+        hlim3 = hmodel3.mainsequence()
+        hlim4 = hmodel4.mainsequence()
+        hlim5 = hmodel5.mainsequence()
+        hlim6 = hmodel6.mainsequence()
+        hlim7 = hmodel7.mainsequence()
+        hlim8 = hmodel8.mainsequence()
+        hlim9 = hmodel9.mainsequence()
+        hlim10 = hmodel10.mainsequence()
+        hlim11 = hmodel11.mainsequence()
+        hlim12 = hmodel12.mainsequence()
+        hlim13 = hmodel13.mainsequence()
+        hlim14 = hmodel14.mainsequence()
+        hlim15 = hmodel15.mainsequence()
+        hlim16 = hmodel16.mainsequence()
+        hlim17 = hmodel17.mainsequence()
+        hlim18 = hmodel18.mainsequence()
+        hlim19 = hmodel19.mainsequence()
+        hlim20 = hmodel20.mainsequence()
+
+        ilim1 = imodel1.mainsequence()
+        ilim2 = imodel2.mainsequence()
+        ilim3 = imodel3.mainsequence()
+        ilim4 = imodel4.mainsequence()
+        ilim5 = imodel5.mainsequence()
+        ilim6 = imodel6.mainsequence()
+        ilim7 = imodel7.mainsequence()
+        ilim8 = imodel8.mainsequence()
+        ilim9 = imodel9.mainsequence()
+        ilim10 = imodel10.mainsequence()
+        ilim11 = imodel11.mainsequence()
+        ilim12 = imodel12.mainsequence()
+        ilim13 = imodel13.mainsequence()
+        ilim14 = imodel14.mainsequence()
+        ilim15 = imodel15.mainsequence()
+        ilim16 = imodel16.mainsequence()
+        ilim17 = imodel17.mainsequence()
+        ilim18 = imodel18.mainsequence()
+        ilim19 = imodel19.mainsequence()
+        ilim20 = imodel20.mainsequence()
     
 
         # limit colorbar
@@ -280,6 +343,69 @@ ms):
         flim19 = fmodel19.end()
         flim20 = fmodel20.end()
 
+        glim1 = gmodel1.end()
+        glim2 = gmodel2.end()
+        glim3 = gmodel3.end()
+        glim4 = gmodel4.end()
+        glim5 = gmodel5.end()
+        glim6 = gmodel6.end()
+        glim7 = gmodel7.end()
+        glim8 = gmodel8.end()
+        glim9 = gmodel9.end()
+        glim10 = gmodel10.end()
+        glim11 = gmodel11.end()
+        glim12 = gmodel12.end()
+        glim13 = gmodel13.end()
+        glim14 = gmodel14.end()
+        glim15 = gmodel15.end()
+        glim16 = gmodel16.end()
+        glim17 = gmodel17.end()
+        glim18 = gmodel18.end()
+        glim19 = gmodel19.end()
+        glim20 = gmodel20.end()
+
+        hlim1 = hmodel1.end()
+        hlim2 = hmodel2.end()
+        hlim3 = hmodel3.end()
+        hlim4 = hmodel4.end()
+        hlim5 = hmodel5.end()
+        hlim6 = hmodel6.end()
+        hlim7 = hmodel7.end()
+        hlim8 = hmodel8.end()
+        hlim9 = hmodel9.end()
+        hlim10 = hmodel10.end()
+        hlim11 = hmodel11.end()
+        hlim12 = hmodel12.end()
+        hlim13 = hmodel13.end()
+        hlim14 = hmodel14.end()
+        hlim15 = hmodel15.end()
+        hlim16 = hmodel16.end()
+        hlim17 = hmodel17.end()
+        hlim18 = hmodel18.end()
+        hlim19 = hmodel19.end()
+        hlim20 = hmodel20.end()
+
+        ilim1 = imodel1.end()
+        ilim2 = imodel2.end()
+        ilim3 = imodel3.end()
+        ilim4 = imodel4.end()
+        ilim5 = imodel5.end()
+        ilim6 = imodel6.end()
+        ilim7 = imodel7.end()
+        ilim8 = imodel8.end()
+        ilim9 = imodel9.end()
+        ilim10 = imodel10.end()
+        ilim11 = imodel11.end()
+        ilim12 = imodel12.end()
+        ilim13 = imodel13.end()
+        ilim14 = imodel14.end()
+        ilim15 = imodel15.end()
+        ilim16 = imodel16.end()
+        ilim17 = imodel17.end()
+        ilim18 = imodel18.end()
+        ilim19 = imodel19.end()
+        ilim20 = imodel20.end()
+
         # colorbar
         min1 = 0.8
         max1 = 1
@@ -337,6 +463,24 @@ ms):
     ax1.scatter(fmodel4.M[0], fmodel4.vrot[0], c= fmodel4.histM[flim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(fmodel5.M[0], fmodel5.vrot[0], c= fmodel5.histM[flim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
+    ax1.scatter(gmodel1.M[0], gmodel1.vrot[0], c= gmodel1.histM[glim1], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel2.M[0], gmodel2.vrot[0], c= gmodel2.histM[glim2], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel3.M[0], gmodel3.vrot[0], c= gmodel3.histM[glim3], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel4.M[0], gmodel4.vrot[0], c= gmodel4.histM[glim4], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel5.M[0], gmodel5.vrot[0], c= gmodel5.histM[glim5], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax1.scatter(hmodel1.M[0], hmodel1.vrot[0], c= hmodel1.histM[hlim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel2.M[0], hmodel2.vrot[0], c= hmodel2.histM[hlim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel3.M[0], hmodel3.vrot[0], c= hmodel3.histM[hlim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel4.M[0], hmodel4.vrot[0], c= hmodel4.histM[hlim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel5.M[0], hmodel5.vrot[0], c= hmodel5.histM[hlim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax1.scatter(imodel1.M[0], imodel1.vrot[0], c= imodel1.histM[ilim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel2.M[0], imodel2.vrot[0], c= imodel2.histM[ilim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel3.M[0], imodel3.vrot[0], c= imodel3.histM[ilim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel4.M[0], imodel4.vrot[0], c= imodel4.histM[ilim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel5.M[0], imodel5.vrot[0], c= imodel5.histM[ilim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     ax1.legend(handles=[circle, triangle, square], loc='center left')
     
     # cbar = fig.colorbar(ims1, ax = ax1)
@@ -379,7 +523,25 @@ ms):
     ax2.scatter(fmodel8.M[0], fmodel8.vrot[0], c= fmodel8.histM[flim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(fmodel9.M[0], fmodel9.vrot[0], c= fmodel9.histM[flim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(fmodel10.M[0], fmodel10.vrot[0], c= fmodel10.histM[flim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    
+
+    ax2.scatter(gmodel6.M[0], gmodel6.vrot[0], c= gmodel6.histM[glim6], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel7.M[0], gmodel7.vrot[0], c= gmodel7.histM[glim7], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel8.M[0], gmodel8.vrot[0], c= gmodel8.histM[glim8], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel9.M[0], gmodel9.vrot[0], c= gmodel9.histM[glim9], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel10.M[0], gmodel10.vrot[0], c= gmodel10.histM[glim10], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax2.scatter(hmodel6.M[0], hmodel6.vrot[0], c= hmodel6.histM[hlim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel7.M[0], hmodel7.vrot[0], c= hmodel7.histM[hlim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel8.M[0], hmodel8.vrot[0], c= hmodel8.histM[hlim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel9.M[0], hmodel9.vrot[0], c= hmodel9.histM[hlim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel10.M[0], hmodel10.vrot[0], c= hmodel10.histM[hlim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax2.scatter(imodel6.M[0], imodel6.vrot[0], c= imodel6.histM[ilim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel7.M[0], imodel7.vrot[0], c= imodel7.histM[ilim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel8.M[0], imodel8.vrot[0], c= imodel8.histM[ilim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel9.M[0], imodel9.vrot[0], c= imodel9.histM[ilim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel10.M[0], imodel10.vrot[0], c= imodel10.histM[ilim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     cbar2 = fig.colorbar(ims2, ax = ax2)
     cbar2.set_label('Final Mass / Initial Mass')
     ax2.legend(handles=[circle, triangle, square], loc='center left')
@@ -421,7 +583,25 @@ ms):
     ax3.scatter(fmodel13.M[0], fmodel13.vrot[0], c= fmodel13.histM[flim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(fmodel14.M[0], fmodel14.vrot[0], c= fmodel14.histM[flim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(fmodel15.M[0], fmodel15.vrot[0], c= fmodel15.histM[flim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    
+
+    ax3.scatter(gmodel11.M[0], gmodel11.vrot[0], c= gmodel11.histM[glim11], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel12.M[0], gmodel12.vrot[0], c= gmodel12.histM[glim12], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel13.M[0], gmodel13.vrot[0], c= gmodel13.histM[glim13], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel14.M[0], gmodel14.vrot[0], c= gmodel14.histM[glim14], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel15.M[0], gmodel15.vrot[0], c= gmodel15.histM[glim15], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax3.scatter(hmodel11.M[0], hmodel11.vrot[0], c= hmodel11.histM[hlim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel12.M[0], hmodel12.vrot[0], c= hmodel12.histM[hlim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel13.M[0], hmodel13.vrot[0], c= hmodel13.histM[hlim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel14.M[0], hmodel14.vrot[0], c= hmodel14.histM[hlim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel15.M[0], hmodel15.vrot[0], c= hmodel15.histM[hlim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax3.scatter(imodel11.M[0], imodel11.vrot[0], c= imodel11.histM[ilim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel12.M[0], imodel12.vrot[0], c= imodel12.histM[ilim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel13.M[0], imodel13.vrot[0], c= imodel13.histM[ilim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel14.M[0], imodel14.vrot[0], c= imodel14.histM[ilim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel15.M[0], imodel15.vrot[0], c= imodel15.histM[ilim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     ax3.legend(handles=[circle, triangle, square], loc='center left')
 
     # cbar3 = fig.colorbar(ims3, ax = ax3)
@@ -465,6 +645,24 @@ ms):
     ax4.scatter(fmodel19.M[0], fmodel19.vrot[0], c= fmodel19.histM[flim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax4.scatter(fmodel20.M[0], fmodel20.vrot[0], c= fmodel20.histM[flim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
+    ax4.scatter(gmodel16.M[0], gmodel16.vrot[0], c= gmodel16.histM[glim16], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel17.M[0], gmodel17.vrot[0], c= gmodel17.histM[glim17], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel18.M[0], gmodel18.vrot[0], c= gmodel18.histM[glim18], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel19.M[0], gmodel19.vrot[0], c= gmodel19.histM[glim19], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel20.M[0], gmodel20.vrot[0], c= gmodel20.histM[glim20], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax4.scatter(hmodel16.M[0], hmodel16.vrot[0], c= hmodel16.histM[hlim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel17.M[0], hmodel17.vrot[0], c= hmodel17.histM[hlim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel18.M[0], hmodel18.vrot[0], c= hmodel18.histM[hlim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel19.M[0], hmodel19.vrot[0], c= hmodel19.histM[hlim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel20.M[0], hmodel20.vrot[0], c= hmodel20.histM[hlim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax4.scatter(imodel16.M[0], imodel16.vrot[0], c= imodel16.histM[ilim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel17.M[0], imodel17.vrot[0], c= imodel17.histM[ilim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel18.M[0], imodel18.vrot[0], c= imodel18.histM[ilim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel19.M[0], imodel19.vrot[0], c= imodel19.histM[ilim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel20.M[0], imodel20.vrot[0], c= imodel20.histM[ilim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     cbar4 = fig.colorbar(ims4, ax = ax4)
     cbar4.set_label('Final Mass / Initial Mass')
     ax4.legend(handles=[circle, triangle, square], loc='center left')
@@ -473,18 +671,18 @@ ms):
     plt.savefig(f'Plots/Overview/{folder}/Final_mass{limit}.png')
 
 
-initial_values(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60,
-avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60,
-aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60,
-akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60,
+initial_values(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
+avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60, gvink18_20, gvink18_30, gvink18_40, gvink18_50, gvink18_60, hvink18_20, hvink18_30, hvink18_40, hvink18_50, hvink18_60, ivink18_20, ivink18_30, ivink18_40, ivink18_50, ivink18_60,
+aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60, gleuven_20, gleuven_30, gleuven_40, gleuven_50, gleuven_60, hleuven_20, hleuven_30, hleuven_40, hleuven_50, hleuven_60, ileuven_20, ileuven_30, ileuven_40, ileuven_50, ileuven_60,
+akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60, gkrticka_20, gkrticka_30, gkrticka_40, gkrticka_50, gkrticka_60, hkrticka_20, hkrticka_30, hkrticka_40, hkrticka_50, hkrticka_60, ikrticka_20, ikrticka_30, ikrticka_40, ikrticka_50, ikrticka_60,
 ms)
 
 # ============================================================
 
-def envelopemass(amodel1, amodel2, amodel3, amodel4, amodel5, bmodel1, bmodel2, bmodel3, bmodel4, bmodel5, cmodel1, cmodel2, cmodel3, cmodel4, cmodel5, dmodel1, dmodel2, dmodel3, dmodel4, dmodel5, emodel1, emodel2, emodel3, emodel4, emodel5, fmodel1, fmodel2, fmodel3, fmodel4, fmodel5,
-amodel6, amodel7, amodel8, amodel9, amodel10, bmodel6, bmodel7, bmodel8, bmodel9, bmodel10, cmodel6, cmodel7, cmodel8, cmodel9, cmodel10, dmodel6, dmodel7, dmodel8, dmodel9, dmodel10, emodel6, emodel7, emodel8, emodel9, emodel10, fmodel6, fmodel7, fmodel8, fmodel9, fmodel10,
-amodel11, amodel12, amodel13, amodel14, amodel15, bmodel11, bmodel12, bmodel13, bmodel14, bmodel15, cmodel11, cmodel12, cmodel13, cmodel14, cmodel15, dmodel11, dmodel12, dmodel13, dmodel14, dmodel15, emodel11, emodel12, emodel13, emodel14, emodel15, fmodel11, fmodel12, fmodel13, fmodel14, fmodel15,
-amodel16, amodel17, amodel18, amodel19, amodel20, bmodel16, bmodel17, bmodel18, bmodel19, bmodel20, cmodel16, cmodel17, cmodel18, cmodel19, cmodel20, dmodel16, dmodel17, dmodel18, dmodel19, dmodel20, emodel16, emodel17, emodel18, emodel19, emodel20, fmodel16, fmodel17, fmodel18, fmodel19, fmodel20,
+def envelopemass(amodel1, amodel2, amodel3, amodel4, amodel5, bmodel1, bmodel2, bmodel3, bmodel4, bmodel5, cmodel1, cmodel2, cmodel3, cmodel4, cmodel5, dmodel1, dmodel2, dmodel3, dmodel4, dmodel5, emodel1, emodel2, emodel3, emodel4, emodel5, fmodel1, fmodel2, fmodel3, fmodel4, fmodel5, gmodel1, gmodel2, gmodel3, gmodel4, gmodel5, hmodel1, hmodel2, hmodel3, hmodel4, hmodel5, imodel1, imodel2, imodel3, imodel4, imodel5,
+amodel6, amodel7, amodel8, amodel9, amodel10, bmodel6, bmodel7, bmodel8, bmodel9, bmodel10, cmodel6, cmodel7, cmodel8, cmodel9, cmodel10, dmodel6, dmodel7, dmodel8, dmodel9, dmodel10, emodel6, emodel7, emodel8, emodel9, emodel10, fmodel6, fmodel7, fmodel8, fmodel9, fmodel10, gmodel6, gmodel7, gmodel8, gmodel9, gmodel10, hmodel6, hmodel7, hmodel8, hmodel9, hmodel10, imodel6, imodel7, imodel8, imodel9, imodel10,
+amodel11, amodel12, amodel13, amodel14, amodel15, bmodel11, bmodel12, bmodel13, bmodel14, bmodel15, cmodel11, cmodel12, cmodel13, cmodel14, cmodel15, dmodel11, dmodel12, dmodel13, dmodel14, dmodel15, emodel11, emodel12, emodel13, emodel14, emodel15, fmodel11, fmodel12, fmodel13, fmodel14, fmodel15, gmodel11, gmodel12, gmodel13, gmodel14, gmodel15, hmodel11, hmodel12, hmodel13, hmodel14, hmodel15, imodel11, imodel12, imodel13, imodel14, imodel15,
+amodel16, amodel17, amodel18, amodel19, amodel20, bmodel16, bmodel17, bmodel18, bmodel19, bmodel20, cmodel16, cmodel17, cmodel18, cmodel19, cmodel20, dmodel16, dmodel17, dmodel18, dmodel19, dmodel20, emodel16, emodel17, emodel18, emodel19, emodel20, fmodel16, fmodel17, fmodel18, fmodel19, fmodel20, gmodel16, gmodel17, gmodel18, gmodel19, gmodel20, hmodel16, hmodel17, hmodel18, hmodel19, hmodel20, imodel16, imodel17, imodel18, imodel19, imodel20,
 ms):
 
     # end of list
@@ -615,6 +813,69 @@ ms):
         flim18 = fmodel18.mainsequence()
         flim19 = fmodel19.mainsequence()
         flim20 = fmodel20.mainsequence()
+
+        glim1 = gmodel1.mainsequence()
+        glim2 = gmodel2.mainsequence()
+        glim3 = gmodel3.mainsequence()
+        glim4 = gmodel4.mainsequence()
+        glim5 = gmodel5.mainsequence()
+        glim6 = gmodel6.mainsequence()
+        glim7 = gmodel7.mainsequence()
+        glim8 = gmodel8.mainsequence()
+        glim9 = gmodel9.mainsequence()
+        glim10 = gmodel10.mainsequence()
+        glim11 = gmodel11.mainsequence()
+        glim12 = gmodel12.mainsequence()
+        glim13 = gmodel13.mainsequence()
+        glim14 = gmodel14.mainsequence()
+        glim15 = gmodel15.mainsequence()
+        glim16 = gmodel16.mainsequence()
+        glim17 = gmodel17.mainsequence()
+        glim18 = gmodel18.mainsequence()
+        glim19 = gmodel19.mainsequence()
+        glim20 = gmodel20.mainsequence()
+
+        hlim1 = hmodel1.mainsequence()
+        hlim2 = hmodel2.mainsequence()
+        hlim3 = hmodel3.mainsequence()
+        hlim4 = hmodel4.mainsequence()
+        hlim5 = hmodel5.mainsequence()
+        hlim6 = hmodel6.mainsequence()
+        hlim7 = hmodel7.mainsequence()
+        hlim8 = hmodel8.mainsequence()
+        hlim9 = hmodel9.mainsequence()
+        hlim10 = hmodel10.mainsequence()
+        hlim11 = hmodel11.mainsequence()
+        hlim12 = hmodel12.mainsequence()
+        hlim13 = hmodel13.mainsequence()
+        hlim14 = hmodel14.mainsequence()
+        hlim15 = hmodel15.mainsequence()
+        hlim16 = hmodel16.mainsequence()
+        hlim17 = hmodel17.mainsequence()
+        hlim18 = hmodel18.mainsequence()
+        hlim19 = hmodel19.mainsequence()
+        hlim20 = hmodel20.mainsequence()
+
+        ilim1 = imodel1.mainsequence()
+        ilim2 = imodel2.mainsequence()
+        ilim3 = imodel3.mainsequence()
+        ilim4 = imodel4.mainsequence()
+        ilim5 = imodel5.mainsequence()
+        ilim6 = imodel6.mainsequence()
+        ilim7 = imodel7.mainsequence()
+        ilim8 = imodel8.mainsequence()
+        ilim9 = imodel9.mainsequence()
+        ilim10 = imodel10.mainsequence()
+        ilim11 = imodel11.mainsequence()
+        ilim12 = imodel12.mainsequence()
+        ilim13 = imodel13.mainsequence()
+        ilim14 = imodel14.mainsequence()
+        ilim15 = imodel15.mainsequence()
+        ilim16 = imodel16.mainsequence()
+        ilim17 = imodel17.mainsequence()
+        ilim18 = imodel18.mainsequence()
+        ilim19 = imodel19.mainsequence()
+        ilim20 = imodel20.mainsequence()
         
         # limit colorbar
         min1 = 10
@@ -749,6 +1010,69 @@ ms):
         flim19 = fmodel19.end()
         flim20 = fmodel20.end()
 
+        glim1 = gmodel1.end()
+        glim2 = gmodel2.end()
+        glim3 = gmodel3.end()
+        glim4 = gmodel4.end()
+        glim5 = gmodel5.end()
+        glim6 = gmodel6.end()
+        glim7 = gmodel7.end()
+        glim8 = gmodel8.end()
+        glim9 = gmodel9.end()
+        glim10 = gmodel10.end()
+        glim11 = gmodel11.end()
+        glim12 = gmodel12.end()
+        glim13 = gmodel13.end()
+        glim14 = gmodel14.end()
+        glim15 = gmodel15.end()
+        glim16 = gmodel16.end()
+        glim17 = gmodel17.end()
+        glim18 = gmodel18.end()
+        glim19 = gmodel19.end()
+        glim20 = gmodel20.end()
+
+        hlim1 = hmodel1.end()
+        hlim2 = hmodel2.end()
+        hlim3 = hmodel3.end()
+        hlim4 = hmodel4.end()
+        hlim5 = hmodel5.end()
+        hlim6 = hmodel6.end()
+        hlim7 = hmodel7.end()
+        hlim8 = hmodel8.end()
+        hlim9 = hmodel9.end()
+        hlim10 = hmodel10.end()
+        hlim11 = hmodel11.end()
+        hlim12 = hmodel12.end()
+        hlim13 = hmodel13.end()
+        hlim14 = hmodel14.end()
+        hlim15 = hmodel15.end()
+        hlim16 = hmodel16.end()
+        hlim17 = hmodel17.end()
+        hlim18 = hmodel18.end()
+        hlim19 = hmodel19.end()
+        hlim20 = hmodel20.end()
+
+        ilim1 = imodel1.end()
+        ilim2 = imodel2.end()
+        ilim3 = imodel3.end()
+        ilim4 = imodel4.end()
+        ilim5 = imodel5.end()
+        ilim6 = imodel6.end()
+        ilim7 = imodel7.end()
+        ilim8 = imodel8.end()
+        ilim9 = imodel9.end()
+        ilim10 = imodel10.end()
+        ilim11 = imodel11.end()
+        ilim12 = imodel12.end()
+        ilim13 = imodel13.end()
+        ilim14 = imodel14.end()
+        ilim15 = imodel15.end()
+        ilim16 = imodel16.end()
+        ilim17 = imodel17.end()
+        ilim18 = imodel18.end()
+        ilim19 = imodel19.end()
+        ilim20 = imodel20.end()
+
         # limit colorbar
         min1 = 0
         max1 = 50
@@ -805,6 +1129,24 @@ ms):
     ax1.scatter(fmodel3.M[0], fmodel3.vrot[0], c= fmodel3.envelope_mass[flim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(fmodel4.M[0], fmodel4.vrot[0], c= fmodel4.envelope_mass[flim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(fmodel5.M[0], fmodel5.vrot[0], c= fmodel5.envelope_mass[flim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax1.scatter(gmodel1.M[0], gmodel1.vrot[0], c= gmodel1.envelope_mass[glim1], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel2.M[0], gmodel2.vrot[0], c= gmodel2.envelope_mass[glim2], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel3.M[0], gmodel3.vrot[0], c= gmodel3.envelope_mass[glim3], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel4.M[0], gmodel4.vrot[0], c= gmodel4.envelope_mass[glim4], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel5.M[0], gmodel5.vrot[0], c= gmodel5.envelope_mass[glim5], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax1.scatter(hmodel1.M[0], hmodel1.vrot[0], c= hmodel1.envelope_mass[hlim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel2.M[0], hmodel2.vrot[0], c= hmodel2.envelope_mass[hlim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel3.M[0], hmodel3.vrot[0], c= hmodel3.envelope_mass[hlim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel4.M[0], hmodel4.vrot[0], c= hmodel4.envelope_mass[hlim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel5.M[0], hmodel5.vrot[0], c= hmodel5.envelope_mass[hlim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax1.scatter(imodel1.M[0], imodel1.vrot[0], c= imodel1.envelope_mass[ilim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel2.M[0], imodel2.vrot[0], c= imodel2.envelope_mass[ilim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel3.M[0], imodel3.vrot[0], c= imodel3.envelope_mass[ilim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel4.M[0], imodel4.vrot[0], c= imodel4.envelope_mass[ilim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel5.M[0], imodel5.vrot[0], c= imodel5.envelope_mass[ilim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     
     ax1.legend(handles=[circle, triangle, square], loc='center left')
 
@@ -848,6 +1190,24 @@ ms):
     ax2.scatter(fmodel8.M[0], fmodel8.vrot[0], c= fmodel8.envelope_mass[flim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(fmodel9.M[0], fmodel9.vrot[0], c= fmodel9.envelope_mass[flim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(fmodel10.M[0], fmodel10.vrot[0], c= fmodel10.envelope_mass[flim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax2.scatter(gmodel6.M[0], gmodel6.vrot[0], c= gmodel6.envelope_mass[glim6], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel7.M[0], gmodel7.vrot[0], c= gmodel7.envelope_mass[glim7], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel8.M[0], gmodel8.vrot[0], c= gmodel8.envelope_mass[glim8], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel9.M[0], gmodel9.vrot[0], c= gmodel9.envelope_mass[glim9], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel10.M[0], gmodel10.vrot[0], c= gmodel10.envelope_mass[glim10], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax2.scatter(hmodel6.M[0], hmodel6.vrot[0], c= hmodel6.envelope_mass[hlim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel7.M[0], hmodel7.vrot[0], c= hmodel7.envelope_mass[hlim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel8.M[0], hmodel8.vrot[0], c= hmodel8.envelope_mass[hlim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel9.M[0], hmodel9.vrot[0], c= hmodel9.envelope_mass[hlim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel10.M[0], hmodel10.vrot[0], c= hmodel10.envelope_mass[hlim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax2.scatter(imodel6.M[0], imodel6.vrot[0], c= imodel6.envelope_mass[ilim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel7.M[0], imodel7.vrot[0], c= imodel7.envelope_mass[ilim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel8.M[0], imodel8.vrot[0], c= imodel8.envelope_mass[ilim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel9.M[0], imodel9.vrot[0], c= imodel9.envelope_mass[ilim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel10.M[0], imodel10.vrot[0], c= imodel10.envelope_mass[ilim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     
     cbar2 = fig.colorbar(ims2, ax = ax2)
     cbar2.set_label('Envelope Mass [M$_{\odot}$]')
@@ -891,6 +1251,24 @@ ms):
     ax3.scatter(fmodel13.M[0], fmodel13.vrot[0], c= fmodel13.envelope_mass[flim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(fmodel14.M[0], fmodel14.vrot[0], c= fmodel14.envelope_mass[flim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(fmodel15.M[0], fmodel15.vrot[0], c= fmodel15.envelope_mass[flim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax3.scatter(gmodel11.M[0], gmodel11.vrot[0], c= gmodel11.envelope_mass[glim11], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel12.M[0], gmodel12.vrot[0], c= gmodel12.envelope_mass[glim12], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel13.M[0], gmodel13.vrot[0], c= gmodel13.envelope_mass[glim13], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel14.M[0], gmodel14.vrot[0], c= gmodel14.envelope_mass[glim14], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel15.M[0], gmodel15.vrot[0], c= gmodel15.envelope_mass[glim15], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax3.scatter(hmodel11.M[0], hmodel11.vrot[0], c= hmodel11.envelope_mass[hlim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel12.M[0], hmodel12.vrot[0], c= hmodel12.envelope_mass[hlim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel13.M[0], hmodel13.vrot[0], c= hmodel13.envelope_mass[hlim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel14.M[0], hmodel14.vrot[0], c= hmodel14.envelope_mass[hlim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel15.M[0], hmodel15.vrot[0], c= hmodel15.envelope_mass[hlim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax3.scatter(imodel11.M[0], imodel11.vrot[0], c= imodel11.envelope_mass[ilim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel12.M[0], imodel12.vrot[0], c= imodel12.envelope_mass[ilim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel13.M[0], imodel13.vrot[0], c= imodel13.envelope_mass[ilim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel14.M[0], imodel14.vrot[0], c= imodel14.envelope_mass[ilim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel15.M[0], imodel15.vrot[0], c= imodel15.envelope_mass[ilim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     
     ax3.legend(handles=[circle, triangle, square], loc='center left')
 
@@ -935,6 +1313,24 @@ ms):
     ax4.scatter(fmodel19.M[0], fmodel19.vrot[0], c= fmodel19.envelope_mass[flim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax4.scatter(fmodel20.M[0], fmodel20.vrot[0], c= fmodel20.envelope_mass[flim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
+    ax4.scatter(gmodel16.M[0], gmodel16.vrot[0], c= gmodel16.envelope_mass[glim16], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel17.M[0], gmodel17.vrot[0], c= gmodel17.envelope_mass[glim17], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel18.M[0], gmodel18.vrot[0], c= gmodel18.envelope_mass[glim18], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel19.M[0], gmodel19.vrot[0], c= gmodel19.envelope_mass[glim19], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel20.M[0], gmodel20.vrot[0], c= gmodel20.envelope_mass[glim20], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax4.scatter(hmodel16.M[0], hmodel16.vrot[0], c= hmodel16.envelope_mass[hlim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel17.M[0], hmodel17.vrot[0], c= hmodel17.envelope_mass[hlim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel18.M[0], hmodel18.vrot[0], c= hmodel18.envelope_mass[hlim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel19.M[0], hmodel19.vrot[0], c= hmodel19.envelope_mass[hlim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel20.M[0], hmodel20.vrot[0], c= hmodel20.envelope_mass[hlim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax4.scatter(imodel16.M[0], imodel16.vrot[0], c= imodel16.envelope_mass[ilim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel17.M[0], imodel17.vrot[0], c= imodel17.envelope_mass[ilim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel18.M[0], imodel18.vrot[0], c= imodel18.envelope_mass[ilim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel19.M[0], imodel19.vrot[0], c= imodel19.envelope_mass[ilim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel20.M[0], imodel20.vrot[0], c= imodel20.envelope_mass[ilim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     cbar4 = fig.colorbar(ims4, ax = ax4)
     cbar4.set_label('Envelope Mass [M$_{\odot}$]')
 
@@ -944,18 +1340,18 @@ ms):
     plt.savefig(f'Plots/Overview/{folder}/Envelope_mass{limit}.png')
 
 
-envelopemass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60,
-avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60,
-aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60,
-akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60,
+envelopemass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
+avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60, gvink18_20, gvink18_30, gvink18_40, gvink18_50, gvink18_60, hvink18_20, hvink18_30, hvink18_40, hvink18_50, hvink18_60, ivink18_20, ivink18_30, ivink18_40, ivink18_50, ivink18_60,
+aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60, gleuven_20, gleuven_30, gleuven_40, gleuven_50, gleuven_60, hleuven_20, hleuven_30, hleuven_40, hleuven_50, hleuven_60, ileuven_20, ileuven_30, ileuven_40, ileuven_50, ileuven_60,
+akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60, gkrticka_20, gkrticka_30, gkrticka_40, gkrticka_50, gkrticka_60, hkrticka_20, hkrticka_30, hkrticka_40, hkrticka_50, hkrticka_60, ikrticka_20, ikrticka_30, ikrticka_40, ikrticka_50, ikrticka_60,
 ms)
 
 # ================================================================
 
-def Nmass(amodel1, amodel2, amodel3, amodel4, amodel5, bmodel1, bmodel2, bmodel3, bmodel4, bmodel5, cmodel1, cmodel2, cmodel3, cmodel4, cmodel5, dmodel1, dmodel2, dmodel3, dmodel4, dmodel5, emodel1, emodel2, emodel3, emodel4, emodel5, fmodel1, fmodel2, fmodel3, fmodel4, fmodel5,
-amodel6, amodel7, amodel8, amodel9, amodel10, bmodel6, bmodel7, bmodel8, bmodel9, bmodel10, cmodel6, cmodel7, cmodel8, cmodel9, cmodel10, dmodel6, dmodel7, dmodel8, dmodel9, dmodel10, emodel6, emodel7, emodel8, emodel9, emodel10, fmodel6, fmodel7, fmodel8, fmodel9, fmodel10,
-amodel11, amodel12, amodel13, amodel14, amodel15, bmodel11, bmodel12, bmodel13, bmodel14, bmodel15, cmodel11, cmodel12, cmodel13, cmodel14, cmodel15, dmodel11, dmodel12, dmodel13, dmodel14, dmodel15, emodel11, emodel12, emodel13, emodel14, emodel15, fmodel11, fmodel12, fmodel13, fmodel14, fmodel15,
-amodel16, amodel17, amodel18, amodel19, amodel20, bmodel16, bmodel17, bmodel18, bmodel19, bmodel20, cmodel16, cmodel17, cmodel18, cmodel19, cmodel20, dmodel16, dmodel17, dmodel18, dmodel19, dmodel20, emodel16, emodel17, emodel18, emodel19, emodel20, fmodel16, fmodel17, fmodel18, fmodel19, fmodel20,
+def Nmass(amodel1, amodel2, amodel3, amodel4, amodel5, bmodel1, bmodel2, bmodel3, bmodel4, bmodel5, cmodel1, cmodel2, cmodel3, cmodel4, cmodel5, dmodel1, dmodel2, dmodel3, dmodel4, dmodel5, emodel1, emodel2, emodel3, emodel4, emodel5, fmodel1, fmodel2, fmodel3, fmodel4, fmodel5, gmodel1, gmodel2, gmodel3, gmodel4, gmodel5, hmodel1, hmodel2, hmodel3, hmodel4, hmodel5, imodel1, imodel2, imodel3, imodel4, imodel5,
+amodel6, amodel7, amodel8, amodel9, amodel10, bmodel6, bmodel7, bmodel8, bmodel9, bmodel10, cmodel6, cmodel7, cmodel8, cmodel9, cmodel10, dmodel6, dmodel7, dmodel8, dmodel9, dmodel10, emodel6, emodel7, emodel8, emodel9, emodel10, fmodel6, fmodel7, fmodel8, fmodel9, fmodel10, gmodel6, gmodel7, gmodel8, gmodel9, gmodel10, hmodel6, hmodel7, hmodel8, hmodel9, hmodel10, imodel6, imodel7, imodel8, imodel9, imodel10,
+amodel11, amodel12, amodel13, amodel14, amodel15, bmodel11, bmodel12, bmodel13, bmodel14, bmodel15, cmodel11, cmodel12, cmodel13, cmodel14, cmodel15, dmodel11, dmodel12, dmodel13, dmodel14, dmodel15, emodel11, emodel12, emodel13, emodel14, emodel15, fmodel11, fmodel12, fmodel13, fmodel14, fmodel15, gmodel11, gmodel12, gmodel13, gmodel14, gmodel15, hmodel11, hmodel12, hmodel13, hmodel14, hmodel15, imodel11, imodel12, imodel13, imodel14, imodel15,
+amodel16, amodel17, amodel18, amodel19, amodel20, bmodel16, bmodel17, bmodel18, bmodel19, bmodel20, cmodel16, cmodel17, cmodel18, cmodel19, cmodel20, dmodel16, dmodel17, dmodel18, dmodel19, dmodel20, emodel16, emodel17, emodel18, emodel19, emodel20, fmodel16, fmodel17, fmodel18, fmodel19, fmodel20, gmodel16, gmodel17, gmodel18, gmodel19, gmodel20, hmodel16, hmodel17, hmodel18, hmodel19, hmodel20, imodel16, imodel17, imodel18, imodel19, imodel20,
 ms):
 
     # end of list
@@ -1086,6 +1482,69 @@ ms):
         flim18 = fmodel18.mainsequence()
         flim19 = fmodel19.mainsequence()
         flim20 = fmodel20.mainsequence()
+
+        glim1 = gmodel1.mainsequence()
+        glim2 = gmodel2.mainsequence()
+        glim3 = gmodel3.mainsequence()
+        glim4 = gmodel4.mainsequence()
+        glim5 = gmodel5.mainsequence()
+        glim6 = gmodel6.mainsequence()
+        glim7 = gmodel7.mainsequence()
+        glim8 = gmodel8.mainsequence()
+        glim9 = gmodel9.mainsequence()
+        glim10 = gmodel10.mainsequence()
+        glim11 = gmodel11.mainsequence()
+        glim12 = gmodel12.mainsequence()
+        glim13 = gmodel13.mainsequence()
+        glim14 = gmodel14.mainsequence()
+        glim15 = gmodel15.mainsequence()
+        glim16 = gmodel16.mainsequence()
+        glim17 = gmodel17.mainsequence()
+        glim18 = gmodel18.mainsequence()
+        glim19 = gmodel19.mainsequence()
+        glim20 = gmodel20.mainsequence()
+
+        hlim1 = hmodel1.mainsequence()
+        hlim2 = hmodel2.mainsequence()
+        hlim3 = hmodel3.mainsequence()
+        hlim4 = hmodel4.mainsequence()
+        hlim5 = hmodel5.mainsequence()
+        hlim6 = hmodel6.mainsequence()
+        hlim7 = hmodel7.mainsequence()
+        hlim8 = hmodel8.mainsequence()
+        hlim9 = hmodel9.mainsequence()
+        hlim10 = hmodel10.mainsequence()
+        hlim11 = hmodel11.mainsequence()
+        hlim12 = hmodel12.mainsequence()
+        hlim13 = hmodel13.mainsequence()
+        hlim14 = hmodel14.mainsequence()
+        hlim15 = hmodel15.mainsequence()
+        hlim16 = hmodel16.mainsequence()
+        hlim17 = hmodel17.mainsequence()
+        hlim18 = hmodel18.mainsequence()
+        hlim19 = hmodel19.mainsequence()
+        hlim20 = hmodel20.mainsequence()
+
+        ilim1 = imodel1.mainsequence()
+        ilim2 = imodel2.mainsequence()
+        ilim3 = imodel3.mainsequence()
+        ilim4 = imodel4.mainsequence()
+        ilim5 = imodel5.mainsequence()
+        ilim6 = imodel6.mainsequence()
+        ilim7 = imodel7.mainsequence()
+        ilim8 = imodel8.mainsequence()
+        ilim9 = imodel9.mainsequence()
+        ilim10 = imodel10.mainsequence()
+        ilim11 = imodel11.mainsequence()
+        ilim12 = imodel12.mainsequence()
+        ilim13 = imodel13.mainsequence()
+        ilim14 = imodel14.mainsequence()
+        ilim15 = imodel15.mainsequence()
+        ilim16 = imodel16.mainsequence()
+        ilim17 = imodel17.mainsequence()
+        ilim18 = imodel18.mainsequence()
+        ilim19 = imodel19.mainsequence()
+        ilim20 = imodel20.mainsequence()
         
         # limit colorbar
         min1 = 6.5
@@ -1221,6 +1680,69 @@ ms):
         flim19 = fmodel19.end()
         flim20 = fmodel20.end()
 
+        glim1 = gmodel1.end()
+        glim2 = gmodel2.end()
+        glim3 = gmodel3.end()
+        glim4 = gmodel4.end()
+        glim5 = gmodel5.end()
+        glim6 = gmodel6.end()
+        glim7 = gmodel7.end()
+        glim8 = gmodel8.end()
+        glim9 = gmodel9.end()
+        glim10 = gmodel10.end()
+        glim11 = gmodel11.end()
+        glim12 = gmodel12.end()
+        glim13 = gmodel13.end()
+        glim14 = gmodel14.end()
+        glim15 = gmodel15.end()
+        glim16 = gmodel16.end()
+        glim17 = gmodel17.end()
+        glim18 = gmodel18.end()
+        glim19 = gmodel19.end()
+        glim20 = gmodel20.end()
+
+        hlim1 = hmodel1.end()
+        hlim2 = hmodel2.end()
+        hlim3 = hmodel3.end()
+        hlim4 = hmodel4.end()
+        hlim5 = hmodel5.end()
+        hlim6 = hmodel6.end()
+        hlim7 = hmodel7.end()
+        hlim8 = hmodel8.end()
+        hlim9 = hmodel9.end()
+        hlim10 = hmodel10.end()
+        hlim11 = hmodel11.end()
+        hlim12 = hmodel12.end()
+        hlim13 = hmodel13.end()
+        hlim14 = hmodel14.end()
+        hlim15 = hmodel15.end()
+        hlim16 = hmodel16.end()
+        hlim17 = hmodel17.end()
+        hlim18 = hmodel18.end()
+        hlim19 = hmodel19.end()
+        hlim20 = hmodel20.end()
+
+        ilim1 = imodel1.end()
+        ilim2 = imodel2.end()
+        ilim3 = imodel3.end()
+        ilim4 = imodel4.end()
+        ilim5 = imodel5.end()
+        ilim6 = imodel6.end()
+        ilim7 = imodel7.end()
+        ilim8 = imodel8.end()
+        ilim9 = imodel9.end()
+        ilim10 = imodel10.end()
+        ilim11 = imodel11.end()
+        ilim12 = imodel12.end()
+        ilim13 = imodel13.end()
+        ilim14 = imodel14.end()
+        ilim15 = imodel15.end()
+        ilim16 = imodel16.end()
+        ilim17 = imodel17.end()
+        ilim18 = imodel18.end()
+        ilim19 = imodel19.end()
+        ilim20 = imodel20.end()
+
          # limit colorbar
         min1 = 6.5
         max1 = 9.5
@@ -1278,7 +1800,25 @@ ms):
     ax1.scatter(fmodel3.M[0], fmodel3.vrot[0], c= fmodel3.lognit[flim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(fmodel4.M[0], fmodel4.vrot[0], c= fmodel4.lognit[flim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(fmodel5.M[0], fmodel5.vrot[0], c= fmodel5.lognit[flim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    
+
+    ax1.scatter(gmodel1.M[0], gmodel1.vrot[0], c= gmodel1.lognit[glim1], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel2.M[0], gmodel2.vrot[0], c= gmodel2.lognit[glim2], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel3.M[0], gmodel3.vrot[0], c= gmodel3.lognit[glim3], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel4.M[0], gmodel4.vrot[0], c= gmodel4.lognit[glim4], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(gmodel5.M[0], gmodel5.vrot[0], c= gmodel5.lognit[glim5], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax1.scatter(hmodel1.M[0], hmodel1.vrot[0], c= hmodel1.lognit[hlim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel2.M[0], hmodel2.vrot[0], c= hmodel2.lognit[hlim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel3.M[0], hmodel3.vrot[0], c= hmodel3.lognit[hlim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel4.M[0], hmodel4.vrot[0], c= hmodel4.lognit[hlim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(hmodel5.M[0], hmodel5.vrot[0], c= hmodel5.lognit[hlim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax1.scatter(imodel1.M[0], imodel1.vrot[0], c= imodel1.lognit[ilim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel2.M[0], imodel2.vrot[0], c= imodel2.lognit[ilim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel3.M[0], imodel3.vrot[0], c= imodel3.lognit[ilim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel4.M[0], imodel4.vrot[0], c= imodel4.lognit[ilim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax1.scatter(imodel5.M[0], imodel5.vrot[0], c= imodel5.lognit[ilim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     ax1.legend(handles=[circle, triangle, square], loc='center left')
 
     # cbar = fig.colorbar(ims1, ax = ax1)
@@ -1322,6 +1862,24 @@ ms):
     ax2.scatter(fmodel9.M[0], fmodel9.vrot[0], c= fmodel9.lognit[flim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(fmodel10.M[0], fmodel10.vrot[0], c= fmodel10.lognit[flim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     
+    ax2.scatter(gmodel6.M[0], gmodel6.vrot[0], c= gmodel6.lognit[glim6], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel7.M[0], gmodel7.vrot[0], c= gmodel7.lognit[glim7], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel8.M[0], gmodel8.vrot[0], c= gmodel8.lognit[glim8], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel9.M[0], gmodel9.vrot[0], c= gmodel9.lognit[glim9], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(gmodel10.M[0], gmodel10.vrot[0], c= gmodel10.lognit[glim10], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax2.scatter(hmodel6.M[0], hmodel6.vrot[0], c= hmodel6.lognit[hlim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel7.M[0], hmodel7.vrot[0], c= hmodel7.lognit[hlim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel8.M[0], hmodel8.vrot[0], c= hmodel8.lognit[hlim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel9.M[0], hmodel9.vrot[0], c= hmodel9.lognit[hlim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(hmodel10.M[0], hmodel10.vrot[0], c= hmodel10.lognit[hlim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax2.scatter(imodel6.M[0], imodel6.vrot[0], c= imodel6.lognit[ilim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel7.M[0], imodel7.vrot[0], c= imodel7.lognit[ilim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel8.M[0], imodel8.vrot[0], c= imodel8.lognit[ilim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel9.M[0], imodel9.vrot[0], c= imodel9.lognit[ilim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax2.scatter(imodel10.M[0], imodel10.vrot[0], c= imodel10.lognit[ilim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     cbar2 = fig.colorbar(ims2, ax = ax2)
     cbar2.set_label('Nitrogen Abundance')
 
@@ -1365,6 +1923,24 @@ ms):
     ax3.scatter(fmodel14.M[0], fmodel14.vrot[0], c= fmodel14.lognit[flim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(fmodel15.M[0], fmodel15.vrot[0], c= fmodel15.lognit[flim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     
+    ax3.scatter(gmodel11.M[0], gmodel11.vrot[0], c= gmodel11.lognit[glim11], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel12.M[0], gmodel12.vrot[0], c= gmodel12.lognit[glim12], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel13.M[0], gmodel13.vrot[0], c= gmodel13.lognit[glim13], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel14.M[0], gmodel14.vrot[0], c= gmodel14.lognit[glim14], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(gmodel15.M[0], gmodel15.vrot[0], c= gmodel15.lognit[glim15], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax3.scatter(hmodel11.M[0], hmodel11.vrot[0], c= hmodel11.lognit[hlim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel12.M[0], hmodel12.vrot[0], c= hmodel12.lognit[hlim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel13.M[0], hmodel13.vrot[0], c= hmodel13.lognit[hlim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel14.M[0], hmodel14.vrot[0], c= hmodel14.lognit[hlim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(hmodel15.M[0], hmodel15.vrot[0], c= hmodel15.lognit[hlim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax3.scatter(imodel11.M[0], imodel11.vrot[0], c= imodel11.lognit[ilim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel12.M[0], imodel12.vrot[0], c= imodel12.lognit[ilim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel13.M[0], imodel13.vrot[0], c= imodel13.lognit[ilim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel14.M[0], imodel14.vrot[0], c= imodel14.lognit[ilim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax3.scatter(imodel15.M[0], imodel15.vrot[0], c= imodel15.lognit[ilim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     # cbar3 = fig.colorbar(ims3, ax = ax3)
     # cbar3.set_label('Final Mass / Initial Mass')
 
@@ -1408,6 +1984,24 @@ ms):
     ax4.scatter(fmodel19.M[0], fmodel19.vrot[0], c= fmodel19.lognit[flim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax4.scatter(fmodel20.M[0], fmodel20.vrot[0], c= fmodel20.lognit[flim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
+    ax4.scatter(gmodel16.M[0], gmodel16.vrot[0], c= gmodel16.lognit[glim16], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel17.M[0], gmodel17.vrot[0], c= gmodel17.lognit[glim17], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel18.M[0], gmodel18.vrot[0], c= gmodel18.lognit[glim18], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel19.M[0], gmodel19.vrot[0], c= gmodel19.lognit[glim19], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(gmodel20.M[0], gmodel20.vrot[0], c= gmodel20.lognit[glim20], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax4.scatter(hmodel16.M[0], hmodel16.vrot[0], c= hmodel16.lognit[hlim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel17.M[0], hmodel17.vrot[0], c= hmodel17.lognit[hlim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel18.M[0], hmodel18.vrot[0], c= hmodel18.lognit[hlim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel19.M[0], hmodel19.vrot[0], c= hmodel19.lognit[hlim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(hmodel20.M[0], hmodel20.vrot[0], c= hmodel20.lognit[hlim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
+    ax4.scatter(imodel16.M[0], imodel16.vrot[0], c= imodel16.lognit[ilim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel17.M[0], imodel17.vrot[0], c= imodel17.lognit[ilim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel18.M[0], imodel18.vrot[0], c= imodel18.lognit[ilim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel19.M[0], imodel19.vrot[0], c= imodel19.lognit[ilim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    ax4.scatter(imodel20.M[0], imodel20.vrot[0], c= imodel20.lognit[ilim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+
     cbar4 = fig.colorbar(ims4, ax = ax4)
     cbar4.set_label('Nitrogen Abundance')
 
@@ -1417,10 +2011,10 @@ ms):
     plt.savefig(f'Plots/Overview/{folder}/Nmass{limit}.png')
 
 
-Nmass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60,
-avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60,
-aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60,
-akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60,
+Nmass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
+avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60, gvink18_20, gvink18_30, gvink18_40, gvink18_50, gvink18_60, hvink18_20, hvink18_30, hvink18_40, hvink18_50, hvink18_60, ivink18_20, ivink18_30, ivink18_40, ivink18_50, ivink18_60,
+aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60, gleuven_20, gleuven_30, gleuven_40, gleuven_50, gleuven_60, hleuven_20, hleuven_30, hleuven_40, hleuven_50, hleuven_60, ileuven_20, ileuven_30, ileuven_40, ileuven_50, ileuven_60,
+akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60, gkrticka_20, gkrticka_30, gkrticka_40, gkrticka_50, gkrticka_60, hkrticka_20, hkrticka_30, hkrticka_40, hkrticka_50, hkrticka_60, ikrticka_20, ikrticka_30, ikrticka_40, ikrticka_50, ikrticka_60,
 ms)
 
 # ================================================================

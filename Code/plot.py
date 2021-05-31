@@ -58,7 +58,7 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
 
     # region of dataset
     if datafolder == '4x4':
-        region = 'Galaxy'
+        region = 'Milky Way'
     if datafolder == 'Z002Om2':
         region = 'SMC'
     if datafolder == 'Z007Om2':
@@ -126,11 +126,11 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
 
     # ------ first plot ------
     # plot line
-    ax1.plot(model11.Teff[0:lim11], model11.Mdot[0:lim11], lw = 1, color = 'black', label = '20M$_{\odot}$')
-    ax1.plot(model12.Teff[0:lim12], model12.Mdot[0:lim12], lw = 1, color = 'navy', label = '30M$_{\odot}$')
-    ax1.plot(model13.Teff[0:lim13], model13.Mdot[0:lim13], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
-    ax1.plot(model14.Teff[0:lim14], model14.Mdot[0:lim14], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
-    ax1.plot(model15.Teff[0:lim15], model15.Mdot[0:lim15], lw = 1, color = 'pink', label = '60M$_{\odot}$')
+    ax1.plot(model11.Teff[0:lim11], model11.logMdot[0:lim11], lw = 1, color = 'black', label = '20M$_{\odot}$')
+    ax1.plot(model12.Teff[0:lim12], model12.logMdot[0:lim12], lw = 1, color = 'navy', label = '30M$_{\odot}$')
+    ax1.plot(model13.Teff[0:lim13], model13.logMdot[0:lim13], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
+    ax1.plot(model14.Teff[0:lim14], model14.logMdot[0:lim14], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
+    ax1.plot(model15.Teff[0:lim15], model15.logMdot[0:lim15], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
     ax1.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
@@ -143,11 +143,11 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     
     # ----- Second plot ------
     # plot line
-    ax2.plot(model21.Teff[0:lim21], model21.Mdot[0:lim21], lw = 1, color = 'black', label = '20M$_{\odot}$')
-    ax2.plot(model22.Teff[0:lim22], model22.Mdot[0:lim22], lw = 1, color = 'navy', label = '30M$_{\odot}$')
-    ax2.plot(model23.Teff[0:lim23], model23.Mdot[0:lim23], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
-    ax2.plot(model24.Teff[0:lim24], model24.Mdot[0:lim24], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
-    ax2.plot(model25.Teff[0:lim25], model25.Mdot[0:lim25], lw = 1, color = 'pink', label = '60M$_{\odot}$')
+    ax2.plot(model21.Teff[0:lim21], model21.logMdot[0:lim21], lw = 1, color = 'black', label = '20M$_{\odot}$')
+    ax2.plot(model22.Teff[0:lim22], model22.logMdot[0:lim22], lw = 1, color = 'navy', label = '30M$_{\odot}$')
+    ax2.plot(model23.Teff[0:lim23], model23.logMdot[0:lim23], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
+    ax2.plot(model24.Teff[0:lim24], model24.logMdot[0:lim24], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
+    ax2.plot(model25.Teff[0:lim25], model25.logMdot[0:lim25], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
     ax2.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
@@ -159,11 +159,11 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     # ax2.text(model25.Teff[0] + txt, model25.Mdot[0], '60M$_{\odot}$', fontweight = 'bold', fontsize=8)
     
     # ------ Third Plot ------
-    ax3.plot(model31.Teff[0:lim31], model31.Mdot[0:lim31], lw = 1, color = 'black', label = '20M$_{\odot}$')
-    ax3.plot(model32.Teff[0:lim32], model32.Mdot[0:lim32], lw = 1, color = 'navy', label = '30M$_{\odot}$')
-    ax3.plot(model33.Teff[0:lim33], model33.Mdot[0:lim33], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
-    ax3.plot(model34.Teff[0:lim34], model34.Mdot[0:lim34], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
-    ax3.plot(model35.Teff[0:lim35], model35.Mdot[0:lim35], lw = 1, color = 'pink', label = '60M$_{\odot}$')
+    ax3.plot(model31.Teff[0:lim31], model31.logMdot[0:lim31], lw = 1, color = 'black', label = '20M$_{\odot}$')
+    ax3.plot(model32.Teff[0:lim32], model32.logMdot[0:lim32], lw = 1, color = 'navy', label = '30M$_{\odot}$')
+    ax3.plot(model33.Teff[0:lim33], model33.logMdot[0:lim33], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
+    ax3.plot(model34.Teff[0:lim34], model34.logMdot[0:lim34], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
+    ax3.plot(model35.Teff[0:lim35], model35.logMdot[0:lim35], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
     ax3.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
@@ -175,11 +175,11 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     # ax3.text(model35.Teff[0] + txt, model35.Mdot[0], '60M$_{\odot}$', fontweight = 'bold', fontsize=8)
     
      # ------ Fourth Plot ------
-    ax4.plot(model41.Teff[0:lim41], model41.Mdot[0:lim41], lw = 1, color = 'black', label = '20M$_{\odot}$')
-    ax4.plot(model42.Teff[0:lim42], model42.Mdot[0:lim42], lw = 1, color = 'navy', label = '30M$_{\odot}$')
-    ax4.plot(model43.Teff[0:lim43], model43.Mdot[0:lim43], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
-    ax4.plot(model44.Teff[0:lim44], model44.Mdot[0:lim44], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
-    ax4.plot(model45.Teff[0:lim45], model45.Mdot[0:lim45], lw = 1, color = 'pink', label = '60M$_{\odot}$')
+    ax4.plot(model41.Teff[0:lim41], model41.logMdot[0:lim41], lw = 1, color = 'black', label = '20M$_{\odot}$')
+    ax4.plot(model42.Teff[0:lim42], model42.logMdot[0:lim42], lw = 1, color = 'navy', label = '30M$_{\odot}$')
+    ax4.plot(model43.Teff[0:lim43], model43.logMdot[0:lim43], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
+    ax4.plot(model44.Teff[0:lim44], model44.logMdot[0:lim44], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
+    ax4.plot(model45.Teff[0:lim45], model45.logMdot[0:lim45], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
     ax4.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
@@ -206,7 +206,7 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
 
     # region of dataset
     if datafolder == '4x4':
-        region = 'Galaxy'
+        region = 'Milky Way'
     if datafolder == 'Z002Om2':
         region = 'SMC'
     if datafolder == 'Z007Om2':
@@ -274,11 +274,11 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
 
     # ------ first plot ------
     # plot line
-    ax1.plot(model11.age[0:lim11], model11.Mdot[0:lim11], lw = 1, color = 'black', label = '20M$_{\odot}$')
-    ax1.plot(model12.age[0:lim12], model12.Mdot[0:lim12], lw = 1, color = 'navy', label = '30M$_{\odot}$')
-    ax1.plot(model13.age[0:lim13], model13.Mdot[0:lim13], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
-    ax1.plot(model14.age[0:lim14], model14.Mdot[0:lim14], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
-    ax1.plot(model15.age[0:lim15], model15.Mdot[0:lim15], lw = 1, color = 'pink', label = '60M$_{\odot}$')
+    ax1.plot(model11.age[0:lim11], model11.logMdot[0:lim11], lw = 1, color = 'black', label = '20M$_{\odot}$')
+    ax1.plot(model12.age[0:lim12], model12.logMdot[0:lim12], lw = 1, color = 'navy', label = '30M$_{\odot}$')
+    ax1.plot(model13.age[0:lim13], model13.logMdot[0:lim13], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
+    ax1.plot(model14.age[0:lim14], model14.logMdot[0:lim14], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
+    ax1.plot(model15.age[0:lim15], model15.logMdot[0:lim15], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
     ax1.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
@@ -291,11 +291,11 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
     
     # ----- Second plot ------
     # plot line
-    ax2.plot(model21.age[0:lim21], model21.Mdot[0:lim21], lw = 1, color = 'black', label = '20M$_{\odot}$')
-    ax2.plot(model22.age[0:lim22], model22.Mdot[0:lim22], lw = 1, color = 'navy', label = '30M$_{\odot}$')
-    ax2.plot(model23.age[0:lim23], model23.Mdot[0:lim23], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
-    ax2.plot(model24.age[0:lim24], model24.Mdot[0:lim24], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
-    ax2.plot(model25.age[0:lim25], model25.Mdot[0:lim25], lw = 1, color = 'pink', label = '60M$_{\odot}$')
+    ax2.plot(model21.age[0:lim21], model21.logMdot[0:lim21], lw = 1, color = 'black', label = '20M$_{\odot}$')
+    ax2.plot(model22.age[0:lim22], model22.logMdot[0:lim22], lw = 1, color = 'navy', label = '30M$_{\odot}$')
+    ax2.plot(model23.age[0:lim23], model23.logMdot[0:lim23], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
+    ax2.plot(model24.age[0:lim24], model24.logMdot[0:lim24], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
+    ax2.plot(model25.age[0:lim25], model25.logMdot[0:lim25], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
     ax2.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
@@ -307,11 +307,11 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
     # ax2.text(model25.Teff[0] + txt, model25.Mdot[0], '60M$_{\odot}$', fontweight = 'bold', fontsize=8)
     
     # ------ Third Plot ------
-    ax3.plot(model31.age[0:lim31], model31.Mdot[0:lim31], lw = 1, color = 'black', label = '20M$_{\odot}$')
-    ax3.plot(model32.age[0:lim32], model32.Mdot[0:lim32], lw = 1, color = 'navy', label = '30M$_{\odot}$')
-    ax3.plot(model33.age[0:lim33], model33.Mdot[0:lim33], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
-    ax3.plot(model34.age[0:lim34], model34.Mdot[0:lim34], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
-    ax3.plot(model35.age[0:lim35], model35.Mdot[0:lim35], lw = 1, color = 'pink', label = '60M$_{\odot}$')
+    ax3.plot(model31.age[0:lim31], model31.logMdot[0:lim31], lw = 1, color = 'black', label = '20M$_{\odot}$')
+    ax3.plot(model32.age[0:lim32], model32.logMdot[0:lim32], lw = 1, color = 'navy', label = '30M$_{\odot}$')
+    ax3.plot(model33.age[0:lim33], model33.logMdot[0:lim33], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
+    ax3.plot(model34.age[0:lim34], model34.logMdot[0:lim34], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
+    ax3.plot(model35.age[0:lim35], model35.logMdot[0:lim35], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
     ax3.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
@@ -323,11 +323,11 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
     # ax3.text(model35.Teff[0] + txt, model35.Mdot[0], '60M$_{\odot}$', fontweight = 'bold', fontsize=8)
     
      # ------ Fourth Plot ------
-    ax4.plot(model41.age[0:lim41], model41.Mdot[0:lim41], lw = 1, color = 'black', label = '20M$_{\odot}$')
-    ax4.plot(model42.age[0:lim42], model42.Mdot[0:lim42], lw = 1, color = 'navy', label = '30M$_{\odot}$')
-    ax4.plot(model43.age[0:lim43], model43.Mdot[0:lim43], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
-    ax4.plot(model44.age[0:lim44], model44.Mdot[0:lim44], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
-    ax4.plot(model45.age[0:lim45], model45.Mdot[0:lim45], lw = 1, color = 'pink', label = '60M$_{\odot}$')
+    ax4.plot(model41.age[0:lim41], model41.logMdot[0:lim41], lw = 1, color = 'black', label = '20M$_{\odot}$')
+    ax4.plot(model42.age[0:lim42], model42.logMdot[0:lim42], lw = 1, color = 'navy', label = '30M$_{\odot}$')
+    ax4.plot(model43.age[0:lim43], model43.logMdot[0:lim43], lw = 1, color = 'darkgreen', label = '40M$_{\odot}$')
+    ax4.plot(model44.age[0:lim44], model44.logMdot[0:lim44], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
+    ax4.plot(model45.age[0:lim45], model45.logMdot[0:lim45], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
     ax4.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 

@@ -4,6 +4,17 @@ export MESASDK_ROOT=~/mesasdk
 export MESA_DIR=~/mesa
 source $MESASDK_ROOT/bin/mesasdk_init.sh
 
+## in template
+./clean
+./mk
+
+## copy include file
+
+cd mesa
+cd include
+cd ../star/make/star_private_def.mod .
+
+
 To close a file to which changes have been made (such as text having been added or removed) without saving the changes, hit ESC, type :q! and then press ENTER. This is sometimes referred to as a "forced quit."
 
 vi works with a buffer (a block of memory in the RAM chips). When you open an existing file, vi copies that file from the hard disk (or floppy, CDROM, etc.) to a buffer. All changes that you make to a file are initially made only to the copy in the buffer, and they are only made to the file itself when you "save" your changes. "Saving" a file means writing (i.e., transferring) the contents of the buffer to the hard disk (or floppy disk).
@@ -33,3 +44,13 @@ To save the changes that have been made to a file, hit ESC, type :qw and then pr
 ## run:
 
     ./rn
+
+## Copy Directory to Cartesius
+
+    scp -r ~/Desktop/TestRun temming@cartesius.surfsara.nl:TestDir
+
+
+
+https://stackoverflow.com/questions/30461201/how-do-i-edit-path-bash-profile-on-os-x
+mac linux?
+
