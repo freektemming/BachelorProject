@@ -5,10 +5,7 @@ from classStructure import Structure
 
 # ------ Select Data ------
     
-datafolder = '4x4'
-#datafolder = 'OmegaCrit06'
-#datafolder = 'Z002Om2'
-#datafolder = 'Z007Om2'
+datafolder = 'Z014Om2'
 
 # -----------------------------------------------------------------------------------
 
@@ -112,7 +109,7 @@ akrticka_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/60/LOGS/out.d
 
 # -----------------------------------------------------------------------------------
 
-datafolder = 'OmegaCrit06'
+datafolder = 'Z014Om6'
 
 # Vink 01
 bvink01_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/20/LOGS/out.data')
@@ -272,7 +269,7 @@ fkrticka_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/60/LOGS/out.d
 
 # -----------------------------------------------------------------------------------
 
-datafolder = 'TestRunMW'
+datafolder = 'Z014Om4'
 
 # Vink 01
 gvink01_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/20/LOGS/out.data')
@@ -304,7 +301,7 @@ gkrticka_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/60/LOGS/out.d
 
 # -----------------------------------------------------------------------------------
 
-datafolder = 'TestRunLMC'
+datafolder = 'Z007Om4'
 
 # Vink 01
 hvink01_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/20/LOGS/out.data')
@@ -336,7 +333,7 @@ hkrticka_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/60/LOGS/out.d
 
 # -----------------------------------------------------------------------------------
 
-datafolder = 'TestRunSMC'
+datafolder = 'Z002Om4'
 
 # Vink 01
 ivink01_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/20/LOGS/out.data')

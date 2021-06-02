@@ -35,3 +35,4 @@ simulaties : commands
 colorbar
 annelottee
 self.end in andere plots (subplot?)
+legendsize overview

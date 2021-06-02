@@ -9,7 +9,7 @@ from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 import matplotlib.lines as mlines
 
-ms = True
+ms = False
 
 def initial_values(amodel1, amodel2, amodel3, amodel4, amodel5, bmodel1, bmodel2, bmodel3, bmodel4, bmodel5, cmodel1, cmodel2, cmodel3, cmodel4, cmodel5, dmodel1, dmodel2, dmodel3, dmodel4, dmodel5, emodel1, emodel2, emodel3, emodel4, emodel5, fmodel1, fmodel2, fmodel3, fmodel4, fmodel5, gmodel1, gmodel2, gmodel3, gmodel4, gmodel5, hmodel1, hmodel2, hmodel3, hmodel4, hmodel5, imodel1, imodel2, imodel3, imodel4, imodel5,
 amodel6, amodel7, amodel8, amodel9, amodel10, bmodel6, bmodel7, bmodel8, bmodel9, bmodel10, cmodel6, cmodel7, cmodel8, cmodel9, cmodel10, dmodel6, dmodel7, dmodel8, dmodel9, dmodel10, emodel6, emodel7, emodel8, emodel9, emodel10, fmodel6, fmodel7, fmodel8, fmodel9, fmodel10, gmodel6, gmodel7, gmodel8, gmodel9, gmodel10, hmodel6, hmodel7, hmodel8, hmodel9, hmodel10, imodel6, imodel7, imodel8, imodel9, imodel10,
@@ -481,7 +481,7 @@ ms):
     ax1.scatter(imodel4.M[0], imodel4.vrot[0], c= imodel4.histM[ilim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(imodel5.M[0], imodel5.vrot[0], c= imodel5.histM[ilim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.legend(handles=[circle, triangle, square], loc='center left')
+    ax1.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
     
     # cbar = fig.colorbar(ims1, ax = ax1)
     # cbar.set_label('Final Mass / Initial Mass')
@@ -544,7 +544,7 @@ ms):
 
     cbar2 = fig.colorbar(ims2, ax = ax2)
     cbar2.set_label('Final Mass / Initial Mass')
-    ax2.legend(handles=[circle, triangle, square], loc='center left')
+    ax2.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # ====== 3 ======
     # plot colors
@@ -602,7 +602,7 @@ ms):
     ax3.scatter(imodel14.M[0], imodel14.vrot[0], c= imodel14.histM[ilim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(imodel15.M[0], imodel15.vrot[0], c= imodel15.histM[ilim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax3.legend(handles=[circle, triangle, square], loc='center left')
+    ax3.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # cbar3 = fig.colorbar(ims3, ax = ax3)
     # cbar3.set_label('Final Mass / Initial Mass')
@@ -665,7 +665,7 @@ ms):
 
     cbar4 = fig.colorbar(ims4, ax = ax4)
     cbar4.set_label('Final Mass / Initial Mass')
-    ax4.legend(handles=[circle, triangle, square], loc='center left')
+    ax4.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     fig.tight_layout()
     plt.savefig(f'Plots/Overview/{folder}/Final_mass{limit}.png')
@@ -1148,7 +1148,7 @@ ms):
     ax1.scatter(imodel4.M[0], imodel4.vrot[0], c= imodel4.envelope_mass[ilim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(imodel5.M[0], imodel5.vrot[0], c= imodel5.envelope_mass[ilim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     
-    ax1.legend(handles=[circle, triangle, square], loc='center left')
+    ax1.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # cbar = fig.colorbar(ims1, ax = ax1)
     # cbar.set_label('Final Mass / Initial Mass')
@@ -1212,7 +1212,7 @@ ms):
     cbar2 = fig.colorbar(ims2, ax = ax2)
     cbar2.set_label('Envelope Mass [M$_{\odot}$]')
 
-    ax2.legend(handles=[circle, triangle, square], loc='center left')
+    ax2.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # ====== 3 ======
     # plot colors
@@ -1270,7 +1270,7 @@ ms):
     ax3.scatter(imodel14.M[0], imodel14.vrot[0], c= imodel14.envelope_mass[ilim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(imodel15.M[0], imodel15.vrot[0], c= imodel15.envelope_mass[ilim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     
-    ax3.legend(handles=[circle, triangle, square], loc='center left')
+    ax3.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # cbar3 = fig.colorbar(ims3, ax = ax3)
     # cbar3.set_label('Final Mass / Initial Mass')
@@ -1334,7 +1334,7 @@ ms):
     cbar4 = fig.colorbar(ims4, ax = ax4)
     cbar4.set_label('Envelope Mass [M$_{\odot}$]')
 
-    ax4.legend(handles=[circle, triangle, square], loc='center left')
+    ax4.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     fig.tight_layout()
     plt.savefig(f'Plots/Overview/{folder}/Envelope_mass{limit}.png')
@@ -1819,7 +1819,7 @@ ms):
     ax1.scatter(imodel4.M[0], imodel4.vrot[0], c= imodel4.lognit[ilim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(imodel5.M[0], imodel5.vrot[0], c= imodel5.lognit[ilim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.legend(handles=[circle, triangle, square], loc='center left')
+    ax1.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # cbar = fig.colorbar(ims1, ax = ax1)
     # cbar.set_label('Final Mass / Initial Mass')
@@ -1883,7 +1883,7 @@ ms):
     cbar2 = fig.colorbar(ims2, ax = ax2)
     cbar2.set_label('Nitrogen Abundance')
 
-    ax2.legend(handles=[circle, triangle, square], loc='center left')
+    ax2.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # ====== 3 ======
     # plot colors
@@ -1944,7 +1944,7 @@ ms):
     # cbar3 = fig.colorbar(ims3, ax = ax3)
     # cbar3.set_label('Final Mass / Initial Mass')
 
-    ax3.legend(handles=[circle, triangle, square], loc='center left')
+    ax3.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # ====== 4 ======
     # plot colors
@@ -2005,7 +2005,7 @@ ms):
     cbar4 = fig.colorbar(ims4, ax = ax4)
     cbar4.set_label('Nitrogen Abundance')
 
-    ax4.legend(handles=[circle, triangle, square], loc='center left')
+    ax4.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     fig.tight_layout()
     plt.savefig(f'Plots/Overview/{folder}/Nmass{limit}.png')

@@ -57,12 +57,20 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     txt = 7
 
     # region of dataset
-    if datafolder == '4x4':
+    if datafolder == 'Z014Om2' or datafolder == 'Z014Om4' or datafolder == 'Z014Om6':
         region = 'Milky Way'
-    if datafolder == 'Z002Om2':
+    if datafolder == 'Z002Om2' or datafolder == 'Z002Om4' or datafolder == 'Z002Om6':
         region = 'SMC'
-    if datafolder == 'Z007Om2':
+    if datafolder == 'Z007Om2' or datafolder == 'Z007Om4' or datafolder == 'Z007Om6':
         region = 'LMC'
+
+    # rotation of dataset
+    if datafolder == 'Z014Om2' or datafolder == 'Z002Om2' or datafolder == 'Z007Om2':
+        omega = 'Omega0.2'
+    if datafolder == 'Z014Om4' or datafolder == 'Z002Om4' or datafolder == 'Z007Om4':
+        omega = 'Omega0.4'
+    if datafolder == 'Z014Om6' or datafolder == 'Z002Om6' or datafolder == 'Z007Om6':
+        omega = 'Omega0.6'
 
     # limits
     if ms == True:
@@ -191,10 +199,10 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     # ax4.text(model45.Teff[0] + txt, model45.Mdot[0], '60M$_{\odot}$', fontweight = 'bold', fontsize=8)
     
     fig.tight_layout()
-    plt.savefig(f'Plots/Overview/Mdot-Teff/{region}{limit}.png')
+    plt.savefig(f'Plots/Overview/Mdot-Teff/{omega}/{region}{limit}.png')
     #plt.show()
 
-subhrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=True)
+
 
 
 
@@ -205,12 +213,22 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
     txt = 7
 
     # region of dataset
-    if datafolder == '4x4':
+    if datafolder == 'Z014Om2' or datafolder == 'Z014Om4' or datafolder == 'Z014Om6':
         region = 'Milky Way'
-    if datafolder == 'Z002Om2':
+    if datafolder == 'Z002Om2' or datafolder == 'Z002Om4' or datafolder == 'Z002Om6':
         region = 'SMC'
-    if datafolder == 'Z007Om2':
+    if datafolder == 'Z007Om2' or datafolder == 'Z007Om4' or datafolder == 'Z007Om6':
         region = 'LMC'
+
+    # rotation of dataset
+    if datafolder == 'Z014Om2' or datafolder == 'Z002Om2' or datafolder == 'Z007Om2':
+        omega = 'Omega0.2'
+    if datafolder == 'Z014Om4' or datafolder == 'Z002Om4' or datafolder == 'Z007Om4':
+        omega = 'Omega0.4'
+    if datafolder == 'Z014Om6' or datafolder == 'Z002Om6' or datafolder == 'Z007Om6':
+        omega = 'Omega0.6'
+
+    
 
     # limits
     if ms == True:
@@ -339,7 +357,20 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
     # ax4.text(model45.Teff[0] + txt, model45.Mdot[0], '60M$_{\odot}$', fontweight = 'bold', fontsize=8)
     
     fig.tight_layout()
-    plt.savefig(f'Plots/Overview/Mdot-Time/{region}{limit}.png')
+    plt.savefig(f'Plots/Overview/Mdot-Time/{omega}/{region}{limit}.png')
     #plt.show()
 
-timeMdot(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=True)
+
+
+# both main sequence and full simulation
+for i in range(2):
+    if i == 0:
+        lim = False
+    if i == 1:
+        lim = True
+
+    # run time vs mdot
+    timeMdot(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=lim)
+    
+    # run Teff vs mdot
+    subhrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=lim)

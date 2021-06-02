@@ -5,14 +5,17 @@ from classStructure import Structure
 
 # ------ Select Data ------
     
-#datafolder = '4x4'
-#datafolder = 'OmegaCrit06'
+#datafolder = 'Z014Om2'
 #datafolder = 'Z002Om2'
 #datafolder = 'Z007Om2'
 
-#datafolder = 'TestRunMW'
-#datafolder = 'TestRunLMC'
-datafolder = 'TestRunSMC'
+#datafolder = 'Z014Om4'
+datafolder = 'Z002Om4'
+#datafolder = 'Z007Om4'
+
+#datafolder = 'Z014Om6'
+#datafolder = 'Z002Om6'
+#datafolder = 'Z007Om6'
 
 # -----------------------------------------------------------------------------------
 
