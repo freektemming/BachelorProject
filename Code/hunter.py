@@ -20,7 +20,7 @@ Msun = 1.99 * pow(10,33)
 pi = np.pi
 
 # ------ Plot Nitrogen Main Sequence 4 Models 1 Mass ------
-def huntermass(model1, model2, model3, model4, typ, number):
+def huntermass(model1, model2, model3, model4, typ, number, ms):
 
     # mass for plot
     mass = number
@@ -32,16 +32,30 @@ def huntermass(model1, model2, model3, model4, typ, number):
     if typ =='NH':
         fig, ax, colormap = hunterNH(mass)
 
-    # limits were main sequence ends
-    lim1 = model1.mainsequence()
-    lim2 = model2.mainsequence()
-    lim3 = model3.mainsequence()
-    lim4 = model4.mainsequence()
-    #lim5 = model5.mainsequence()
+    if lim == True:
+        # limits where main sequence ends
+        lim1 = model1.mainsequence()
+        lim2 = model2.mainsequence()
+        lim3 = model3.mainsequence()
+        lim4 = model4.mainsequence()
+        #lim5 = model5.mainsequence()
 
-    # gravitation limit colorbar
-    min1 = model1.get_grav(lim1)
-    max1 = model1.get_max_grav()
+        # gravitation limit colorbar
+        min1 = min([model1.get_grav(lim1), model2.get_grav(lim2), model3.get_grav(lim3), model4.get_grav(lim4)])
+        max1 = model1.get_max_grav()
+        limit = '_ms'
+        folder = 'MainSequence'
+    else:
+        # full simulation
+        lim1 = model1.end()
+        lim2 = model2.end()
+        lim3 = model3.end()
+        lim4 = model4.end()
+
+        min1 = min([model1.get_grav(lim1), model2.get_grav(lim2), model3.get_grav(lim3), model4.get_grav(lim4)])
+        max1 = model1.get_max_grav()
+        limit = ''
+        folder = 'FullSimulation'
     
     # plot line
     if typ == 'N':
@@ -76,23 +90,30 @@ def huntermass(model1, model2, model3, model4, typ, number):
     ax.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
-    #plt.show()
 
     if typ == 'N':
-        plt.savefig(f'Plots/{datafolder}/Hunter/Nitrogen/nit{mass}.png')
+        plt.savefig(f'Plots/{datafolder}/Hunter/{folder}/Nitrogen/nit{mass}{limit}.png')
     if typ == 'NH':
-        plt.savefig(f'Plots/{datafolder}/Hunter/NH+12/NH{mass}.png')
+        plt.savefig(f'Plots/{datafolder}/Hunter/{folder}/NH+12/NH{mass}{limit}.png')
 
-# Nitrogen
-huntermass(vink01_20, vink18_20, leuven_20, krticka_20, 'N', '20')
-huntermass(vink01_30, vink18_30, leuven_30, krticka_30, 'N', '30')
-huntermass(vink01_40, vink18_40, leuven_40, krticka_40, 'N', '40')
-huntermass(vink01_50, vink18_50, leuven_50, krticka_50, 'N', '50')
-huntermass(vink01_60, vink18_60, leuven_60, krticka_60, 'N', '60')
 
-# N/H + 12
-huntermass(vink01_20, vink18_20, leuven_20, krticka_20, 'NH', '20')
-huntermass(vink01_30, vink18_30, leuven_30, krticka_30, 'NH', '30')
-huntermass(vink01_40, vink18_40, leuven_40, krticka_40, 'NH', '40')
-huntermass(vink01_50, vink18_50, leuven_50, krticka_50, 'NH', '50')
-huntermass(vink01_60, vink18_60, leuven_60, krticka_60, 'NH', '60')
+# both main sequence and full simulation
+for i in range(2):
+    if i == 0:
+        lim = False
+    if i == 1:
+        lim = True
+
+    # Nitrogen
+    huntermass(vink01_20, vink18_20, leuven_20, krticka_20, 'N', '20', ms=lim)
+    huntermass(vink01_30, vink18_30, leuven_30, krticka_30, 'N', '30', ms=lim)
+    huntermass(vink01_40, vink18_40, leuven_40, krticka_40, 'N', '40', ms=lim)
+    huntermass(vink01_50, vink18_50, leuven_50, krticka_50, 'N', '50', ms=lim)
+    huntermass(vink01_60, vink18_60, leuven_60, krticka_60, 'N', '60', ms=lim)
+
+    # N/H + 12
+    huntermass(vink01_20, vink18_20, leuven_20, krticka_20, 'NH', '20', ms=lim)
+    huntermass(vink01_30, vink18_30, leuven_30, krticka_30, 'NH', '30', ms=lim)
+    huntermass(vink01_40, vink18_40, leuven_40, krticka_40, 'NH', '40', ms=lim)
+    huntermass(vink01_50, vink18_50, leuven_50, krticka_50, 'NH', '50', ms=lim)
+    huntermass(vink01_60, vink18_60, leuven_60, krticka_60, 'NH', '60', ms=lim)

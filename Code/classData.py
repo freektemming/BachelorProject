@@ -29,6 +29,7 @@ class Data:
         self.centerhe = data[self.x:,60]
         self.convective_core = data[self.x:,39]
 
+        # standard parameters
         self.model = data[self.x:,0]
         self.m = len(self.model)
         self.age2 = data[self.x-1:self.m-1,1]
@@ -93,7 +94,7 @@ class Data:
         self.tothe = data[self.x:,72]
         self.ntothe = self.tothe / np.max(self.M) * self.nmass
 
-        # surface
+        # surface elements
         self.logh1 = data[self.x:,69]
         self.h1 = pow(10,self.logh1)
         self.nh1 = self.h1 / np.max(self.M) * self.nmass
@@ -149,6 +150,7 @@ class Data:
         self.vesc = data[self.x:,86]
         self.vinf = data[self.x:,87]
         
+        # wind models
         self.wvink01 = data[self.x:,88]
         self.usewvink01 = data[self.x:,89]
         self.wvink18 = data[self.x:,90]

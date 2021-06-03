@@ -10,10 +10,10 @@ from classStructure import Structure
 #datafolder = 'Z007Om2'
 
 #datafolder = 'Z014Om4'
-datafolder = 'Z002Om4'
+#datafolder = 'Z002Om4'
 #datafolder = 'Z007Om4'
 
-#datafolder = 'Z014Om6'
+datafolder = 'Z014Om6'
 #datafolder = 'Z002Om6'
 #datafolder = 'Z007Om6'
 

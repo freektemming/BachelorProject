@@ -8,9 +8,6 @@ import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 
-# limit: True for main sequense
-lim = False
-
 # ------ plot normal HRD 1 Model All Masses------
 def hrd(model1, model2, model3, model4, model5, number, ms):
 
@@ -80,12 +77,6 @@ def hrd(model1, model2, model3, model4, model5, number, ms):
     
     fig.tight_layout()
     plt.savefig(f'Plots/{datafolder}/HRDmodels/{folder}/HRD{number}{limit}.png')
-    #plt.show()
-
-hrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, '1', ms=lim)
-hrd(vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, '2', ms=lim)
-hrd(leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, '3', ms=lim)
-hrd(krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, '4', ms=lim)
 
 
 # ------ plot normal HRD 4 Models 1 Mass ------
@@ -153,15 +144,8 @@ def hrdmass(model1, model2, model3, model4, number, ms):
 
     fig.tight_layout()
     plt.savefig(f'Plots/{datafolder}/HRDmass/{folder}/HRD{mass}{limit}.png')
-    #plt.show()
-
-hrdmass(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms=lim)
-hrdmass(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms=lim)
-hrdmass(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms=lim)
-hrdmass(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms=lim)
-hrdmass(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms=lim)
-
-
+ 
+ 
 # ------ Plot multiple HRD 4 Models Main Sequence------
 def subhrd(model11, model12, model13, model14, model15, model21, model22, model23, model24, model25, model31, model32, model33, model34, model35, model41, model42, model43, model44, model45, ms):
     
@@ -322,6 +306,22 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     
     fig.tight_layout()
     plt.savefig('Plots/4x4/HRDmodels/sub.png')
-    #plt.show()
 
 #subhrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=lim)
+
+# both main sequence and full simulation
+for i in range(2):
+    if i == 0:
+        lim = False
+    if i == 1:
+        lim = True
+
+    hrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, '1', ms=lim)
+    hrd(vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, '2', ms=lim)
+    hrd(leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, '3', ms=lim)
+    hrd(krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, '4', ms=lim)
+    hrdmass(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms=lim)
+    hrdmass(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms=lim)
+    hrdmass(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms=lim)
+    hrdmass(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms=lim)
+    hrdmass(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms=lim)

@@ -36,3 +36,4 @@ colorbar
 annelottee
 self.end in andere plots (subplot?)
 legendsize overview
+make y axis same limit in overview plots Mdot?
