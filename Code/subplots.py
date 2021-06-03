@@ -1,6 +1,7 @@
 # Multiple supblots / histograms to compare variables from different models
 
-from data import *
+from classData import Data
+#from data import *
 from plots import *
 from plotstyles import *
 import matplotlib.pyplot as plt
@@ -8,9 +9,6 @@ import matplotlib.ticker as ticker
 from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 
-
-# limit: True for main sequense
-lim = False
 
 # ------ Compare 4 variables ------
 def star(model1, model2, model3, model4, mass, ms):
@@ -85,13 +83,8 @@ def star(model1, model2, model3, model4, mass, ms):
     ax2.set_title('Mass Loss')
     
     plt.tight_layout()
-    plt.savefig(f'Plots/{datafolder}/Subplots/Star/{folder}/star{mass}{limit}.png')
+    plt.savefig(f'Plots/{datafolder}/Subplots/Star/{folder}/star{mass}{limit}.png', dpi=200)
 
-star(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
-star(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
-star(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
-star(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
-star(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
 
 # ------ Elements ------
 def elements(model1, model2, model3, model4, mass, ms):
@@ -166,14 +159,7 @@ def elements(model1, model2, model3, model4, mass, ms):
     ax4.set_title('Surface Nitrogen')
     
     plt.tight_layout()
-    plt.savefig(f'Plots/{datafolder}/Subplots/Elements/{folder}/elem{mass}{limit}.png')
-
-elements(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
-elements(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
-elements(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
-elements(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
-elements(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
-
+    plt.savefig(f'Plots/{datafolder}/Subplots/Elements/{folder}/elem{mass}{limit}.png', dpi=200)
 
 
 # ------ Histograms ------
@@ -259,19 +245,8 @@ def histogram(model1, model2, model3, model4, mass, ms):
 
     fig.tight_layout()
     #plt.show()
-    plt.savefig(f'Plots/{datafolder}/Subplots/Histogram/{folder}/hist{mass}{limit}.png')
+    plt.savefig(f'Plots/{datafolder}/Subplots/Histogram/{folder}/hist{mass}{limit}.png', dpi=200)
 
-histogram(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
-histogram(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
-histogram(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
-histogram(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
-histogram(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
-# lim = True
-# histogram(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
-# histogram(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
-# histogram(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
-# histogram(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
-# histogram(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
 
 
 # ------ Plot difference between 2 variables ------
@@ -366,65 +341,63 @@ def difplot(model1,model2):
 #difplot(vink01,vink18)
 
 
-# ------ Rotation ------
-def rotation(model1, model2, ms):
+# both main sequence and full simulation, all datafolders
+datalist = ['Z014Om2','Z014Om4','Z014Om6','Z002Om2','Z002Om4','Z002Om6','Z007Om2','Z007Om4','Z007Om6']
+for datafolder in datalist:
 
-    # ------ Set Plot Style ------
-    default_style()
+    print(datafolder)
 
-    if ms == True:
-        # main sequence limit
-        lim1 = model1.mainsequence()
-        lim2 = model2.mainsequence()
-    else:
-        # full simulation
-        lim1 = len(model1.age)
-        lim2 = len(model1.age)
+    # Vink 01
+    vink01_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/20/LOGS/out.data')
+    vink01_30 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/30/LOGS/out.data')
+    vink01_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/40/LOGS/out.data')
+    vink01_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/50/LOGS/out.data')
+    vink01_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/60/LOGS/out.data')
 
-    # ------ Figure ------
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2,2, figsize=(9,6.5))
+    # Vink 18
+    vink18_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/20/LOGS/out.data')
+    vink18_30 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/30/LOGS/out.data')
+    vink18_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/40/LOGS/out.data')
+    vink18_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/50/LOGS/out.data')
+    vink18_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/60/LOGS/out.data')
 
-    if ms == True:
-        fig.suptitle('Main Sequence Results', fontweight='bold')
-        limit = '_ms'
-    else:
-        fig.suptitle('Full Evolution Results', fontweight='bold')
-        limit = ''
+    # Leuven
+    leuven_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/20/LOGS/out.data')
+    leuven_30 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/30/LOGS/out.data')
+    leuven_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/40/LOGS/out.data')
+    leuven_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/50/LOGS/out.data')
+    leuven_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/60/LOGS/out.data')
 
-    # ------ Plot 1 ------
-    ax1.plot(model1.age[0:lim1], model1.vrot[0:lim1], label = 'Vink01', color = 'navy')
-    ax1.plot(model2.age[0:lim2], model2.vrot[0:lim2], label = 'Vink18', color = 'darkred')
-    ax1.legend(shadow = False, edgecolor = 'k')
-    ax1.set_xlabel('Age [Myr]')
-    ax1.set_ylabel('')
-    ax1.set_title('Rotational Velocity')
-    ax1.yaxis.set_major_formatter(FormatStrFormatter('%d'))
-
-    # ------ Plot 2 ------
-    ax2.plot(model1.age[0:lim1], model1.Jtot[0:lim1], label = 'Vink01', color = 'navy')
-    ax2.plot(model2.age[0:lim2], model2.Jtot[0:lim2], label = 'Vink18', color = 'darkred')
-    ax2.set_xlabel('Age [Myr]')
-    ax2.set_ylabel('')
-    ax2.set_title('Total Angular Momentum')
-    ax2.legend(shadow = False, edgecolor = 'k')
-
-    # ------ Plot 3 ------
-    ax3.plot(model1.age[0:lim1], model1.Omega[0:lim1], label = 'Vink01', color = 'navy')
-    ax3.plot(model2.age[0:lim2], model2.Omega[0:lim2], label = 'Vink18', color = 'darkred')
-    ax3.legend(shadow = False, edgecolor = 'k')
-    ax3.set_xlabel('Age [Myr]')
-    ax3.set_ylabel('')
-    ax3.set_title('Omega')
-
-    # ------ Plot 4 ------
-    ax4.plot(model1.age[0:lim1], model1.period[0:lim1], label = 'Vink01', color = 'navy')
-    ax4.plot(model2.age[0:lim2], model2.period[0:lim2], label = 'Vink18', color = 'darkred')
-    ax4.legend(shadow = False, edgecolor = 'k')
-    ax4.set_xlabel('Age [Myr]')
-    ax4.set_ylabel('')
-    ax4.set_title('Period')
+    # Krticka
+    krticka_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/20/LOGS/out.data')
+    krticka_30 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/30/LOGS/out.data')
+    krticka_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/40/LOGS/out.data')
+    krticka_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/50/LOGS/out.data')
+    krticka_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/60/LOGS/out.data')
     
-    plt.tight_layout()
-    plt.savefig(f'Plots/Week1/Subplots/rotation{limit}.png')
+    # both main sequence and full simulation
+    for i in range(2):
+        if i == 0:
+            lim = False
+        if i == 1:
+            lim = True
 
-#rotation(vink01, vink18, ms = lim)
+        print(lim)
+
+        histogram(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
+        histogram(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
+        histogram(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
+        histogram(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
+        histogram(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
+
+        elements(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
+        elements(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
+        elements(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
+        elements(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
+        elements(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
+
+        star(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
+        star(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
+        star(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
+        star(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
+        star(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)

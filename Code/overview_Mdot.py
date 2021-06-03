@@ -1,7 +1,8 @@
 # Script that makes plot
 
+from classData import Data
 from typing import Sized
-from data import *
+#from data import *
 from plots import *
 from plotstyles import *
 import matplotlib.pyplot as plt
@@ -199,7 +200,7 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     # ax4.text(model45.Teff[0] + txt, model45.Mdot[0], '60M$_{\odot}$', fontweight = 'bold', fontsize=8)
     
     fig.tight_layout()
-    plt.savefig(f'Plots/Overview/Mdot-Teff/{omega}/{region}{limit}.png')
+    plt.savefig(f'Plots/Overview/Mdot-Teff/{omega}/{region}{limit}.png', dpi=200)
     #plt.show()
 
 
@@ -357,20 +358,56 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
     # ax4.text(model45.Teff[0] + txt, model45.Mdot[0], '60M$_{\odot}$', fontweight = 'bold', fontsize=8)
     
     fig.tight_layout()
-    plt.savefig(f'Plots/Overview/Mdot-Time/{omega}/{region}{limit}.png')
+    plt.savefig(f'Plots/Overview/Mdot-Time/{omega}/{region}{limit}.png', dpi=200)
     #plt.show()
 
 
 
-# both main sequence and full simulation
-for i in range(2):
-    if i == 0:
-        lim = False
-    if i == 1:
-        lim = True
+# both main sequence and full simulation, all datafolders
+datalist = ['Z014Om2','Z014Om4','Z014Om6','Z002Om2','Z002Om4','Z002Om6','Z007Om2','Z007Om4','Z007Om6']
+for datafolder in datalist:
 
-    # run time vs mdot
-    timeMdot(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=lim)
-    
-    # run Teff vs mdot
-    subhrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=lim)
+    print(datafolder)
+
+    # Vink 01
+    vink01_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/20/LOGS/out.data')
+    vink01_30 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/30/LOGS/out.data')
+    vink01_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/40/LOGS/out.data')
+    vink01_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/50/LOGS/out.data')
+    vink01_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/1/60/LOGS/out.data')
+
+    # Vink 18
+    vink18_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/20/LOGS/out.data')
+    vink18_30 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/30/LOGS/out.data')
+    vink18_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/40/LOGS/out.data')
+    vink18_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/50/LOGS/out.data')
+    vink18_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/2/60/LOGS/out.data')
+
+    # Leuven
+    leuven_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/20/LOGS/out.data')
+    leuven_30 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/30/LOGS/out.data')
+    leuven_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/40/LOGS/out.data')
+    leuven_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/50/LOGS/out.data')
+    leuven_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/3/60/LOGS/out.data')
+
+    # Krticka
+    krticka_20 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/20/LOGS/out.data')
+    krticka_30 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/30/LOGS/out.data')
+    krticka_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/40/LOGS/out.data')
+    krticka_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/50/LOGS/out.data')
+    krticka_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/60/LOGS/out.data')
+
+
+    for i in range(2):
+        if i == 0:
+            lim = False
+        if i == 1:
+            lim = True
+        
+        print(lim)
+
+        # run time vs mdot
+        timeMdot(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=lim)
+        
+        # run Teff vs mdot
+        subhrd(vink01_20, vink01_30, vink01_40, vink01_50, vink01_60, vink18_20, vink18_30, vink18_40, vink18_50, vink18_60, leuven_20, leuven_30, leuven_40, leuven_50, leuven_60, krticka_20, krticka_30, krticka_40, krticka_50, krticka_60, ms=lim)

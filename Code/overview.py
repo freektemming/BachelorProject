@@ -668,7 +668,7 @@ ms):
     ax4.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     fig.tight_layout()
-    plt.savefig(f'Plots/Overview/{folder}/Final_mass{limit}.png')
+    plt.savefig(f'Plots/Overview/{folder}/Final_mass{limit}.png', dpi=200)
 
 
 initial_values(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
@@ -1337,7 +1337,7 @@ ms):
     ax4.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     fig.tight_layout()
-    plt.savefig(f'Plots/Overview/{folder}/Envelope_mass{limit}.png')
+    plt.savefig(f'Plots/Overview/{folder}/Envelope_mass{limit}.png', dpi=200)
 
 
 envelopemass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
@@ -2008,7 +2008,7 @@ ms):
     ax4.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     fig.tight_layout()
-    plt.savefig(f'Plots/Overview/{folder}/Nmass{limit}.png')
+    plt.savefig(f'Plots/Overview/{folder}/Nmass{limit}.png', dpi=200)
 
 
 Nmass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,

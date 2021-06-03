@@ -5,7 +5,7 @@ from classStructure import Structure
 
 # ------ Select Data ------
     
-#datafolder = 'Z014Om2'
+datafolder = 'Z014Om2'
 #datafolder = 'Z002Om2'
 #datafolder = 'Z007Om2'
 
@@ -13,7 +13,7 @@ from classStructure import Structure
 #datafolder = 'Z002Om4'
 #datafolder = 'Z007Om4'
 
-datafolder = 'Z014Om6'
+#datafolder = 'Z014Om6'
 #datafolder = 'Z002Om6'
 #datafolder = 'Z007Om6'
 
