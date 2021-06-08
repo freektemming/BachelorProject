@@ -37,3 +37,18 @@ annelottee
 self.end in andere plots (subplot?)
 legendsize overview
 make y axis same limit in overview plots Mdot?
+log g in hunter
+check resolution
+legend locaation
+subplots: full simulation until 10 kk
+
+for new simulation Kee: recipies plot tot cool temperatuur
+and also mdot - teff plot to cool temp
+2 gelijke simulaties maken van 1 model met kee en beasor
+hrd maken
+hunter log
+
+
+matieu renzo papaer (2019?) (compactness?)
+structure of the star at end of mainsequence —> wich supernova?
+Renzo, M.  + 2017 https://ui.adsabs.harvard.edu/abs/2017A%26A...603A.118R/abstract
