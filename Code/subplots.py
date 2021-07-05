@@ -25,10 +25,10 @@ def star(model1, model2, model3, model4, mass, ms):
         folder = 'MainSequence'
     else:
         # full simulation
-        lim1 = len(model1.age)
-        lim2 = len(model1.age)
-        lim3 = len(model1.age)
-        lim4 = len(model1.age)
+        lim1 = model1.end()
+        lim2 = model2.end()
+        lim3 = model3.end()
+        lim4 = model4.end()
         folder = 'FullSimulation'
 
     # ------ Figure ------
@@ -53,34 +53,34 @@ def star(model1, model2, model3, model4, mass, ms):
     ax1.yaxis.set_major_formatter(FormatStrFormatter('%d'))
 
     # ------ Plot 2 ------
-    ax4.plot(model1.age[0:lim1], model1.logL[0:lim1], label = 'Vink 01', color = 'navy')
-    ax4.plot(model2.age[0:lim2], model2.logL[0:lim2], label = 'Vink 18', color = 'darkred')
-    ax4.plot(model3.age[0:lim3], model3.logL[0:lim3], label = 'Leuven', color = 'green')
-    ax4.plot(model4.age[0:lim4], model4.logL[0:lim4], label = 'Krticka', color = 'pink')
-    ax4.set_xlabel('Age [Myr]')
-    ax4.set_ylabel('log (L / L$_{\odot}$)')
-    ax4.set_title('Luminosity')
-    ax4.legend(shadow = False, edgecolor = 'k')
+    ax2.plot(model1.age[0:lim1], model1.logL[0:lim1], label = 'Vink 01', color = 'navy')
+    ax2.plot(model2.age[0:lim2], model2.logL[0:lim2], label = 'Vink 18', color = 'darkred')
+    ax2.plot(model3.age[0:lim3], model3.logL[0:lim3], label = 'Leuven', color = 'green')
+    ax2.plot(model4.age[0:lim4], model4.logL[0:lim4], label = 'Krticka', color = 'pink')
+    ax2.set_xlabel('Age [Myr]')
+    ax2.set_ylabel('log (L / L$_{\odot}$)')
+    ax2.set_title('Luminosity')
+    #ax4.legend(shadow = False, edgecolor = 'k')
 
     # ------ Plot 3 ------
-    ax3.plot(model1.age[0:lim1], model1.vrot[0:lim1], label = 'Vink 01', color = 'navy')
-    ax3.plot(model2.age[0:lim2], model2.vrot[0:lim2], label = 'Vink 18', color = 'darkred')
-    ax3.plot(model3.age[0:lim3], model3.vrot[0:lim3], label = 'Leuven', color = 'green')
-    ax3.plot(model4.age[0:lim4], model4.vrot[0:lim4], label = 'Krticka', color = 'pink')
-    ax3.legend(shadow = False, edgecolor = 'k')
-    ax3.set_xlabel('Age [Myr]')
-    ax3.set_ylabel('V$_{\mathregular{rot}}$ [km / s]')
-    ax3.set_title('Rotational Velocity')
+    ax4.plot(model1.age[0:lim1], model1.vrot[0:lim1], label = 'Vink 01', color = 'navy')
+    ax4.plot(model2.age[0:lim2], model2.vrot[0:lim2], label = 'Vink 18', color = 'darkred')
+    ax4.plot(model3.age[0:lim3], model3.vrot[0:lim3], label = 'Leuven', color = 'green')
+    ax4.plot(model4.age[0:lim4], model4.vrot[0:lim4], label = 'Krticka', color = 'pink')
+    #ax3.legend(shadow = False, edgecolor = 'k')
+    ax4.set_xlabel('Age [Myr]')
+    ax4.set_ylabel('V$_{\mathregular{rot}}$ [km / s]')
+    ax4.set_title('Rotational Velocity')
 
     # ------ Plot 4 ------
-    ax2.plot(model1.age[0:lim1], model1.logMdot[0:lim1], label = 'Vink 01', color = 'navy')
-    ax2.plot(model2.age[0:lim2], model2.logMdot[0:lim2], label = 'Vink 18', color = 'darkred')
-    ax2.plot(model3.age[0:lim3], model3.logMdot[0:lim3], label = 'Leuven', color = 'green')
-    ax2.plot(model4.age[0:lim4], model4.logMdot[0:lim4], label = 'Krticka', color = 'pink')
-    ax2.legend(shadow = False, edgecolor = 'k')
-    ax2.set_xlabel('Age [Myr]')
-    ax2.set_ylabel('log ($\dot{M}$) [M$_{\odot}$ / yr]')
-    ax2.set_title('Mass Loss')
+    ax3.plot(model1.age[0:lim1], model1.logMdot[0:lim1], label = 'Vink 01', color = 'navy')
+    ax3.plot(model2.age[0:lim2], model2.logMdot[0:lim2], label = 'Vink 18', color = 'darkred')
+    ax3.plot(model3.age[0:lim3], model3.logMdot[0:lim3], label = 'Leuven', color = 'green')
+    ax3.plot(model4.age[0:lim4], model4.logMdot[0:lim4], label = 'Krticka', color = 'pink')
+    #ax2.legend(shadow = False, edgecolor = 'k')
+    ax3.set_xlabel('Age [Myr]')
+    ax3.set_ylabel('log ($\dot{M}$) [M$_{\odot}$ / yr]')
+    ax3.set_title('Mass Loss')
     
     plt.tight_layout()
     plt.savefig(f'Plots/{datafolder}/Subplots/Star/{folder}/star{mass}{limit}.png', dpi=200)
@@ -101,10 +101,10 @@ def elements(model1, model2, model3, model4, mass, ms):
         folder = 'MainSequence'
     else:
         # full simulation
-        lim1 = len(model1.age)
-        lim2 = len(model1.age)
-        lim3 = len(model1.age)
-        lim4 = len(model1.age)
+        lim1 = model1.end()
+        lim2 = model2.end()
+        lim3 = model3.end()
+        lim4 = model4.end()
         folder = 'FullSimulation'
 
     # ------ Figure ------
@@ -177,10 +177,10 @@ def histogram(model1, model2, model3, model4, mass, ms):
         folder = 'MainSequence'
     else:
         # full simulation
-        lim1 = len(model1.age)
-        lim2 = len(model1.age)
-        lim3 = len(model1.age)
-        lim4 = len(model1.age)
+        lim1 = model1.end()
+        lim2 = model2.end()
+        lim3 = model3.end()
+        lim4 = model4.end()
         folder = 'FullSimulation'
 
     # ------ Figure ------
@@ -202,20 +202,20 @@ def histogram(model1, model2, model3, model4, mass, ms):
     ax1.set_ylim(0.6)
     ax1.set_xticks([2,3,4,5])
     ax1.set_xticklabels(['Vink 01','Vink 18','Leuven','Krticka'])
-    ax1.set_ylabel('Mass [M / M$_{\mathregular{start}}$]')
+    ax1.set_ylabel('Mass [M / M$_{\mathregular{initial}}$]')
     ax1.set_title('Mass')
     #ax1.legend(shadow = False, edgecolor = 'k')
 
     # ------ Hist 2 ------
-    ax2.bar(2, model1.histR[len(model1.M[0:lim1])-1], 1, label='Vink 01', color = 'navy')
-    ax2.bar(3, model2.histR[len(model2.M[0:lim2])-1], 1, label='Vink 18', color = 'darkred')
-    ax2.bar(4, model3.histR[len(model3.M[0:lim3])-1], 1, label='Leuven', color = 'green')
-    ax2.bar(5, model4.histR[len(model4.M[0:lim4])-1], 1, label='Krticka', color = 'pink')
+    ax2.bar(2, model1.histCore[len(model1.M[0:lim1])-1], 1, label='Vink 01', color = 'navy')
+    ax2.bar(3, model2.histCore[len(model2.M[0:lim2])-1], 1, label='Vink 18', color = 'darkred')
+    ax2.bar(4, model3.histCore[len(model3.M[0:lim3])-1], 1, label='Leuven', color = 'green')
+    ax2.bar(5, model4.histCore[len(model4.M[0:lim4])-1], 1, label='Krticka', color = 'pink')
     ax2.set_xlim(0,7)
     ax2.set_xticks([2,3,4,5])
     ax2.set_xticklabels(['Vink 01','Vink 18','Leuven','Krticka'])
-    ax2.set_ylabel('Radius [R / R$_{\mathregular{start}}$]')
-    ax2.set_title('Radius')
+    ax2.set_ylabel('Core Mass [M / M$_{\mathregular{initial}}$]')
+    ax2.set_title('Core Mass')
     #ax2.legend(shadow = False, edgecolor = 'k')
 
     # ------ Hist 3 ------
@@ -226,21 +226,23 @@ def histogram(model1, model2, model3, model4, mass, ms):
     ax3.set_xlim(0,7)
     ax3.set_xticks([2,3,4,5])
     ax3.set_xticklabels(['Vink 01','Vink 18','Leuven','Krticka'])
-    ax3.set_ylabel('V$_{\mathregular{rot}}$ [V / V$_{\mathregular{start}}$]')
+    ax3.set_ylabel('V$_{\mathregular{rot}}$ [V / V$_{\mathregular{initial}}$]')
     ax3.set_title('Rotational Velocity')
     #ax3.legend(shadow = False, edgecolor = 'k')
 
     # ------ Hist 4 ------
-    ax4.bar(2, model1.histL[len(model1.M[0:lim1])-1], 1, label='Vink 01', color = 'navy')
-    ax4.bar(3, model2.histL[len(model2.M[0:lim2])-1], 1, label='Vink 18', color = 'darkred')
-    ax4.bar(4, model3.histL[len(model3.M[0:lim3])-1], 1, label='Leuven', color = 'green')
-    ax4.bar(5, model4.histL[len(model4.M[0:lim4])-1], 1, label='Krticka', color = 'pink')
+    ax4.bar(2, model1.lognit[len(model1.M[0:lim1])-1], 1, label='Vink 01', color = 'navy')
+    ax4.bar(3, model2.lognit[len(model2.M[0:lim2])-1], 1, label='Vink 18', color = 'darkred')
+    ax4.bar(4, model3.lognit[len(model3.M[0:lim3])-1], 1, label='Leuven', color = 'green')
+    ax4.bar(5, model4.lognit[len(model4.M[0:lim4])-1], 1, label='Krticka', color = 'pink')
     ax4.set_xlim(0,7)
-    ax4.set_ylim(1)
+
+    # this ylim works for some special cases
+    ax4.set_ylim(model1.lognit[len(model1.M[0:lim1])-1] - 0.1,model1.lognit[len(model1.M[0:lim1])-1] + 0.1)
     ax4.set_xticks([2,3,4,5])
     ax4.set_xticklabels(['Vink 01','Vink 18','Leuven','Krticka'])
-    ax4.set_ylabel('Luminosity [L / L$_{\mathregular{start}}$]')
-    ax4.set_title('Luminosity')
+    ax4.set_ylabel('log (N / H) + 12')
+    ax4.set_title('Nitrogen Abundance')
     #ax4.legend(shadow = False, edgecolor = 'k')
 
     fig.tight_layout()
@@ -390,14 +392,14 @@ for datafolder in datalist:
         histogram(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
         histogram(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
 
-        elements(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
-        elements(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
-        elements(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
-        elements(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
-        elements(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
+        # elements(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
+        # elements(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
+        # elements(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
+        # elements(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
+        # elements(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
 
-        star(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
-        star(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
-        star(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
-        star(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
-        star(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)
+        # star(vink01_20, vink18_20, leuven_20, krticka_20, '20', ms = lim)
+        # star(vink01_30, vink18_30, leuven_30, krticka_30, '30', ms = lim)
+        # star(vink01_40, vink18_40, leuven_40, krticka_40, '40', ms = lim)
+        # star(vink01_50, vink18_50, leuven_50, krticka_50, '50', ms = lim)
+        # star(vink01_60, vink18_60, leuven_60, krticka_60, '60', ms = lim)

@@ -1,6 +1,6 @@
 # Script to make simulation
 
-from data import *
+#from data import *
 from plots import *
 from plotstyles import *
 import matplotlib.pyplot as plt
@@ -11,6 +11,9 @@ import math
 from scipy import interpolate
 import os
 import imageio
+
+mod1 = Data('../../BachelorProjectData/Data/TryMWkee/1/40/LOGS/out.data') # beasor
+mod2 = Data('../../BachelorProjectData/Data/TryMWkee/6/40/LOGS/out.data') # kee
 
 
 # ------ Interpolate model to same age list so steps are equal ------
@@ -172,7 +175,7 @@ def circles(model1,model2):
     #         writer.append_data(image)
 
 
-circles(vink01_20, vink18_20)
+circles(mod1, mod2)
 
 
 def simulation(model1, model2):

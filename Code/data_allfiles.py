@@ -1,4 +1,4 @@
-# script that contains data import for other scripts
+# script that contains data import for other scripts (all 180 simulations)
 
 from classData import Data
 from classStructure import Structure

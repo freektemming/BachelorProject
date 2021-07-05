@@ -42,7 +42,7 @@ def huntermass(model1, model2, model3, model4, typ, number, ms):
         #lim5 = model5.mainsequence()
 
         # gravitation limit colorbar
-        min1 = min([model1.get_min_grav(), model2.get_min_grav(), model3.get_min_grav(), model4.get_min_grav()])
+        min1 = model2.minlist(model2.mainsequence())
         max1 = model1.get_max_grav()
         limit = '_ms'
         folder = 'MainSequence'
@@ -53,25 +53,119 @@ def huntermass(model1, model2, model3, model4, typ, number, ms):
         lim3 = model3.end()
         lim4 = model4.end()
 
-        min1 = min([model1.get_min_grav(), model2.get_min_grav(), model3.get_min_grav(), model4.get_min_grav()])
+        min1 = model2.minlist(model2.end())
         max1 = model1.get_max_grav()
         limit = ''
         folder = 'FullSimulation'
-    
+
+    x1 = []
+    y1 = []
+
+    x2 = []
+    y2 = []
+
+    x3 = []
+    y3 = []
+
+    # log lines 3.8
+
+    for b in range(len(model2.logg[0:lim2])):
+        if model2.logg[b] < 3.8:
+            x1.append(model2.vrot[b])
+            y1.append(model2.lognit[b])
+            break
+
+    for a in range(len(model1.logg[0:lim1])):
+        if model1.logg[a] < 3.8:
+            x1.append(model1.vrot[a])
+            y1.append(model1.lognit[a])
+            break
+
+    for d in range(len(model4.logg[0:lim4])):
+        if model4.logg[d] < 3.8:
+            x1.append(model4.vrot[d])
+            y1.append(model4.lognit[d])
+            break   
+
+
+    for c in range(len(model3.logg[0:lim3])):
+        if model3.logg[c] < 3.8:
+            x1.append(model3.vrot[c])
+            y1.append(model3.lognit[c])
+            break
+
+    # log lines 3.6
+
+    for b in range(len(model2.logg[0:lim2])):
+        if model2.logg[b] < 3.6:
+            x2.append(model2.vrot[b])
+            y2.append(model2.lognit[b])
+            break
+
+    for a in range(len(model1.logg[0:lim1])):
+        if model1.logg[a] < 3.6:
+            x2.append(model1.vrot[a])
+            y2.append(model1.lognit[a])
+            break
+
+    for d in range(len(model4.logg[0:lim4])):
+        if model4.logg[d] < 3.6:
+            x2.append(model4.vrot[d])
+            y2.append(model4.lognit[d])
+            break   
+
+
+    for c in range(len(model3.logg[0:lim3])):
+        if model3.logg[c] < 3.6:
+            x2.append(model3.vrot[c])
+            y2.append(model3.lognit[c])
+            break
+
+    # log lines 3.4
+
+    for b in range(len(model2.logg[0:lim2])):
+        if model2.logg[b] < 3.4:
+            x3.append(model2.vrot[b])
+            y3.append(model2.lognit[b])
+            break
+
+    for a in range(len(model1.logg[0:lim1])):
+        if model1.logg[a] < 3.4:
+            x3.append(model1.vrot[a])
+            y3.append(model1.lognit[a])
+            break
+
+    for d in range(len(model4.logg[0:lim4])):
+        if model4.logg[d] < 3.4:
+            x3.append(model4.vrot[d])
+            y3.append(model4.lognit[d])
+            break   
+
+
+    for c in range(len(model3.logg[0:lim3])):
+        if model3.logg[c] < 3.4:
+            x3.append(model3.vrot[c])
+            y3.append(model3.lognit[c])
+            break
+
     # plot line
     if typ == 'N':
         ax.plot(model1.vrot[0:lim1], model1.lognnit[0:lim1], lw = 1, color = 'black', linestyle = 'solid', label = 'Vink 01')
         ax.plot(model2.vrot[0:lim2], model2.lognnit[0:lim2], lw = 1, color = 'black', linestyle = 'dashed', label = 'Vink 18')
         ax.plot(model3.vrot[0:lim3], model3.lognnit[0:lim3], lw = 1, color = 'black', linestyle = 'dashdot', label = 'Leuven')
         ax.plot(model4.vrot[0:lim4], model4.lognnit[0:lim4], lw = 1, color = 'black', linestyle = 'dotted', label = 'Krticka')
-        #ax.plot(model5.vrot[0:lim5], model5.nnit[0:lim5], lw = 1, color = 'black')
 
     if typ == 'NH':
         ax.plot(model1.vrot[0:lim1], model1.lognit[0:lim1], lw = 1, color = 'black', linestyle = 'solid', label = 'Vink 01')
         ax.plot(model2.vrot[0:lim2], model2.lognit[0:lim2], lw = 1, color = 'black', linestyle = 'dashed', label = 'Vink 18')
         ax.plot(model3.vrot[0:lim3], model3.lognit[0:lim3], lw = 1, color = 'black', linestyle = 'dashdot', label = 'Leuven')
         ax.plot(model4.vrot[0:lim4], model4.lognit[0:lim4], lw = 1, color = 'black', linestyle = 'dotted', label = 'Krticka')
-        #ax.plot(model5.vrot[0:lim5], model5.lognit[0:lim5], lw = 1, color = 'black')
+        ax.plot(x1,y1, color='black')
+        ax.plot(x2,y2, color='black')
+        ax.plot(x3,y3, color='black')
+        ax.text(60,y1[0] + 0.0025, 'log g = 3.8', rotation=3)
+        ax.text(60,y2[0] + 0.008, 'log g = 3.6', rotation=11)
+        ax.text(60,y3[0] + 0.013, 'log g = 3.4', rotation=18)
 
     # plot colors
     if typ == 'N':
@@ -98,9 +192,9 @@ def huntermass(model1, model2, model3, model4, typ, number, ms):
         plt.savefig(f'Plots/{datafolder}/Hunter/{folder}/NH+12/NH{mass}{limit}.png', dpi=200)
 
 
-
+# ----------------------- Call with all data files ----------------------------------
 # both main sequence and full simulation, all datafolders
-datalist = ['Z014Om2','Z014Om4','Z014Om6','Z002Om2','Z002Om4','Z002Om6','Z007Om2','Z007Om4','Z007Om6']
+datalist = ['Z014Om2']#,'Z014Om4','Z014Om6','Z002Om2','Z002Om4','Z002Om6','Z007Om2','Z007Om4','Z007Om6']
 for datafolder in datalist:
 
     print(datafolder)

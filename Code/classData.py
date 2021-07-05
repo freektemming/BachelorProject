@@ -53,6 +53,8 @@ class Data:
         self.histVrot = self.Vrot / self.Vrot[0]
         self.histR = self.R / self.R[0]
         self.histM = self.M / self.M[0]
+        self.convcore = data[self.x:,37]
+        self.histCore = self.convcore / self.convcore[0]
         
         # ------ Convection ------
         self.normR = self.R / np.max(self.R)
@@ -231,6 +233,6 @@ class Data:
         return -1
 
     # ------ Determine max of list in certain range ------
-    def maxlist(self, lim):
-        max = np.max(self.R[0:lim])
-        return max
+    def minlist(self, lim):
+        min = np.min(self.logg[0:lim])
+        return min

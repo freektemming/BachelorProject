@@ -11,7 +11,7 @@ def HRD(model):
     colormap = plt.cm.plasma
     fig, ax = plt.subplots(1,1)
 
-    ax.set_xlim(60,2)
+    ax.set_xlim(60,0)
     ax.set_xlabel('T$_{\mathregular{eff}}$ [kK]')
     ax.set_ylabel('log (L / L$_{\odot}$)')
     ax.set_title(f'Hertzsprung Russell Diagram: {model}')
@@ -25,21 +25,25 @@ def overview_Mdot_Teff(region):
     fig.suptitle(f'Mass Loss of Different Models: {region}')
 
     ax1.set_xlim(55,5)
+    ax1.set_ylim(-8.6,-4.5)
     ax1.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
     ax1.set_ylabel('log M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
     ax1.set_title('Vink 01')
 
     ax2.set_xlim(55,5)
+    ax2.set_ylim(-8.6,-4.5)
     ax2.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
     ax2.set_ylabel('log M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
     ax2.set_title('Vink 18')
 
     ax3.set_xlim(55,5)
+    ax3.set_ylim(-8.6,-4.5)
     ax3.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
     ax3.set_ylabel('log M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
     ax3.set_title('Leuven')
 
     ax4.set_xlim(55,5)
+    ax4.set_ylim(-8.6,-4.5)
     ax4.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
     ax4.set_ylabel('log M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
     ax4.set_title('Krticka')

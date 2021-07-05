@@ -47,7 +47,7 @@ krticka_40 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/40/LOGS/out.da
 krticka_50 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/50/LOGS/out.data')
 krticka_60 = Data(f'../../BachelorProjectData/Data/{datafolder}/4/60/LOGS/out.data')
 
-# ------ Structure ------
+# ------ Structure Files ------
 
 # # Vink 01
 # vink01_20z = Structure(f'../../BachelorProjectData/Data/{datafolder}/1/20/LOGS/prof_ZAMS.data')

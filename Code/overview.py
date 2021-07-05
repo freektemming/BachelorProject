@@ -427,6 +427,7 @@ ms):
     
     # ====== 1 ======
     # plot colors
+    ax1.set_ylim(50,450)
     ims1 = ax1.scatter(amodel1.M[0], amodel1.vrot[0], c= amodel1.histM[alim1], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(amodel2.M[0], amodel2.vrot[0], c= amodel2.histM[alim2], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(amodel3.M[0], amodel3.vrot[0], c= amodel3.histM[alim3], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
@@ -439,29 +440,29 @@ ms):
     ax1.scatter(bmodel4.M[0], bmodel4.vrot[0], c= bmodel4.histM[blim4], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(bmodel5.M[0], bmodel5.vrot[0], c= bmodel5.histM[blim5], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.scatter(cmodel1.M[0], cmodel1.vrot[0], c= cmodel1.histM[clim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(cmodel2.M[0], cmodel2.vrot[0], c= cmodel2.histM[clim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(cmodel3.M[0], cmodel3.vrot[0], c= cmodel3.histM[clim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(cmodel4.M[0], cmodel4.vrot[0], c= cmodel4.histM[clim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(cmodel5.M[0], cmodel5.vrot[0], c= cmodel5.histM[clim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(cmodel1.M[0], cmodel1.vrot[0], c= cmodel1.histM[clim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(cmodel2.M[0], cmodel2.vrot[0], c= cmodel2.histM[clim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(cmodel3.M[0], cmodel3.vrot[0], c= cmodel3.histM[clim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(cmodel4.M[0], cmodel4.vrot[0], c= cmodel4.histM[clim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(cmodel5.M[0], cmodel5.vrot[0], c= cmodel5.histM[clim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.scatter(dmodel1.M[0], dmodel1.vrot[0], c= dmodel1.histM[dlim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(dmodel2.M[0], dmodel2.vrot[0], c= dmodel2.histM[dlim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(dmodel3.M[0], dmodel3.vrot[0], c= dmodel3.histM[dlim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(dmodel4.M[0], dmodel4.vrot[0], c= dmodel4.histM[dlim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(dmodel5.M[0], dmodel5.vrot[0], c= dmodel5.histM[dlim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(dmodel1.M[0], dmodel1.vrot[0], c= dmodel1.histM[dlim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(dmodel2.M[0], dmodel2.vrot[0], c= dmodel2.histM[dlim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(dmodel3.M[0], dmodel3.vrot[0], c= dmodel3.histM[dlim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(dmodel4.M[0], dmodel4.vrot[0], c= dmodel4.histM[dlim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(dmodel5.M[0], dmodel5.vrot[0], c= dmodel5.histM[dlim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.scatter(emodel1.M[0], emodel1.vrot[0], c= emodel1.histM[elim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(emodel2.M[0], emodel2.vrot[0], c= emodel2.histM[elim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(emodel3.M[0], emodel3.vrot[0], c= emodel3.histM[elim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(emodel4.M[0], emodel4.vrot[0], c= emodel4.histM[elim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(emodel5.M[0], emodel5.vrot[0], c= emodel5.histM[elim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(emodel1.M[0], emodel1.vrot[0], c= emodel1.histM[elim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(emodel2.M[0], emodel2.vrot[0], c= emodel2.histM[elim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(emodel3.M[0], emodel3.vrot[0], c= emodel3.histM[elim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(emodel4.M[0], emodel4.vrot[0], c= emodel4.histM[elim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(emodel5.M[0], emodel5.vrot[0], c= emodel5.histM[elim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.scatter(fmodel1.M[0], fmodel1.vrot[0], c= fmodel1.histM[flim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(fmodel2.M[0], fmodel2.vrot[0], c= fmodel2.histM[flim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(fmodel3.M[0], fmodel3.vrot[0], c= fmodel3.histM[flim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(fmodel4.M[0], fmodel4.vrot[0], c= fmodel4.histM[flim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(fmodel5.M[0], fmodel5.vrot[0], c= fmodel5.histM[flim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(fmodel1.M[0], fmodel1.vrot[0], c= fmodel1.histM[flim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(fmodel2.M[0], fmodel2.vrot[0], c= fmodel2.histM[flim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(fmodel3.M[0], fmodel3.vrot[0], c= fmodel3.histM[flim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(fmodel4.M[0], fmodel4.vrot[0], c= fmodel4.histM[flim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(fmodel5.M[0], fmodel5.vrot[0], c= fmodel5.histM[flim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
     ax1.scatter(gmodel1.M[0], gmodel1.vrot[0], c= gmodel1.histM[glim1], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(gmodel2.M[0], gmodel2.vrot[0], c= gmodel2.histM[glim2], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
@@ -469,25 +470,26 @@ ms):
     ax1.scatter(gmodel4.M[0], gmodel4.vrot[0], c= gmodel4.histM[glim4], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax1.scatter(gmodel5.M[0], gmodel5.vrot[0], c= gmodel5.histM[glim5], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.scatter(hmodel1.M[0], hmodel1.vrot[0], c= hmodel1.histM[hlim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(hmodel2.M[0], hmodel2.vrot[0], c= hmodel2.histM[hlim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(hmodel3.M[0], hmodel3.vrot[0], c= hmodel3.histM[hlim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(hmodel4.M[0], hmodel4.vrot[0], c= hmodel4.histM[hlim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(hmodel5.M[0], hmodel5.vrot[0], c= hmodel5.histM[hlim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(hmodel1.M[0], hmodel1.vrot[0], c= hmodel1.histM[hlim1], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(hmodel2.M[0], hmodel2.vrot[0], c= hmodel2.histM[hlim2], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(hmodel3.M[0], hmodel3.vrot[0], c= hmodel3.histM[hlim3], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(hmodel4.M[0], hmodel4.vrot[0], c= hmodel4.histM[hlim4], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(hmodel5.M[0], hmodel5.vrot[0], c= hmodel5.histM[hlim5], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.scatter(imodel1.M[0], imodel1.vrot[0], c= imodel1.histM[ilim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(imodel2.M[0], imodel2.vrot[0], c= imodel2.histM[ilim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(imodel3.M[0], imodel3.vrot[0], c= imodel3.histM[ilim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(imodel4.M[0], imodel4.vrot[0], c= imodel4.histM[ilim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax1.scatter(imodel5.M[0], imodel5.vrot[0], c= imodel5.histM[ilim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(imodel1.M[0], imodel1.vrot[0], c= imodel1.histM[ilim1], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(imodel2.M[0], imodel2.vrot[0], c= imodel2.histM[ilim2], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(imodel3.M[0], imodel3.vrot[0], c= imodel3.histM[ilim3], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(imodel4.M[0], imodel4.vrot[0], c= imodel4.histM[ilim4], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax1.scatter(imodel5.M[0], imodel5.vrot[0], c= imodel5.histM[ilim5], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax1.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
+    #ax1.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
     
     # cbar = fig.colorbar(ims1, ax = ax1)
     # cbar.set_label('Final Mass / Initial Mass')
 
     # ====== 2 ======
     # plot colors
+    ax2.set_ylim(50,450)
     ims2 = ax2.scatter(amodel6.M[0], amodel6.vrot[0], c= amodel6.histM[alim6], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(amodel7.M[0], amodel7.vrot[0], c= amodel7.histM[alim7], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(amodel8.M[0], amodel8.vrot[0], c= amodel8.histM[alim8], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
@@ -500,29 +502,29 @@ ms):
     ax2.scatter(bmodel9.M[0], bmodel9.vrot[0], c= bmodel9.histM[blim9], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(bmodel10.M[0], bmodel10.vrot[0], c= bmodel10.histM[blim10], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax2.scatter(cmodel6.M[0], cmodel6.vrot[0], c= cmodel6.histM[clim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(cmodel7.M[0], cmodel7.vrot[0], c= cmodel7.histM[clim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(cmodel8.M[0], cmodel8.vrot[0], c= cmodel8.histM[clim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(cmodel9.M[0], cmodel9.vrot[0], c= cmodel9.histM[clim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(cmodel10.M[0], cmodel10.vrot[0], c= cmodel10.histM[clim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(cmodel6.M[0], cmodel6.vrot[0], c= cmodel6.histM[clim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(cmodel7.M[0], cmodel7.vrot[0], c= cmodel7.histM[clim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(cmodel8.M[0], cmodel8.vrot[0], c= cmodel8.histM[clim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(cmodel9.M[0], cmodel9.vrot[0], c= cmodel9.histM[clim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(cmodel10.M[0], cmodel10.vrot[0], c= cmodel10.histM[clim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax2.scatter(dmodel6.M[0], dmodel6.vrot[0], c= dmodel6.histM[dlim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(dmodel7.M[0], dmodel7.vrot[0], c= dmodel7.histM[dlim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(dmodel8.M[0], dmodel8.vrot[0], c= dmodel8.histM[dlim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(dmodel9.M[0], dmodel9.vrot[0], c= dmodel9.histM[dlim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(dmodel10.M[0], dmodel10.vrot[0], c= dmodel10.histM[dlim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(dmodel6.M[0], dmodel6.vrot[0], c= dmodel6.histM[dlim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(dmodel7.M[0], dmodel7.vrot[0], c= dmodel7.histM[dlim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(dmodel8.M[0], dmodel8.vrot[0], c= dmodel8.histM[dlim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(dmodel9.M[0], dmodel9.vrot[0], c= dmodel9.histM[dlim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(dmodel10.M[0], dmodel10.vrot[0], c= dmodel10.histM[dlim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax2.scatter(emodel6.M[0], emodel6.vrot[0], c= emodel6.histM[elim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(emodel7.M[0], emodel7.vrot[0], c= emodel7.histM[elim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(emodel8.M[0], emodel8.vrot[0], c= emodel8.histM[elim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(emodel9.M[0], emodel9.vrot[0], c= emodel9.histM[elim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(emodel10.M[0], emodel10.vrot[0], c= emodel10.histM[elim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(emodel6.M[0], emodel6.vrot[0], c= emodel6.histM[elim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(emodel7.M[0], emodel7.vrot[0], c= emodel7.histM[elim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(emodel8.M[0], emodel8.vrot[0], c= emodel8.histM[elim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(emodel9.M[0], emodel9.vrot[0], c= emodel9.histM[elim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(emodel10.M[0], emodel10.vrot[0], c= emodel10.histM[elim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax2.scatter(fmodel6.M[0], fmodel6.vrot[0], c= fmodel6.histM[flim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(fmodel7.M[0], fmodel7.vrot[0], c= fmodel7.histM[flim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(fmodel8.M[0], fmodel8.vrot[0], c= fmodel8.histM[flim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(fmodel9.M[0], fmodel9.vrot[0], c= fmodel9.histM[flim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(fmodel10.M[0], fmodel10.vrot[0], c= fmodel10.histM[flim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(fmodel6.M[0], fmodel6.vrot[0], c= fmodel6.histM[flim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(fmodel7.M[0], fmodel7.vrot[0], c= fmodel7.histM[flim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(fmodel8.M[0], fmodel8.vrot[0], c= fmodel8.histM[flim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(fmodel9.M[0], fmodel9.vrot[0], c= fmodel9.histM[flim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(fmodel10.M[0], fmodel10.vrot[0], c= fmodel10.histM[flim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
     ax2.scatter(gmodel6.M[0], gmodel6.vrot[0], c= gmodel6.histM[glim6], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(gmodel7.M[0], gmodel7.vrot[0], c= gmodel7.histM[glim7], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
@@ -530,24 +532,25 @@ ms):
     ax2.scatter(gmodel9.M[0], gmodel9.vrot[0], c= gmodel9.histM[glim9], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax2.scatter(gmodel10.M[0], gmodel10.vrot[0], c= gmodel10.histM[glim10], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax2.scatter(hmodel6.M[0], hmodel6.vrot[0], c= hmodel6.histM[hlim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(hmodel7.M[0], hmodel7.vrot[0], c= hmodel7.histM[hlim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(hmodel8.M[0], hmodel8.vrot[0], c= hmodel8.histM[hlim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(hmodel9.M[0], hmodel9.vrot[0], c= hmodel9.histM[hlim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(hmodel10.M[0], hmodel10.vrot[0], c= hmodel10.histM[hlim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(hmodel6.M[0], hmodel6.vrot[0], c= hmodel6.histM[hlim6], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(hmodel7.M[0], hmodel7.vrot[0], c= hmodel7.histM[hlim7], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(hmodel8.M[0], hmodel8.vrot[0], c= hmodel8.histM[hlim8], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(hmodel9.M[0], hmodel9.vrot[0], c= hmodel9.histM[hlim9], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(hmodel10.M[0], hmodel10.vrot[0], c= hmodel10.histM[hlim10], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax2.scatter(imodel6.M[0], imodel6.vrot[0], c= imodel6.histM[ilim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(imodel7.M[0], imodel7.vrot[0], c= imodel7.histM[ilim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(imodel8.M[0], imodel8.vrot[0], c= imodel8.histM[ilim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(imodel9.M[0], imodel9.vrot[0], c= imodel9.histM[ilim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax2.scatter(imodel10.M[0], imodel10.vrot[0], c= imodel10.histM[ilim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(imodel6.M[0], imodel6.vrot[0], c= imodel6.histM[ilim6], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(imodel7.M[0], imodel7.vrot[0], c= imodel7.histM[ilim7], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(imodel8.M[0], imodel8.vrot[0], c= imodel8.histM[ilim8], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(imodel9.M[0], imodel9.vrot[0], c= imodel9.histM[ilim9], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax2.scatter(imodel10.M[0], imodel10.vrot[0], c= imodel10.histM[ilim10], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
     cbar2 = fig.colorbar(ims2, ax = ax2)
     cbar2.set_label('Final Mass / Initial Mass')
-    ax2.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
+    # ax2.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # ====== 3 ======
     # plot colors
+    ax3.set_ylim(50,450)
     ims3 = ax3.scatter(amodel11.M[0], amodel11.vrot[0], c= amodel11.histM[alim11], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(amodel12.M[0], amodel12.vrot[0], c= amodel12.histM[alim12], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(amodel13.M[0], amodel13.vrot[0], c= amodel13.histM[alim13], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
@@ -560,29 +563,29 @@ ms):
     ax3.scatter(bmodel14.M[0], bmodel14.vrot[0], c= bmodel14.histM[blim14], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(bmodel15.M[0], bmodel15.vrot[0], c= bmodel15.histM[blim15], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax3.scatter(cmodel11.M[0], cmodel11.vrot[0], c= cmodel11.histM[clim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(cmodel12.M[0], cmodel12.vrot[0], c= cmodel12.histM[clim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(cmodel13.M[0], cmodel13.vrot[0], c= cmodel13.histM[clim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(cmodel14.M[0], cmodel14.vrot[0], c= cmodel14.histM[clim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(cmodel15.M[0], cmodel15.vrot[0], c= cmodel15.histM[clim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(cmodel11.M[0], cmodel11.vrot[0], c= cmodel11.histM[clim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(cmodel12.M[0], cmodel12.vrot[0], c= cmodel12.histM[clim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(cmodel13.M[0], cmodel13.vrot[0], c= cmodel13.histM[clim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(cmodel14.M[0], cmodel14.vrot[0], c= cmodel14.histM[clim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(cmodel15.M[0], cmodel15.vrot[0], c= cmodel15.histM[clim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax3.scatter(dmodel11.M[0], dmodel11.vrot[0], c= dmodel11.histM[dlim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(dmodel12.M[0], dmodel12.vrot[0], c= dmodel12.histM[dlim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(dmodel13.M[0], dmodel13.vrot[0], c= dmodel13.histM[dlim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(dmodel14.M[0], dmodel14.vrot[0], c= dmodel14.histM[dlim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(dmodel15.M[0], dmodel15.vrot[0], c= dmodel15.histM[dlim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(dmodel11.M[0], dmodel11.vrot[0], c= dmodel11.histM[dlim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(dmodel12.M[0], dmodel12.vrot[0], c= dmodel12.histM[dlim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(dmodel13.M[0], dmodel13.vrot[0], c= dmodel13.histM[dlim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(dmodel14.M[0], dmodel14.vrot[0], c= dmodel14.histM[dlim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(dmodel15.M[0], dmodel15.vrot[0], c= dmodel15.histM[dlim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax3.scatter(emodel11.M[0], emodel11.vrot[0], c= emodel11.histM[elim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(emodel12.M[0], emodel12.vrot[0], c= emodel12.histM[elim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(emodel13.M[0], emodel13.vrot[0], c= emodel13.histM[elim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(emodel14.M[0], emodel14.vrot[0], c= emodel14.histM[elim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(emodel15.M[0], emodel15.vrot[0], c= emodel15.histM[elim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(emodel11.M[0], emodel11.vrot[0], c= emodel11.histM[elim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(emodel12.M[0], emodel12.vrot[0], c= emodel12.histM[elim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(emodel13.M[0], emodel13.vrot[0], c= emodel13.histM[elim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(emodel14.M[0], emodel14.vrot[0], c= emodel14.histM[elim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(emodel15.M[0], emodel15.vrot[0], c= emodel15.histM[elim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax3.scatter(fmodel11.M[0], fmodel11.vrot[0], c= fmodel11.histM[flim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(fmodel12.M[0], fmodel12.vrot[0], c= fmodel12.histM[flim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(fmodel13.M[0], fmodel13.vrot[0], c= fmodel13.histM[flim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(fmodel14.M[0], fmodel14.vrot[0], c= fmodel14.histM[flim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(fmodel15.M[0], fmodel15.vrot[0], c= fmodel15.histM[flim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(fmodel11.M[0], fmodel11.vrot[0], c= fmodel11.histM[flim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(fmodel12.M[0], fmodel12.vrot[0], c= fmodel12.histM[flim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(fmodel13.M[0], fmodel13.vrot[0], c= fmodel13.histM[flim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(fmodel14.M[0], fmodel14.vrot[0], c= fmodel14.histM[flim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(fmodel15.M[0], fmodel15.vrot[0], c= fmodel15.histM[flim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
     ax3.scatter(gmodel11.M[0], gmodel11.vrot[0], c= gmodel11.histM[glim11], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(gmodel12.M[0], gmodel12.vrot[0], c= gmodel12.histM[glim12], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
@@ -590,25 +593,26 @@ ms):
     ax3.scatter(gmodel14.M[0], gmodel14.vrot[0], c= gmodel14.histM[glim14], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax3.scatter(gmodel15.M[0], gmodel15.vrot[0], c= gmodel15.histM[glim15], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax3.scatter(hmodel11.M[0], hmodel11.vrot[0], c= hmodel11.histM[hlim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(hmodel12.M[0], hmodel12.vrot[0], c= hmodel12.histM[hlim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(hmodel13.M[0], hmodel13.vrot[0], c= hmodel13.histM[hlim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(hmodel14.M[0], hmodel14.vrot[0], c= hmodel14.histM[hlim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(hmodel15.M[0], hmodel15.vrot[0], c= hmodel15.histM[hlim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(hmodel11.M[0], hmodel11.vrot[0], c= hmodel11.histM[hlim11], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(hmodel12.M[0], hmodel12.vrot[0], c= hmodel12.histM[hlim12], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(hmodel13.M[0], hmodel13.vrot[0], c= hmodel13.histM[hlim13], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(hmodel14.M[0], hmodel14.vrot[0], c= hmodel14.histM[hlim14], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(hmodel15.M[0], hmodel15.vrot[0], c= hmodel15.histM[hlim15], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax3.scatter(imodel11.M[0], imodel11.vrot[0], c= imodel11.histM[ilim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(imodel12.M[0], imodel12.vrot[0], c= imodel12.histM[ilim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(imodel13.M[0], imodel13.vrot[0], c= imodel13.histM[ilim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(imodel14.M[0], imodel14.vrot[0], c= imodel14.histM[ilim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax3.scatter(imodel15.M[0], imodel15.vrot[0], c= imodel15.histM[ilim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(imodel11.M[0], imodel11.vrot[0], c= imodel11.histM[ilim11], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(imodel12.M[0], imodel12.vrot[0], c= imodel12.histM[ilim12], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(imodel13.M[0], imodel13.vrot[0], c= imodel13.histM[ilim13], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(imodel14.M[0], imodel14.vrot[0], c= imodel14.histM[ilim14], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax3.scatter(imodel15.M[0], imodel15.vrot[0], c= imodel15.histM[ilim15], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax3.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
+    #ax3.legend(handles=[circle, triangle, square], loc='center left', fontsize=10, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     # cbar3 = fig.colorbar(ims3, ax = ax3)
     # cbar3.set_label('Final Mass / Initial Mass')
 
     # ====== 4 ======
     # plot colors
+    ax4.set_ylim(50,450)
     ims4 = ax4.scatter(amodel16.M[0], amodel16.vrot[0], c= amodel16.histM[alim16], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax4.scatter(amodel17.M[0], amodel17.vrot[0], c= amodel17.histM[alim17], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax4.scatter(amodel18.M[0], amodel18.vrot[0], c= amodel18.histM[alim18], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
@@ -621,29 +625,29 @@ ms):
     ax4.scatter(bmodel19.M[0], bmodel19.vrot[0], c= bmodel19.histM[blim19], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax4.scatter(bmodel20.M[0], bmodel20.vrot[0], c= bmodel20.histM[blim20], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax4.scatter(cmodel16.M[0], cmodel16.vrot[0], c= cmodel16.histM[clim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(cmodel17.M[0], cmodel17.vrot[0], c= cmodel17.histM[clim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(cmodel18.M[0], cmodel18.vrot[0], c= cmodel18.histM[clim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(cmodel19.M[0], cmodel19.vrot[0], c= cmodel19.histM[clim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(cmodel20.M[0], cmodel20.vrot[0], c= cmodel20.histM[clim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(cmodel16.M[0], cmodel16.vrot[0], c= cmodel16.histM[clim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(cmodel17.M[0], cmodel17.vrot[0], c= cmodel17.histM[clim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(cmodel18.M[0], cmodel18.vrot[0], c= cmodel18.histM[clim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(cmodel19.M[0], cmodel19.vrot[0], c= cmodel19.histM[clim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(cmodel20.M[0], cmodel20.vrot[0], c= cmodel20.histM[clim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax4.scatter(dmodel16.M[0], dmodel16.vrot[0], c= dmodel16.histM[dlim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(dmodel17.M[0], dmodel17.vrot[0], c= dmodel17.histM[dlim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(dmodel18.M[0], dmodel18.vrot[0], c= dmodel18.histM[dlim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(dmodel19.M[0], dmodel19.vrot[0], c= dmodel19.histM[dlim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(dmodel20.M[0], dmodel20.vrot[0], c= dmodel20.histM[dlim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(dmodel16.M[0], dmodel16.vrot[0], c= dmodel16.histM[dlim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(dmodel17.M[0], dmodel17.vrot[0], c= dmodel17.histM[dlim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(dmodel18.M[0], dmodel18.vrot[0], c= dmodel18.histM[dlim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(dmodel19.M[0], dmodel19.vrot[0], c= dmodel19.histM[dlim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(dmodel20.M[0], dmodel20.vrot[0], c= dmodel20.histM[dlim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax4.scatter(emodel16.M[0], emodel16.vrot[0], c= emodel16.histM[elim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(emodel17.M[0], emodel17.vrot[0], c= emodel17.histM[elim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(emodel18.M[0], emodel18.vrot[0], c= emodel18.histM[elim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(emodel19.M[0], emodel19.vrot[0], c= emodel19.histM[elim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(emodel20.M[0], emodel20.vrot[0], c= emodel20.histM[elim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(emodel16.M[0], emodel16.vrot[0], c= emodel16.histM[elim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(emodel17.M[0], emodel17.vrot[0], c= emodel17.histM[elim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(emodel18.M[0], emodel18.vrot[0], c= emodel18.histM[elim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(emodel19.M[0], emodel19.vrot[0], c= emodel19.histM[elim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(emodel20.M[0], emodel20.vrot[0], c= emodel20.histM[elim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax4.scatter(fmodel16.M[0], fmodel16.vrot[0], c= fmodel16.histM[flim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(fmodel17.M[0], fmodel17.vrot[0], c= fmodel17.histM[flim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(fmodel18.M[0], fmodel18.vrot[0], c= fmodel18.histM[flim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(fmodel19.M[0], fmodel19.vrot[0], c= fmodel19.histM[flim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(fmodel20.M[0], fmodel20.vrot[0], c= fmodel20.histM[flim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(fmodel16.M[0], fmodel16.vrot[0], c= fmodel16.histM[flim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(fmodel17.M[0], fmodel17.vrot[0], c= fmodel17.histM[flim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(fmodel18.M[0], fmodel18.vrot[0], c= fmodel18.histM[flim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(fmodel19.M[0], fmodel19.vrot[0], c= fmodel19.histM[flim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(fmodel20.M[0], fmodel20.vrot[0], c= fmodel20.histM[flim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
     ax4.scatter(gmodel16.M[0], gmodel16.vrot[0], c= gmodel16.histM[glim16], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax4.scatter(gmodel17.M[0], gmodel17.vrot[0], c= gmodel17.histM[glim17], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
@@ -651,24 +655,26 @@ ms):
     ax4.scatter(gmodel19.M[0], gmodel19.vrot[0], c= gmodel19.histM[glim19], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
     ax4.scatter(gmodel20.M[0], gmodel20.vrot[0], c= gmodel20.histM[glim20], marker='s', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax4.scatter(hmodel16.M[0], hmodel16.vrot[0], c= hmodel16.histM[hlim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(hmodel17.M[0], hmodel17.vrot[0], c= hmodel17.histM[hlim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(hmodel18.M[0], hmodel18.vrot[0], c= hmodel18.histM[hlim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(hmodel19.M[0], hmodel19.vrot[0], c= hmodel19.histM[hlim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(hmodel20.M[0], hmodel20.vrot[0], c= hmodel20.histM[hlim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(hmodel16.M[0], hmodel16.vrot[0], c= hmodel16.histM[hlim16], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(hmodel17.M[0], hmodel17.vrot[0], c= hmodel17.histM[hlim17], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(hmodel18.M[0], hmodel18.vrot[0], c= hmodel18.histM[hlim18], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(hmodel19.M[0], hmodel19.vrot[0], c= hmodel19.histM[hlim19], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(hmodel20.M[0], hmodel20.vrot[0], c= hmodel20.histM[hlim20], marker='^', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
-    ax4.scatter(imodel16.M[0], imodel16.vrot[0], c= imodel16.histM[ilim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(imodel17.M[0], imodel17.vrot[0], c= imodel17.histM[ilim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(imodel18.M[0], imodel18.vrot[0], c= imodel18.histM[ilim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(imodel19.M[0], imodel19.vrot[0], c= imodel19.histM[ilim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
-    ax4.scatter(imodel20.M[0], imodel20.vrot[0], c= imodel20.histM[ilim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(imodel16.M[0], imodel16.vrot[0], c= imodel16.histM[ilim16], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(imodel17.M[0], imodel17.vrot[0], c= imodel17.histM[ilim17], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(imodel18.M[0], imodel18.vrot[0], c= imodel18.histM[ilim18], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(imodel19.M[0], imodel19.vrot[0], c= imodel19.histM[ilim19], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
+    # ax4.scatter(imodel20.M[0], imodel20.vrot[0], c= imodel20.histM[ilim20], marker='o', edgecolors='none', s=50, cmap=colormap, vmin = min1, vmax = max1)
 
     cbar4 = fig.colorbar(ims4, ax = ax4)
     cbar4.set_label('Final Mass / Initial Mass')
-    ax4.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
+    #ax4.legend(handles=[circle, triangle, square], loc='center left', fontsize=9, framealpha=0.2, labelspacing=0.1, handletextpad=0.2, borderpad=0.6)
 
     fig.tight_layout()
-    plt.savefig(f'Plots/Overview/{folder}/Final_mass{limit}.png', dpi=200)
+    #plt.savefig(f'Plots/Overview/{folder}/Final_mass{limit}.png', dpi=200)
+    #plt.show()
+    plt.savefig(f'Plots/Overview/Presentation/Final_mass4.png', dpi=200)
 
 
 initial_values(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
@@ -1340,11 +1346,11 @@ ms):
     plt.savefig(f'Plots/Overview/{folder}/Envelope_mass{limit}.png', dpi=200)
 
 
-envelopemass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
-avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60, gvink18_20, gvink18_30, gvink18_40, gvink18_50, gvink18_60, hvink18_20, hvink18_30, hvink18_40, hvink18_50, hvink18_60, ivink18_20, ivink18_30, ivink18_40, ivink18_50, ivink18_60,
-aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60, gleuven_20, gleuven_30, gleuven_40, gleuven_50, gleuven_60, hleuven_20, hleuven_30, hleuven_40, hleuven_50, hleuven_60, ileuven_20, ileuven_30, ileuven_40, ileuven_50, ileuven_60,
-akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60, gkrticka_20, gkrticka_30, gkrticka_40, gkrticka_50, gkrticka_60, hkrticka_20, hkrticka_30, hkrticka_40, hkrticka_50, hkrticka_60, ikrticka_20, ikrticka_30, ikrticka_40, ikrticka_50, ikrticka_60,
-ms)
+# envelopemass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
+# avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60, gvink18_20, gvink18_30, gvink18_40, gvink18_50, gvink18_60, hvink18_20, hvink18_30, hvink18_40, hvink18_50, hvink18_60, ivink18_20, ivink18_30, ivink18_40, ivink18_50, ivink18_60,
+# aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60, gleuven_20, gleuven_30, gleuven_40, gleuven_50, gleuven_60, hleuven_20, hleuven_30, hleuven_40, hleuven_50, hleuven_60, ileuven_20, ileuven_30, ileuven_40, ileuven_50, ileuven_60,
+# akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60, gkrticka_20, gkrticka_30, gkrticka_40, gkrticka_50, gkrticka_60, hkrticka_20, hkrticka_30, hkrticka_40, hkrticka_50, hkrticka_60, ikrticka_20, ikrticka_30, ikrticka_40, ikrticka_50, ikrticka_60,
+# ms)
 
 # ================================================================
 
@@ -2011,10 +2017,10 @@ ms):
     plt.savefig(f'Plots/Overview/{folder}/Nmass{limit}.png', dpi=200)
 
 
-Nmass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
-avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60, gvink18_20, gvink18_30, gvink18_40, gvink18_50, gvink18_60, hvink18_20, hvink18_30, hvink18_40, hvink18_50, hvink18_60, ivink18_20, ivink18_30, ivink18_40, ivink18_50, ivink18_60,
-aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60, gleuven_20, gleuven_30, gleuven_40, gleuven_50, gleuven_60, hleuven_20, hleuven_30, hleuven_40, hleuven_50, hleuven_60, ileuven_20, ileuven_30, ileuven_40, ileuven_50, ileuven_60,
-akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60, gkrticka_20, gkrticka_30, gkrticka_40, gkrticka_50, gkrticka_60, hkrticka_20, hkrticka_30, hkrticka_40, hkrticka_50, hkrticka_60, ikrticka_20, ikrticka_30, ikrticka_40, ikrticka_50, ikrticka_60,
-ms)
+# Nmass(avink01_20, avink01_30, avink01_40, avink01_50, avink01_60, bvink01_20, bvink01_30, bvink01_40, bvink01_50, bvink01_60, cvink01_20, cvink01_30, cvink01_40, cvink01_50, cvink01_60, dvink01_20, dvink01_30, dvink01_40, dvink01_50, dvink01_60, evink01_20, evink01_30, evink01_40, evink01_50, evink01_60, fvink01_20, fvink01_30, fvink01_40, fvink01_50, fvink01_60, gvink01_20, gvink01_30, gvink01_40, gvink01_50, gvink01_60, hvink01_20, hvink01_30, hvink01_40, hvink01_50, hvink01_60, ivink01_20, ivink01_30, ivink01_40, ivink01_50, ivink01_60,
+# avink18_20, avink18_30, avink18_40, avink18_50, avink18_60, bvink18_20, bvink18_30, bvink18_40, bvink18_50, bvink18_60, cvink18_20, cvink18_30, cvink18_40, cvink18_50, cvink18_60, dvink18_20, dvink18_30, dvink18_40, dvink18_50, dvink18_60, evink18_20, evink18_30, evink18_40, evink18_50, evink18_60, fvink18_20, fvink18_30, fvink18_40, fvink18_50, fvink18_60, gvink18_20, gvink18_30, gvink18_40, gvink18_50, gvink18_60, hvink18_20, hvink18_30, hvink18_40, hvink18_50, hvink18_60, ivink18_20, ivink18_30, ivink18_40, ivink18_50, ivink18_60,
+# aleuven_20, aleuven_30, aleuven_40, aleuven_50, aleuven_60, bleuven_20, bleuven_30, bleuven_40, bleuven_50, bleuven_60, cleuven_20, cleuven_30, cleuven_40, cleuven_50, cleuven_60, dleuven_20, dleuven_30, dleuven_40, dleuven_50, dleuven_60, eleuven_20, eleuven_30, eleuven_40, eleuven_50, eleuven_60, fleuven_20, fleuven_30, fleuven_40, fleuven_50, fleuven_60, gleuven_20, gleuven_30, gleuven_40, gleuven_50, gleuven_60, hleuven_20, hleuven_30, hleuven_40, hleuven_50, hleuven_60, ileuven_20, ileuven_30, ileuven_40, ileuven_50, ileuven_60,
+# akrticka_20, akrticka_30, akrticka_40, akrticka_50, akrticka_60, bkrticka_20, bkrticka_30, bkrticka_40, bkrticka_50, bkrticka_60, ckrticka_20, ckrticka_30, ckrticka_40, ckrticka_50, ckrticka_60, dkrticka_20, dkrticka_30, dkrticka_40, dkrticka_50, dkrticka_60, ekrticka_20, ekrticka_30, ekrticka_40, ekrticka_50, ekrticka_60, fkrticka_20, fkrticka_30, fkrticka_40, fkrticka_50, fkrticka_60, gkrticka_20, gkrticka_30, gkrticka_40, gkrticka_50, gkrticka_60, hkrticka_20, hkrticka_30, hkrticka_40, hkrticka_50, hkrticka_60, ikrticka_20, ikrticka_30, ikrticka_40, ikrticka_50, ikrticka_60,
+# ms)
 
 # ================================================================
