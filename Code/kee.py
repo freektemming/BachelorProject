@@ -98,23 +98,17 @@ def hrdmass(model1, model2, model3, model4, number, ms):
 # hrdmass(kee1,kee2,kee3,kee4,'40', False)
 
 
-
-
 # ======================================================================================
 
 # ------ plot normal HRD 1 Model All Masses------
-def recipe(model1, model2, model3, model4, rates):
+def recipe(model1, model2):
 
     lim1 = len(model1.age)
-
-    if rates == '1':
-        model = 'Beasor'
-    if rates == '2':
-        model = 'Kee'
+    lim2 = len(model2.age)
 
     # ------ Set Plot Style ------
     default_style()
-    fig, ax, colormap = HRD(model)
+    fig, (ax1, ax2), colormap = HRDRSG()
 
     # self.wvink01 = data[self.x:,88]
     # self.usewvink01 = data[self.x:,89]
@@ -150,8 +144,8 @@ def recipe(model1, model2, model3, model4, rates):
             novinkx.append(model1.Teff[i])
             novinky.append(model1.logL[i])
 
-    ax.plot(vinkx, vinky, lw = 1, color = 'black', label = 'Original Model')
-    ax.plot(novinkx, novinky, lw = 1, color = 'red', label = model)
+    #ax.plot(vinkx, vinky, lw = 1, color = 'black', label = 'Original Model')
+    #ax.plot(novinkx, novinky, lw = 1, color = 'red', label = model)
 
     # ============ Model 2 =========== 
 
@@ -171,8 +165,8 @@ def recipe(model1, model2, model3, model4, rates):
             novinkx.append(model2.Teff[i])
             novinky.append(model2.logL[i])
    
-    ax.plot(vinkx, vinky, lw = 1, color = 'black')
-    ax.plot(novinkx, novinky, lw = 1, color = 'red')
+    #ax.plot(vinkx, vinky, lw = 1, color = 'black')
+    #ax.plot(novinkx, novinky, lw = 1, color = 'red')
 
      # ============ Model 3 =========== 
 
@@ -183,16 +177,16 @@ def recipe(model1, model2, model3, model4, rates):
     novinky.clear()
     novinkc.clear()
     
-    for i in range(len(model3.age[0:lim1])):
-        if model3.usewleuven[i] == 1:
-            vinkx.append(model3.Teff[i])
-            vinky.append(model3.logL[i])
+    for i in range(len(model1.age[0:lim1])):
+        if model1.usewkrticka[i] == 1:
+            vinkx.append(model1.Teff[i])
+            vinky.append(model1.logL[i])
         else:
-            novinkx.append(model3.Teff[i])
-            novinky.append(model3.logL[i])
+            novinkx.append(model1.Teff[i])
+            novinky.append(model1.logL[i])
 
-    ax.plot(vinkx, vinky, lw = 1, color = 'black')
-    ax.plot(novinkx, novinky, lw = 1, color = 'red')
+    #ax1.plot(vinkx, vinky, lw = 1, color = 'green', label='Krticka')
+    ax1.plot(novinkx, novinky, lw = 1, color = 'black', label='Beasor')
 
      # ============ Model 4 =========== 
 
@@ -204,18 +198,31 @@ def recipe(model1, model2, model3, model4, rates):
     novinkc.clear()
     
     
-    for i in range(len(model4.age[0:lim1])):
-        if model4.usewkrticka[i] == 1:
-            vinkx.append(model4.Teff[i])
-            vinky.append(model4.logL[i])
+    for i in range(len(model2.age[0:lim2])):
+        if model2.usewkrticka[i] == 1:
+            vinkx.append(model2.Teff[i])
+            vinky.append(model2.logL[i])
         else:
-            novinkx.append(model4.Teff[i])
-            novinky.append(model4.logL[i])
+            novinkx.append(model2.Teff[i])
+            novinky.append(model2.logL[i])
 
-    ax.plot(vinkx, vinky, lw = 1, color = 'black')
-    ax.plot(novinkx, novinky, lw = 1, color = 'red')
+    ax1.plot(novinkx, novinky, lw = 1, color = 'red', label='Kee')
+    #ax1.plot(vinkx, vinky, lw = 1, color = 'green')
     
-    ax.legend(shadow = False, edgecolor = 'k')
+    ax1.legend(shadow = False, edgecolor = 'k')
+
+    # ----- SECOND PLOT ----------
+    # full simulation
+    lim1 = len(model1.age)
+    lim2 = len(model2.age)
+    start1 = model1.end()
+    start2 = model2.end()
+
+    # plot line
+    ax2.plot(model1.age[start1:lim1], model1.logMdot[start1:lim1], lw = 1, color = 'black', label = 'Beasor')
+    ax2.plot(model2.age[start2:lim2], model2.logMdot[start2:lim2], lw = 1, color = 'red', label = 'Kee')
+
+    ax2.legend(shadow = False, edgecolor = 'k')
 
     # # ------ Text ------
     # ax.text(model1.Teff[0] + 5, model1.logL[0], '20M$_{\odot}$', fontweight = 'bold')
@@ -225,8 +232,49 @@ def recipe(model1, model2, model3, model4, rates):
     # ax.text(model5.Teff[0] + 5, model5.logL[0], '60M$_{\odot}$', fontweight = 'bold')
     
     fig.tight_layout()
-    #plt.savefig(f'Plots/Recipies/HRD{number}.png')
+    plt.savefig(f'Plots/RSG/BK4.png', dpi=200)
+    #plt.show()
+
+recipe(beasor4, kee4) # plot beasor and kee vs krticka (4)
+#recipe(kee1,kee2,kee3,kee4, '2')
+
+
+# ------ Plot multiple HRD 4 Models Main Sequence------
+def masslosskee(model1, model2, ms):
+
+    # limits
+    if ms == True:
+        # main sequence limit
+        lim1 = model1.mainsequence()
+        lim2 = model2.mainsequence()
+        limit = '_ms'
+    else:
+        # full simulation
+        lim1 = len(model1.age)
+        lim2 = len(model1.age)
+
+        limit = ''
+
+    # ------ Set Plot Style ------
+    default_style()
+    fig, ax = plt.subplots(1,1)
+
+    #ax.set_xlim(10,2)
+    #ax.set_ylim(-8.7,-4.5)
+    #ax.set_xlabel('T$_{\mathrm{eff}}$ [kK]')
+    ax.set_xlabel('Time (Myr)')
+    ax.set_ylabel('log M$_{\mathregular{dot}}$ [M$_{\odot}$ / yr]')
+    ax.set_title('Mass Loss Rates Beasor and Kee')
+
+    # ------ first plot ------
+    # plot line
+    ax.plot(model1.age[0:lim1], model1.logMdot[0:lim1], lw = 1, color = 'black', label = 'Beasor')
+    ax.plot(model2.age[0:lim2], model2.logMdot[0:lim2], lw = 1, color = 'red', label = 'Kee')
+
+    ax.legend(shadow = False, edgecolor = 'k')
+
+    fig.tight_layout()
+    #plt.savefig(f'Plots/Overview/Mdot-Teff/{omega}/{region}{limit}.png', dpi=200)
     plt.show()
 
-recipe(beasor1,beasor2,beasor3,beasor4, '1')
-recipe(kee1,kee2,kee3,kee4, '2')
+#masslosskee(beasor4, kee4, ms=False)

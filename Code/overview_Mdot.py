@@ -59,7 +59,7 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
 
     # region of dataset
     if datafolder == 'Z014Om2' or datafolder == 'Z014Om4' or datafolder == 'Z014Om6':
-        region = 'Milky Way'
+        region = 'Milky Way Galaxy'
     if datafolder == 'Z002Om2' or datafolder == 'Z002Om4' or datafolder == 'Z002Om6':
         region = 'SMC'
     if datafolder == 'Z007Om2' or datafolder == 'Z007Om4' or datafolder == 'Z007Om6':
@@ -141,7 +141,7 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     ax1.plot(model14.Teff[0:lim14], model14.logMdot[0:lim14], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
     ax1.plot(model15.Teff[0:lim15], model15.logMdot[0:lim15], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
-    ax1.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
+    ax1.legend(shadow = False, edgecolor = 'k', fontsize=6.5, loc='lower left')
 
     # plot text
     # ax1.text(model11.Teff[0] + txt, model11.Mdot[0], '20M$_{\odot}$', fontweight = 'bold', fontsize=8)
@@ -158,7 +158,7 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     ax2.plot(model24.Teff[0:lim24], model24.logMdot[0:lim24], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
     ax2.plot(model25.Teff[0:lim25], model25.logMdot[0:lim25], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
-    ax2.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
+    #ax2.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
     # plot text
     # ax2.text(model21.Teff[0] + txt, model21.Mdot[0], '20M$_{\odot}$', fontweight = 'bold', fontsize=8)
@@ -174,7 +174,7 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     ax3.plot(model34.Teff[0:lim34], model34.logMdot[0:lim34], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
     ax3.plot(model35.Teff[0:lim35], model35.logMdot[0:lim35], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
-    ax3.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
+    #ax3.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
     # plot text
     # ax3.text(model31.Teff[0] + txt, model31.Mdot[0], '20M$_{\odot}$', fontweight = 'bold', fontsize=8)
@@ -190,7 +190,7 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     ax4.plot(model44.Teff[0:lim44], model44.logMdot[0:lim44], lw = 1, color = 'darkred', label = '50M$_{\odot}$')
     ax4.plot(model45.Teff[0:lim45], model45.logMdot[0:lim45], lw = 1, color = 'pink', label = '60M$_{\odot}$')
 
-    ax4.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
+    #ax4.legend(shadow = False, edgecolor = 'k', fontsize=6.5)
 
     # plot text
     # ax4.text(model41.Teff[0] + txt, model41.Mdot[0], '20M$_{\odot}$', fontweight = 'bold', fontsize=8)
@@ -204,9 +204,6 @@ def subhrd(model11, model12, model13, model14, model15, model21, model22, model2
     #plt.show()
 
 
-
-
-
 # ------ Plot multiple HRD 4 Models Main Sequence------
 def timeMdot(model11, model12, model13, model14, model15, model21, model22, model23, model24, model25, model31, model32, model33, model34, model35, model41, model42, model43, model44, model45, ms):
     
@@ -215,7 +212,7 @@ def timeMdot(model11, model12, model13, model14, model15, model21, model22, mode
 
     # region of dataset
     if datafolder == 'Z014Om2' or datafolder == 'Z014Om4' or datafolder == 'Z014Om6':
-        region = 'Milky Way'
+        region = 'Milky Way Galaxy'
     if datafolder == 'Z002Om2' or datafolder == 'Z002Om4' or datafolder == 'Z002Om6':
         region = 'SMC'
     if datafolder == 'Z007Om2' or datafolder == 'Z007Om4' or datafolder == 'Z007Om6':

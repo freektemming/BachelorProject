@@ -16,19 +16,19 @@ def recipe(model1, model2, model3, model4, model5, number, ms):
 
     # plot name of model in legend
     if number == '1':
-        model = 'Vink 01 Model'
+        model = 'Vink 01'
     if number == '2':
-        model = 'Vink 18 Model'
+        model = 'Vink 18'
     if number == '3':
-        model = 'Leuven Model'
+        model = 'Leuven'
     if number == '4':
-        model = 'Krticka Model'
+        model = 'Krticka'
 
     lim1 = len(model1.age)
 
     # ------ Set Plot Style ------
     default_style()
-    fig, ax, colormap = HRD(model)
+    fig, ax, colormap = recip(model)
 
     # self.wvink01 = data[self.x:,88]
     # self.usewvink01 = data[self.x:,89]
@@ -97,8 +97,8 @@ def recipe(model1, model2, model3, model4, model5, number, ms):
                 novinkc.append(model1.usewvink01)
 
 
-    ax.plot(vinkx, vinky, lw = 1, color = 'black', label = model)
-    ax.plot(novinkx, novinky, lw = 1, color = 'red', label = 'Other Model')
+    ax.plot(vinkx, vinky, lw = 1, color = 'black', linestyle = 'solid', label = model)
+    ax.plot(novinkx, novinky, lw = 1, color = 'black', linestyle = 'dashed', label = 'Beasor')
 
     # ============ Model 2 =========== 
 
@@ -150,8 +150,8 @@ def recipe(model1, model2, model3, model4, model5, number, ms):
                 novinky.append(model2.logL[i])
                 novinkc.append(model2.usewvink01)
 
-    ax.plot(vinkx, vinky, lw = 1, color = 'black')
-    ax.plot(novinkx, novinky, lw = 1, color = 'red')
+    ax.plot(vinkx, vinky, lw = 1, color = 'black', linestyle = 'solid')
+    ax.plot(novinkx, novinky, lw = 1, color = 'black', linestyle = 'dashed')
 
      # ============ Model 3 =========== 
 
@@ -204,8 +204,8 @@ def recipe(model1, model2, model3, model4, model5, number, ms):
                 novinkc.append(model3.usewvink01)
 
 
-    ax.plot(vinkx, vinky, lw = 1, color = 'black')
-    ax.plot(novinkx, novinky, lw = 1, color = 'red')
+    ax.plot(vinkx, vinky, lw = 1, color = 'black', linestyle = 'solid')
+    ax.plot(novinkx, novinky, lw = 1, color = 'black', linestyle = 'dashed')
 
      # ============ Model 4 =========== 
 
@@ -258,8 +258,8 @@ def recipe(model1, model2, model3, model4, model5, number, ms):
                 novinkc.append(model4.usewvink01)
 
 
-    ax.plot(vinkx, vinky, lw = 1, color = 'black')
-    ax.plot(novinkx, novinky, lw = 1, color = 'red')
+    ax.plot(vinkx, vinky, lw = 1, color = 'black', linestyle = 'solid')
+    ax.plot(novinkx, novinky, lw = 1, color = 'black', linestyle = 'dashed')
 
      # ============ Model 5 =========== 
 
@@ -312,8 +312,8 @@ def recipe(model1, model2, model3, model4, model5, number, ms):
                 novinkc.append(model5.usewvink01)
 
 
-    ax.plot(vinkx, vinky, lw = 1, color = 'black')
-    ax.plot(novinkx, novinky, lw = 1, color = 'red')
+    ax.plot(vinkx, vinky, lw = 1, color = 'black', linestyle = 'solid')
+    ax.plot(novinkx, novinky, lw = 1, color = 'black', linestyle = 'dashed')
     
     ax.legend(shadow = False, edgecolor = 'k')
 
